@@ -62,6 +62,7 @@
             this.bWCalcute = new System.ComponentModel.BackgroundWorker();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -202,7 +203,7 @@
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1380, 756);
             this.panel1.TabIndex = 13;
@@ -214,7 +215,7 @@
             this.pictureBox1.BackgroundImage = global::Myprojekt.Properties.Resources.map_pripyat;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBox1.Location = new System.Drawing.Point(-29, 4);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(3516, 3083);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -233,7 +234,7 @@
             this.panel2.Controls.Add(this.btnOpenMap);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(62, 756);
             this.panel2.TabIndex = 2;
@@ -243,7 +244,7 @@
             // 
             this.txtBlockSize.Font = new System.Drawing.Font("Calibri", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.txtBlockSize.Location = new System.Drawing.Point(7, 347);
-            this.txtBlockSize.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtBlockSize.Margin = new System.Windows.Forms.Padding(4);
             this.txtBlockSize.Name = "txtBlockSize";
             this.txtBlockSize.Size = new System.Drawing.Size(63, 58);
             this.txtBlockSize.TabIndex = 6;
@@ -254,7 +255,7 @@
             this.btnDrawPolygon.BackgroundImage = global::Myprojekt.Properties.Resources._1301475484_draw_polygon_curves;
             this.btnDrawPolygon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnDrawPolygon.Location = new System.Drawing.Point(7, 281);
-            this.btnDrawPolygon.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDrawPolygon.Margin = new System.Windows.Forms.Padding(4);
             this.btnDrawPolygon.Name = "btnDrawPolygon";
             this.btnDrawPolygon.Size = new System.Drawing.Size(64, 59);
             this.btnDrawPolygon.TabIndex = 5;
@@ -267,7 +268,7 @@
             this.btnCalcute.BackgroundImage = global::Myprojekt.Properties.Resources._1301423055_Maps;
             this.btnCalcute.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnCalcute.Location = new System.Drawing.Point(7, 214);
-            this.btnCalcute.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCalcute.Margin = new System.Windows.Forms.Padding(4);
             this.btnCalcute.Name = "btnCalcute";
             this.btnCalcute.Size = new System.Drawing.Size(64, 59);
             this.btnCalcute.TabIndex = 4;
@@ -280,7 +281,7 @@
             this.buttonDrawGrid.BackgroundImage = global::Myprojekt.Properties.Resources._1301423012_3x3_grid_2;
             this.buttonDrawGrid.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.buttonDrawGrid.Location = new System.Drawing.Point(7, 148);
-            this.buttonDrawGrid.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonDrawGrid.Margin = new System.Windows.Forms.Padding(4);
             this.buttonDrawGrid.Name = "buttonDrawGrid";
             this.buttonDrawGrid.Size = new System.Drawing.Size(64, 59);
             this.buttonDrawGrid.TabIndex = 3;
@@ -293,7 +294,7 @@
             this.btnAd.BackgroundImage = global::Myprojekt.Properties.Resources._1289309280_11;
             this.btnAd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnAd.Location = new System.Drawing.Point(7, 81);
-            this.btnAd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAd.Margin = new System.Windows.Forms.Padding(4);
             this.btnAd.Name = "btnAd";
             this.btnAd.Size = new System.Drawing.Size(64, 59);
             this.btnAd.TabIndex = 2;
@@ -306,7 +307,7 @@
             this.btnOpenMap.BackgroundImage = global::Myprojekt.Properties.Resources._1301423033_folder_64;
             this.btnOpenMap.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnOpenMap.Location = new System.Drawing.Point(7, 15);
-            this.btnOpenMap.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnOpenMap.Margin = new System.Windows.Forms.Padding(4);
             this.btnOpenMap.Name = "btnOpenMap";
             this.btnOpenMap.Size = new System.Drawing.Size(64, 59);
             this.btnOpenMap.TabIndex = 0;
@@ -364,7 +365,7 @@
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer1.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
             this.splitContainer1.Location = new System.Drawing.Point(0, 28);
-            this.splitContainer1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.splitContainer1.Margin = new System.Windows.Forms.Padding(4);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
@@ -379,19 +380,29 @@
             this.splitContainer1.SplitterWidth = 5;
             this.splitContainer1.TabIndex = 15;
             // 
-            // MainForm
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(276, 7);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(36, 17);
+            this.label1.TabIndex = 16;
+            this.label1.Text = "Test";
+            // 
+            // frmMainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1447, 810);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.statusStrip2);
             this.DoubleBuffered = true;
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Name = "MainForm";
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Name = "frmMainWindow";
             this.Text = "WS&P";
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.Shown += new System.EventHandler(this.MainForm_Shown);
@@ -449,5 +460,6 @@
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.SplitContainer splitContainer1;
+        private System.Windows.Forms.Label label1;
     }
 }
