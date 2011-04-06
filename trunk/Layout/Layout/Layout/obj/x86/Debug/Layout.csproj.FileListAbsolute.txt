@@ -1,0 +1,32 @@
+D:\Project\Layout\Layout\bin\Debug\Layout.exe
+D:\Project\Layout\Layout\bin\Debug\Layout.pdb
+D:\Project\Layout\Layout\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Project\Layout\Layout\obj\x86\Debug\Layout.AddMap.resources
+D:\Project\Layout\Layout\obj\x86\Debug\Layout.Form1.resources
+D:\Project\Layout\Layout\obj\x86\Debug\Layout.Properties.Resources.resources
+D:\Project\Layout\Layout\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\Project\Layout\Layout\obj\x86\Debug\GenerateResource.write.1.tlog
+D:\Project\Layout\Layout\obj\x86\Debug\Layout.exe
+D:\Project\Layout\Layout\obj\x86\Debug\Layout.pdb
+D:\Project\Layout\Layout\Layout\bin\Debug\Layout.pdb
+D:\Project\Layout\Layout\Layout\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Project\Layout\Layout\Layout\obj\x86\Debug\Layout.AddMap.resources
+D:\Project\Layout\Layout\Layout\obj\x86\Debug\Layout.AddPoligon.resources
+D:\Project\Layout\Layout\Layout\obj\x86\Debug\Layout.MapForm.resources
+D:\Project\Layout\Layout\Layout\obj\x86\Debug\Layout.Properties.Resources.resources
+D:\Project\Layout\Layout\Layout\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\Project\Layout\Layout\Layout\obj\x86\Debug\GenerateResource.write.1.tlog
+D:\Project\Layout\Layout\Layout\obj\x86\Debug\Layout.pdb
+D:\Project\Layout\Layout\Layout\bin\Debug\Layout.dll
+D:\Project\Layout\Layout\Layout\obj\x86\Debug\Layout.dll
+D:\Project\WPaS beta 1 v.1.0.2.0\Layout\Layout\Layout\bin\Debug\Layout.dll
+D:\Project\WPaS beta 1 v.1.0.2.0\Layout\Layout\Layout\bin\Debug\Layout.pdb
+D:\Project\WPaS beta 1 v.1.0.2.0\Layout\Layout\Layout\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Project\WPaS beta 1 v.1.0.2.0\Layout\Layout\Layout\obj\x86\Debug\Layout.AddMap.resources
+D:\Project\WPaS beta 1 v.1.0.2.0\Layout\Layout\Layout\obj\x86\Debug\Layout.AddPoligon.resources
+D:\Project\WPaS beta 1 v.1.0.2.0\Layout\Layout\Layout\obj\x86\Debug\Layout.MapForm.resources
+D:\Project\WPaS beta 1 v.1.0.2.0\Layout\Layout\Layout\obj\x86\Debug\Layout.Properties.Resources.resources
+D:\Project\WPaS beta 1 v.1.0.2.0\Layout\Layout\Layout\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\Project\WPaS beta 1 v.1.0.2.0\Layout\Layout\Layout\obj\x86\Debug\GenerateResource.write.1.tlog
+D:\Project\WPaS beta 1 v.1.0.2.0\Layout\Layout\Layout\obj\x86\Debug\Layout.dll
+D:\Project\WPaS beta 1 v.1.0.2.0\Layout\Layout\Layout\obj\x86\Debug\Layout.pdb
