@@ -31,22 +31,24 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnSave = new System.Windows.Forms.Button();
             this.txtServerAddress = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.cmbDataUpdates = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(123, 20);
+            this.label1.Size = new System.Drawing.Size(105, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "Server address";
             // 
             // btnSave
             // 
-            this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnSave.Location = new System.Drawing.Point(270, 53);
+            this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnSave.Location = new System.Drawing.Point(251, 77);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 27);
             this.btnSave.TabIndex = 1;
@@ -55,16 +57,43 @@
             // 
             // txtServerAddress
             // 
-            this.txtServerAddress.Location = new System.Drawing.Point(141, 9);
+            this.txtServerAddress.Location = new System.Drawing.Point(123, 6);
             this.txtServerAddress.Name = "txtServerAddress";
             this.txtServerAddress.Size = new System.Drawing.Size(204, 22);
             this.txtServerAddress.TabIndex = 2;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.Location = new System.Drawing.Point(12, 41);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(125, 17);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Update data every";
+            // 
+            // cmbDataUpdates
+            // 
+            this.cmbDataUpdates.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbDataUpdates.FormattingEnabled = true;
+            this.cmbDataUpdates.Items.AddRange(new object[] {
+            "1 min",
+            "2 min",
+            "3 min",
+            "4 min",
+            "5 min"});
+            this.cmbDataUpdates.Location = new System.Drawing.Point(143, 38);
+            this.cmbDataUpdates.Name = "cmbDataUpdates";
+            this.cmbDataUpdates.Size = new System.Drawing.Size(86, 24);
+            this.cmbDataUpdates.TabIndex = 4;
             // 
             // frmSettings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(354, 89);
+            this.ClientSize = new System.Drawing.Size(336, 113);
+            this.Controls.Add(this.cmbDataUpdates);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.txtServerAddress);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.label1);
@@ -83,5 +112,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.TextBox txtServerAddress;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox cmbDataUpdates;
     }
 }
