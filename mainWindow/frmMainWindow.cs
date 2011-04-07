@@ -41,7 +41,7 @@ namespace Myprojekt
             
         }
 
-        
+        frmSettings settingsForm = new frmSettings();
         frmFilters FormFilter = new frmFilters();
         AddMap addMap = new AddMap();
 
@@ -248,9 +248,12 @@ namespace Myprojekt
 
         private void button1_KeyDown(object sender, KeyEventArgs e)
         {
+            
+        }
 
-            
-            
+        private void settingsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            settingsForm.ShowDialog();
         }
     }
 }
