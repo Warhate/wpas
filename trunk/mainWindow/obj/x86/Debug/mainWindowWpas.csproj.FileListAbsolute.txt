@@ -13,3 +13,4 @@ F:\share\competition\fire\WPaS\mainWindow\obj\x86\Debug\Myprojekt.exe
 F:\share\competition\fire\WPaS\mainWindow\obj\x86\Debug\Myprojekt.pdb
 F:\share\competition\fire\WPaS\mainWindow\obj\x86\Debug\Myprojekt.frmFilters.resources
 F:\share\competition\fire\WPaS\mainWindow\obj\x86\Debug\Myprojekt.frmMainWindow.resources
+F:\share\competition\fire\WPaS\mainWindow\obj\x86\Debug\Myprojekt.frmSettings.resources
