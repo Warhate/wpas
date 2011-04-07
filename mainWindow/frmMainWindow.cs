@@ -12,16 +12,20 @@ namespace Myprojekt
 {
     public partial class frmMainWindow : Form
     {
-        
         Graphics graf;
         Bitmap drawableImage, img;
         Marker marker;
         int width, hight;
         Map map;
         List<Block> blocks;
+        public frmSettings settingsForm;
         
         public frmMainWindow()
         {
+            settingsForm = new frmSettings();
+            // загрузка настроек приложения
+            settingsForm.appSettings.loadSettings();
+
             InitializeComponent();
             SetStyle(ControlStyles.SupportsTransparentBackColor, true);
             SetStyle(ControlStyles.Opaque, true);
@@ -41,7 +45,7 @@ namespace Myprojekt
             
         }
 
-        frmSettings settingsForm = new frmSettings();
+
         frmFilters FormFilter = new frmFilters();
         AddMap addMap = new AddMap();
 
