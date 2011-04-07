@@ -13,7 +13,9 @@ namespace Myprojekt
               
         private static Settings instance;
 
+        // адрес сервера для получения данных
         private String m_serverAddress;
+        // частота обновления данных
         private int m_updateRate;
 
         public String serverAddress
