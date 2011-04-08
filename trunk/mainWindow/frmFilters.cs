@@ -21,7 +21,7 @@ namespace Myprojekt
         Filters FLI = new Filters();
         Interface inf = new Interface();
         Image<Bgr, Byte> Image_G;
-        Image<Gray, Byte>[] Image_result;
+        Image<Gray, Byte>[] Image_result_RGB, Image_result_HSV;
 
         string[] mas_filter;
 
@@ -36,15 +36,15 @@ namespace Myprojekt
         { 
             //CvInvoke.cvSplit(adr,);//Доступ к библиотеке OpenCV за допомогою функції CvInvoke.
 
-                Image_result = FLI.RBG_Filter(Image_G);
-                pictureBox1.Image = Image_result[0].Bitmap;
-                pictureBox3.Image = Image_result[1].Bitmap;
-                pictureBox4.Image = Image_result[2].Bitmap;
+            Image_result_RGB = FLI.RBG_Filter(Image_G);
+            pictureBox1.Image = Image_result_RGB[0].Bitmap;
+            pictureBox3.Image = Image_result_RGB[1].Bitmap;
+            pictureBox4.Image = Image_result_RGB[2].Bitmap;
 
-                Image_result = FLI.HSV_Filter(Image_G);
-                pictureBox7.Image = Image_result[0].Bitmap;
-                pictureBox6.Image = Image_result[1].Bitmap;
-                pictureBox5.Image = Image_result[2].Bitmap;
+            Image_result_HSV = FLI.HSV_Filter(Image_G);
+            pictureBox7.Image = Image_result_HSV[0].Bitmap;
+            pictureBox6.Image = Image_result_HSV[1].Bitmap;
+            pictureBox5.Image = Image_result_HSV[2].Bitmap;
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -78,32 +78,32 @@ namespace Myprojekt
         {
 
             //filter out all but "the color you want"...seems to be 0 to 128 ?
-            pictureBox1.Image = Image_result[0].InRange(new Gray(trackBar2.Value), new Gray(trackBar1.Value)).Bitmap;
+            pictureBox1.Image = Image_result_RGB[0].InRange(new Gray(trackBar2.Value), new Gray(trackBar1.Value)).Bitmap;
         }
 
         private void trackBar2_Scroll(object sender, EventArgs e)
         {
-            pictureBox1.Image = Image_result[0].InRange(new Gray(trackBar2.Value), new Gray(trackBar1.Value)).Bitmap;
+            pictureBox1.Image = Image_result_RGB[0].InRange(new Gray(trackBar2.Value), new Gray(trackBar1.Value)).Bitmap;
         }
 
         private void trackBar3_Scroll(object sender, EventArgs e)
         {
-            pictureBox3.Image = Image_result[1].InRange(new Gray(trackBar4.Value), new Gray(trackBar3.Value)).Bitmap;
+            pictureBox3.Image = Image_result_RGB[1].InRange(new Gray(trackBar4.Value), new Gray(trackBar3.Value)).Bitmap;
         }
 
         private void trackBar4_Scroll(object sender, EventArgs e)
         {
-            pictureBox3.Image = Image_result[1].InRange(new Gray(trackBar4.Value), new Gray(trackBar3.Value)).Bitmap;
+            pictureBox3.Image = Image_result_RGB[1].InRange(new Gray(trackBar4.Value), new Gray(trackBar3.Value)).Bitmap;
         }
 
         private void trackBar5_Scroll(object sender, EventArgs e)
         {
-            pictureBox4.Image = Image_result[2].InRange(new Gray(trackBar6.Value), new Gray(trackBar5.Value)).Bitmap;
+            pictureBox4.Image = Image_result_RGB[2].InRange(new Gray(trackBar6.Value), new Gray(trackBar5.Value)).Bitmap;
         }
 
         private void trackBar6_Scroll(object sender, EventArgs e)
         {
-            pictureBox4.Image = Image_result[2].InRange(new Gray(trackBar6.Value), new Gray(trackBar5.Value)).Bitmap;
+            pictureBox4.Image = Image_result_RGB[2].InRange(new Gray(trackBar6.Value), new Gray(trackBar5.Value)).Bitmap;
         }
 
         private void checkBox2_CheckedChanged(object sender, EventArgs e)
@@ -141,19 +141,19 @@ namespace Myprojekt
             {
                 Image_G = new Image<Bgr, Byte>(textBox4.Text);
                 pictureBox2.Image = Image_G.Bitmap;
-                pictureBox9.Image = Image_G.Bitmap;
+
 
                 //CvInvoke.cvSplit(adr,);//Доступ к библиотеке OpenCV за допомогою функції CvInvoke.
 
-                Image_result = FLI.RBG_Filter(Image_G);
-                pictureBox1.Image = Image_result[0].Bitmap;
-                pictureBox3.Image = Image_result[1].Bitmap;
-                pictureBox4.Image = Image_result[2].Bitmap;
+                Image_result_RGB = FLI.RBG_Filter(Image_G);
+                pictureBox1.Image = Image_result_RGB[0].Bitmap;
+                pictureBox3.Image = Image_result_RGB[1].Bitmap;
+                pictureBox4.Image = Image_result_RGB[2].Bitmap;
 
-                Image_result = FLI.HSV_Filter(Image_G);
-                pictureBox7.Image = Image_result[0].Bitmap;
-                pictureBox6.Image = Image_result[1].Bitmap;
-                pictureBox5.Image = Image_result[2].Bitmap;
+                Image_result_HSV = FLI.HSV_Filter(Image_G);
+                pictureBox7.Image = Image_result_HSV[0].Bitmap;
+                pictureBox6.Image = Image_result_HSV[1].Bitmap;
+                pictureBox5.Image = Image_result_HSV[2].Bitmap;
             }
             
         }
@@ -194,43 +194,43 @@ namespace Myprojekt
 
         private void trackBar12_Scroll(object sender, EventArgs e)
         {
-            pictureBox7.Image = Image_result[0].InRange(new Gray(trackBar12.Value), new Gray(trackBar11.Value)).Bitmap;
+            pictureBox7.Image = Image_result_HSV[0].InRange(new Gray(trackBar12.Value), new Gray(trackBar11.Value)).Bitmap;
         }
 
         private void trackBar11_Scroll(object sender, EventArgs e)
         {
-            pictureBox7.Image = Image_result[0].InRange(new Gray(trackBar12.Value), new Gray(trackBar11.Value)).Bitmap;
+            pictureBox7.Image = Image_result_HSV[0].InRange(new Gray(trackBar12.Value), new Gray(trackBar11.Value)).Bitmap;
         }
 
         private void trackBar9_Scroll(object sender, EventArgs e)
         {
-            pictureBox6.Image = Image_result[0].InRange(new Gray(trackBar9.Value), new Gray(trackBar10.Value)).Bitmap;
+            pictureBox6.Image = Image_result_HSV[1].InRange(new Gray(trackBar9.Value), new Gray(trackBar10.Value)).Bitmap;
         }
 
         private void trackBar10_Scroll(object sender, EventArgs e)
         {
-            pictureBox6.Image = Image_result[0].InRange(new Gray(trackBar9.Value), new Gray(trackBar10.Value)).Bitmap;
+            pictureBox6.Image = Image_result_HSV[1].InRange(new Gray(trackBar9.Value), new Gray(trackBar10.Value)).Bitmap;
         }
 
         private void trackBar7_Scroll(object sender, EventArgs e)
         {
-            pictureBox5.Image = Image_result[0].InRange(new Gray(trackBar7.Value), new Gray(trackBar8.Value)).Bitmap;
+            pictureBox5.Image = Image_result_HSV[2].InRange(new Gray(trackBar7.Value), new Gray(trackBar8.Value)).Bitmap;
         }
 
         private void trackBar8_Scroll(object sender, EventArgs e)
         {
-            pictureBox5.Image = Image_result[0].InRange(new Gray(trackBar7.Value), new Gray(trackBar8.Value)).Bitmap;
+            pictureBox5.Image = Image_result_HSV[2].InRange(new Gray(trackBar7.Value), new Gray(trackBar8.Value)).Bitmap;
         }
 
         private void checkBox3_CheckedChanged_1(object sender, EventArgs e)
         {
             if (checkBox3.Checked == true)
             {
-                button3.Enabled = true;
+                buttonSeveFilter.Enabled = true;
             }
             else
             {
-                button3.Enabled = false;
+                buttonSeveFilter.Enabled = false;
             }
         }
 
@@ -280,15 +280,86 @@ namespace Myprojekt
             trackBar7.Value = Convert.ToInt32(buf[10]);
             trackBar8.Value = Convert.ToInt32(buf[11]);
 
-            pictureBox1.Image = Image_result[0].InRange(new Gray(trackBar2.Value), new Gray(trackBar1.Value)).Bitmap;
-            pictureBox3.Image = Image_result[1].InRange(new Gray(trackBar4.Value), new Gray(trackBar3.Value)).Bitmap;
-            pictureBox4.Image = Image_result[2].InRange(new Gray(trackBar6.Value), new Gray(trackBar5.Value)).Bitmap;
+            pictureBox1.Image = Image_result_RGB[0].InRange(new Gray(trackBar2.Value), new Gray(trackBar1.Value)).Bitmap;
+            pictureBox3.Image = Image_result_RGB[1].InRange(new Gray(trackBar4.Value), new Gray(trackBar3.Value)).Bitmap;
+            pictureBox4.Image = Image_result_RGB[2].InRange(new Gray(trackBar6.Value), new Gray(trackBar5.Value)).Bitmap;
 
-            pictureBox7.Image = Image_result[0].InRange(new Gray(trackBar12.Value), new Gray(trackBar11.Value)).Bitmap;
-            pictureBox6.Image = Image_result[0].InRange(new Gray(trackBar9.Value), new Gray(trackBar10.Value)).Bitmap;
-            pictureBox5.Image = Image_result[0].InRange(new Gray(trackBar7.Value), new Gray(trackBar8.Value)).Bitmap;
+            pictureBox7.Image = Image_result_HSV[0].InRange(new Gray(trackBar12.Value), new Gray(trackBar11.Value)).Bitmap;
+            pictureBox6.Image = Image_result_HSV[0].InRange(new Gray(trackBar9.Value), new Gray(trackBar10.Value)).Bitmap;
+            pictureBox5.Image = Image_result_HSV[0].InRange(new Gray(trackBar7.Value), new Gray(trackBar8.Value)).Bitmap;
 
             //trackBar1.Scroll;
+        }
+
+        private void GenerateFullFilterButton_Click(object sender, EventArgs e)
+        {
+            if (CheckRChannel.Checked == true)
+            {
+                CvInvoke.cvAdd(Image_result_RGB[0], Image_result_RGB[0], Image_result_RGB[0], IntPtr.Zero);
+            }
+
+            if (CheckGChannel.Checked == true)
+            {
+                CvInvoke.cvAdd(Image_result_RGB[1], Image_result_RGB[0], Image_result_RGB[0], IntPtr.Zero);
+            }
+
+            if (CheckBChannel.Checked == true)
+            {
+                CvInvoke.cvAdd(Image_result_RGB[2], Image_result_RGB[1], Image_result_RGB[0], IntPtr.Zero);
+            }
+
+            if (CheckHChannel.Checked == true)
+            {
+                CvInvoke.cvAdd(Image_result_HSV[0], Image_result_RGB[0], Image_result_RGB[0], IntPtr.Zero);
+            }
+
+            if (CheckSChannel.Checked == true)
+            {
+                CvInvoke.cvAdd(Image_result_HSV[1], Image_result_RGB[0], Image_result_RGB[0], IntPtr.Zero);
+            }
+
+            if (CheckVChannel.Checked == true)
+            {
+                CvInvoke.cvAdd(Image_result_HSV[2], Image_result_RGB[0], Image_result_RGB[0], IntPtr.Zero);
+            }
+            CvInvoke.cvCanny(Image_result_RGB[0], Image_result_RGB[0], 10, 100, 3);
+            pictureBoxResult.Image = Image_result_RGB[0].Bitmap;
+        }
+
+        private void checkBoxSaveTheOpenFile_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxSaveTheOpenFile.Checked == true)
+            {
+                labelFileSave.Enabled = true;
+                textBoxFileSave.Enabled = true;
+                buttonObzorFileSave.Enabled = true;
+                checkBoxSaveNewFile.Checked = false;
+                buttonSeveFilter.Enabled = true;
+            }
+            else
+            {
+                labelFileSave.Enabled = false;
+                textBoxFileSave.Enabled = false;
+                buttonObzorFileSave.Enabled = false;
+                buttonSeveFilter.Enabled = false;
+            }
+        }
+
+        private void checkBoxSaveNewFile_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxSaveNewFile.Checked == true)
+            {
+                labelNewFileName.Enabled = true;
+                textBoxNewFileName.Enabled = true;
+                checkBoxSaveTheOpenFile.Checked = false;
+                buttonSeveFilter.Enabled = true;
+            }
+            else
+            {
+                labelNewFileName.Enabled = false;
+                textBoxNewFileName.Enabled = false;
+                buttonSeveFilter.Enabled = false;
+            }
         }
     }
 }
