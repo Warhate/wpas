@@ -90,7 +90,22 @@ namespace Myprojekt
             }
 
             System.IO.File.WriteAllLines(file_name, lines);
+        }
 
+        public void CreateFileFilter(string file_name)
+        {
+            FileInfo fi = new FileInfo(file_name+".txt");
+            fi.Create();
+  
+        }
+
+        public void SaveFilterFile(string file_name, string filter)
+        {
+            StreamWriter sw;
+            FileInfo fi = new FileInfo(file_name);
+            sw = fi.AppendText();
+            sw.WriteLine(filter);
+            sw.Close();
         }
     }
 }

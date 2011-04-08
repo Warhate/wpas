@@ -292,6 +292,19 @@ namespace Myprojekt
             trackBar7.Value = Convert.ToInt32(buf[10]);
             trackBar8.Value = Convert.ToInt32(buf[11]);
 
+            labelR1.Text = buf[0];
+            labelR2.Text = buf[1];
+            labelG1.Text = buf[2];
+            labelG2.Text = buf[3];
+            labelB1.Text = buf[4];
+            labelB2.Text = buf[5];
+            labelH1.Text = buf[6];
+            labelH2.Text = buf[7];
+            labelS1.Text = buf[8];
+            labelS2.Text = buf[9];
+            labelV1.Text = buf[10];
+            labelV2.Text = buf[11];
+
             pictureBox1.Image = Image_result_RGB[0].InRange(new Gray(trackBar2.Value), new Gray(trackBar1.Value)).Bitmap;
             pictureBox3.Image = Image_result_RGB[1].InRange(new Gray(trackBar4.Value), new Gray(trackBar3.Value)).Bitmap;
             pictureBox4.Image = Image_result_RGB[2].InRange(new Gray(trackBar6.Value), new Gray(trackBar5.Value)).Bitmap;
@@ -371,6 +384,27 @@ namespace Myprojekt
                 labelNewFileName.Enabled = false;
                 textBoxNewFileName.Enabled = false;
                 buttonSeveFilter.Enabled = false;
+            }
+        }
+
+        private void buttonObzorFileSave_Click(object sender, EventArgs e)
+        {
+            textBoxFileSave.Text = inf.Open_Dialog_File_Filter();
+        }
+
+        private void buttonSeveFilter_Click(object sender, EventArgs e)
+        {
+            string filter = textBoxFilterName.Text + "#***#" + trackBar1.Value.ToString() + "###" + trackBar2.Value.ToString() + "###" + trackBar3.Value.ToString() + "###" + trackBar4.Value.ToString() + "###" + trackBar5.Value.ToString() + "###" + trackBar6.Value.ToString() + "###" + trackBar12.Value.ToString() + "###" + trackBar11.Value.ToString() + "###" + trackBar9.Value.ToString() + "###" + trackBar10.Value.ToString() + "###" + trackBar7.Value.ToString() + "###" + trackBar8.Value.ToString();
+
+            if (checkBoxSaveTheOpenFile.Checked == true)
+            {
+                FLI.SaveFilterFile(textBoxFileSave.Text, filter);
+            }
+
+            if (checkBoxSaveNewFile.Checked == true)
+            {
+                FLI.CreateFileFilter(textBoxNewFileName.Text);
+                FLI.SaveFilterFile(textBoxNewFileName.Text+".txt", filter);
             }
         }
     }

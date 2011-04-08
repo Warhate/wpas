@@ -54,6 +54,12 @@
             this.button5 = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.labelB2 = new System.Windows.Forms.Label();
+            this.labelB1 = new System.Windows.Forms.Label();
+            this.labelG2 = new System.Windows.Forms.Label();
+            this.labelG1 = new System.Windows.Forms.Label();
+            this.labelR2 = new System.Windows.Forms.Label();
+            this.labelR1 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -68,6 +74,12 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.labelH2 = new System.Windows.Forms.Label();
+            this.labelH1 = new System.Windows.Forms.Label();
+            this.labelS2 = new System.Windows.Forms.Label();
+            this.labelS1 = new System.Windows.Forms.Label();
+            this.labelV2 = new System.Windows.Forms.Label();
+            this.labelV1 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -83,7 +95,7 @@
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.groupBoxFilterInfo = new System.Windows.Forms.GroupBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBoxFilterName = new System.Windows.Forms.TextBox();
             this.groupBoxFileInfo = new System.Windows.Forms.GroupBox();
             this.labelNewFileName = new System.Windows.Forms.Label();
             this.textBoxNewFileName = new System.Windows.Forms.TextBox();
@@ -96,18 +108,6 @@
             this.checkBoxSaveTheOpenFile = new System.Windows.Forms.CheckBox();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBoxResult = new System.Windows.Forms.PictureBox();
-            this.labelR1 = new System.Windows.Forms.Label();
-            this.labelR2 = new System.Windows.Forms.Label();
-            this.labelG1 = new System.Windows.Forms.Label();
-            this.labelG2 = new System.Windows.Forms.Label();
-            this.labelB2 = new System.Windows.Forms.Label();
-            this.labelB1 = new System.Windows.Forms.Label();
-            this.labelV2 = new System.Windows.Forms.Label();
-            this.labelV1 = new System.Windows.Forms.Label();
-            this.labelS2 = new System.Windows.Forms.Label();
-            this.labelS1 = new System.Windows.Forms.Label();
-            this.labelH2 = new System.Windows.Forms.Label();
-            this.labelH1 = new System.Windows.Forms.Label();
             this.tabPage2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -405,7 +405,7 @@
             // 
             this.pictureBox2.Location = new System.Drawing.Point(444, 0);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(462, 380);
+            this.pictureBox2.Size = new System.Drawing.Size(468, 400);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
@@ -437,6 +437,66 @@
             this.tabPage1.Size = new System.Drawing.Size(912, 400);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "RGB Filters";
+            // 
+            // labelB2
+            // 
+            this.labelB2.AutoSize = true;
+            this.labelB2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelB2.Location = new System.Drawing.Point(604, 354);
+            this.labelB2.Name = "labelB2";
+            this.labelB2.Size = new System.Drawing.Size(19, 20);
+            this.labelB2.TabIndex = 45;
+            this.labelB2.Text = "0";
+            // 
+            // labelB1
+            // 
+            this.labelB1.AutoSize = true;
+            this.labelB1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelB1.Location = new System.Drawing.Point(604, 301);
+            this.labelB1.Name = "labelB1";
+            this.labelB1.Size = new System.Drawing.Size(19, 20);
+            this.labelB1.TabIndex = 44;
+            this.labelB1.Text = "0";
+            // 
+            // labelG2
+            // 
+            this.labelG2.AutoSize = true;
+            this.labelG2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelG2.Location = new System.Drawing.Point(302, 354);
+            this.labelG2.Name = "labelG2";
+            this.labelG2.Size = new System.Drawing.Size(19, 20);
+            this.labelG2.TabIndex = 43;
+            this.labelG2.Text = "0";
+            // 
+            // labelG1
+            // 
+            this.labelG1.AutoSize = true;
+            this.labelG1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelG1.Location = new System.Drawing.Point(302, 301);
+            this.labelG1.Name = "labelG1";
+            this.labelG1.Size = new System.Drawing.Size(19, 20);
+            this.labelG1.TabIndex = 42;
+            this.labelG1.Text = "0";
+            // 
+            // labelR2
+            // 
+            this.labelR2.AutoSize = true;
+            this.labelR2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelR2.Location = new System.Drawing.Point(6, 354);
+            this.labelR2.Name = "labelR2";
+            this.labelR2.Size = new System.Drawing.Size(19, 20);
+            this.labelR2.TabIndex = 41;
+            this.labelR2.Text = "0";
+            // 
+            // labelR1
+            // 
+            this.labelR1.AutoSize = true;
+            this.labelR1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelR1.Location = new System.Drawing.Point(6, 301);
+            this.labelR1.Name = "labelR1";
+            this.labelR1.Size = new System.Drawing.Size(19, 20);
+            this.labelR1.TabIndex = 40;
+            this.labelR1.Text = "0";
             // 
             // label8
             // 
@@ -595,6 +655,66 @@
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "HSV Filters";
             // 
+            // labelH2
+            // 
+            this.labelH2.AutoSize = true;
+            this.labelH2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelH2.Location = new System.Drawing.Point(6, 355);
+            this.labelH2.Name = "labelH2";
+            this.labelH2.Size = new System.Drawing.Size(19, 20);
+            this.labelH2.TabIndex = 51;
+            this.labelH2.Text = "0";
+            // 
+            // labelH1
+            // 
+            this.labelH1.AutoSize = true;
+            this.labelH1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelH1.Location = new System.Drawing.Point(6, 302);
+            this.labelH1.Name = "labelH1";
+            this.labelH1.Size = new System.Drawing.Size(19, 20);
+            this.labelH1.TabIndex = 50;
+            this.labelH1.Text = "0";
+            // 
+            // labelS2
+            // 
+            this.labelS2.AutoSize = true;
+            this.labelS2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelS2.Location = new System.Drawing.Point(306, 355);
+            this.labelS2.Name = "labelS2";
+            this.labelS2.Size = new System.Drawing.Size(19, 20);
+            this.labelS2.TabIndex = 49;
+            this.labelS2.Text = "0";
+            // 
+            // labelS1
+            // 
+            this.labelS1.AutoSize = true;
+            this.labelS1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelS1.Location = new System.Drawing.Point(306, 302);
+            this.labelS1.Name = "labelS1";
+            this.labelS1.Size = new System.Drawing.Size(19, 20);
+            this.labelS1.TabIndex = 48;
+            this.labelS1.Text = "0";
+            // 
+            // labelV2
+            // 
+            this.labelV2.AutoSize = true;
+            this.labelV2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelV2.Location = new System.Drawing.Point(610, 355);
+            this.labelV2.Name = "labelV2";
+            this.labelV2.Size = new System.Drawing.Size(19, 20);
+            this.labelV2.TabIndex = 47;
+            this.labelV2.Text = "0";
+            // 
+            // labelV1
+            // 
+            this.labelV1.AutoSize = true;
+            this.labelV1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelV1.Location = new System.Drawing.Point(610, 302);
+            this.labelV1.Name = "labelV1";
+            this.labelV1.Size = new System.Drawing.Size(19, 20);
+            this.labelV1.TabIndex = 46;
+            this.labelV1.Text = "0";
+            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -730,7 +850,7 @@
             // groupBoxFilterInfo
             // 
             this.groupBoxFilterInfo.Controls.Add(this.label13);
-            this.groupBoxFilterInfo.Controls.Add(this.textBox3);
+            this.groupBoxFilterInfo.Controls.Add(this.textBoxFilterName);
             this.groupBoxFilterInfo.Location = new System.Drawing.Point(6, 200);
             this.groupBoxFilterInfo.Name = "groupBoxFilterInfo";
             this.groupBoxFilterInfo.Size = new System.Drawing.Size(431, 67);
@@ -748,12 +868,12 @@
             this.label13.TabIndex = 54;
             this.label13.Text = "Введіть назву фільтеру :";
             // 
-            // textBox3
+            // textBoxFilterName
             // 
-            this.textBox3.Location = new System.Drawing.Point(6, 35);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(419, 20);
-            this.textBox3.TabIndex = 53;
+            this.textBoxFilterName.Location = new System.Drawing.Point(6, 35);
+            this.textBoxFilterName.Name = "textBoxFilterName";
+            this.textBoxFilterName.Size = new System.Drawing.Size(419, 20);
+            this.textBoxFilterName.TabIndex = 53;
             // 
             // groupBoxFileInfo
             // 
@@ -808,6 +928,7 @@
             this.buttonObzorFileSave.TabIndex = 48;
             this.buttonObzorFileSave.Text = "Обзор";
             this.buttonObzorFileSave.UseVisualStyleBackColor = true;
+            this.buttonObzorFileSave.Click += new System.EventHandler(this.buttonObzorFileSave_Click);
             // 
             // textBoxFileSave
             // 
@@ -826,6 +947,7 @@
             this.buttonSeveFilter.TabIndex = 35;
             this.buttonSeveFilter.Text = "Save filter";
             this.buttonSeveFilter.UseVisualStyleBackColor = true;
+            this.buttonSeveFilter.Click += new System.EventHandler(this.buttonSeveFilter_Click);
             // 
             // groupBox4
             // 
@@ -876,126 +998,6 @@
             this.pictureBoxResult.Size = new System.Drawing.Size(463, 372);
             this.pictureBoxResult.TabIndex = 0;
             this.pictureBoxResult.TabStop = false;
-            // 
-            // labelR1
-            // 
-            this.labelR1.AutoSize = true;
-            this.labelR1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelR1.Location = new System.Drawing.Point(6, 301);
-            this.labelR1.Name = "labelR1";
-            this.labelR1.Size = new System.Drawing.Size(19, 20);
-            this.labelR1.TabIndex = 40;
-            this.labelR1.Text = "0";
-            // 
-            // labelR2
-            // 
-            this.labelR2.AutoSize = true;
-            this.labelR2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelR2.Location = new System.Drawing.Point(6, 354);
-            this.labelR2.Name = "labelR2";
-            this.labelR2.Size = new System.Drawing.Size(19, 20);
-            this.labelR2.TabIndex = 41;
-            this.labelR2.Text = "0";
-            // 
-            // labelG1
-            // 
-            this.labelG1.AutoSize = true;
-            this.labelG1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelG1.Location = new System.Drawing.Point(302, 301);
-            this.labelG1.Name = "labelG1";
-            this.labelG1.Size = new System.Drawing.Size(19, 20);
-            this.labelG1.TabIndex = 42;
-            this.labelG1.Text = "0";
-            // 
-            // labelG2
-            // 
-            this.labelG2.AutoSize = true;
-            this.labelG2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelG2.Location = new System.Drawing.Point(302, 354);
-            this.labelG2.Name = "labelG2";
-            this.labelG2.Size = new System.Drawing.Size(19, 20);
-            this.labelG2.TabIndex = 43;
-            this.labelG2.Text = "0";
-            // 
-            // labelB2
-            // 
-            this.labelB2.AutoSize = true;
-            this.labelB2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelB2.Location = new System.Drawing.Point(604, 354);
-            this.labelB2.Name = "labelB2";
-            this.labelB2.Size = new System.Drawing.Size(19, 20);
-            this.labelB2.TabIndex = 45;
-            this.labelB2.Text = "0";
-            // 
-            // labelB1
-            // 
-            this.labelB1.AutoSize = true;
-            this.labelB1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelB1.Location = new System.Drawing.Point(604, 301);
-            this.labelB1.Name = "labelB1";
-            this.labelB1.Size = new System.Drawing.Size(19, 20);
-            this.labelB1.TabIndex = 44;
-            this.labelB1.Text = "0";
-            // 
-            // labelV2
-            // 
-            this.labelV2.AutoSize = true;
-            this.labelV2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelV2.Location = new System.Drawing.Point(610, 355);
-            this.labelV2.Name = "labelV2";
-            this.labelV2.Size = new System.Drawing.Size(19, 20);
-            this.labelV2.TabIndex = 47;
-            this.labelV2.Text = "0";
-            // 
-            // labelV1
-            // 
-            this.labelV1.AutoSize = true;
-            this.labelV1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelV1.Location = new System.Drawing.Point(610, 302);
-            this.labelV1.Name = "labelV1";
-            this.labelV1.Size = new System.Drawing.Size(19, 20);
-            this.labelV1.TabIndex = 46;
-            this.labelV1.Text = "0";
-            // 
-            // labelS2
-            // 
-            this.labelS2.AutoSize = true;
-            this.labelS2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelS2.Location = new System.Drawing.Point(306, 355);
-            this.labelS2.Name = "labelS2";
-            this.labelS2.Size = new System.Drawing.Size(19, 20);
-            this.labelS2.TabIndex = 49;
-            this.labelS2.Text = "0";
-            // 
-            // labelS1
-            // 
-            this.labelS1.AutoSize = true;
-            this.labelS1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelS1.Location = new System.Drawing.Point(306, 302);
-            this.labelS1.Name = "labelS1";
-            this.labelS1.Size = new System.Drawing.Size(19, 20);
-            this.labelS1.TabIndex = 48;
-            this.labelS1.Text = "0";
-            // 
-            // labelH2
-            // 
-            this.labelH2.AutoSize = true;
-            this.labelH2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelH2.Location = new System.Drawing.Point(6, 355);
-            this.labelH2.Name = "labelH2";
-            this.labelH2.Size = new System.Drawing.Size(19, 20);
-            this.labelH2.TabIndex = 51;
-            this.labelH2.Text = "0";
-            // 
-            // labelH1
-            // 
-            this.labelH1.AutoSize = true;
-            this.labelH1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelH1.Location = new System.Drawing.Point(6, 302);
-            this.labelH1.Name = "labelH1";
-            this.labelH1.Size = new System.Drawing.Size(19, 20);
-            this.labelH1.TabIndex = 50;
-            this.labelH1.Text = "0";
             // 
             // frmFilters
             // 
@@ -1110,7 +1112,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.GroupBox groupBoxFilterInfo;
         private System.Windows.Forms.Label label13;
-        public System.Windows.Forms.TextBox textBox3;
+        public System.Windows.Forms.TextBox textBoxFilterName;
         private System.Windows.Forms.GroupBox groupBoxFileInfo;
         private System.Windows.Forms.Label labelNewFileName;
         public System.Windows.Forms.TextBox textBoxNewFileName;
