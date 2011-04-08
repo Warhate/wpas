@@ -64,3 +64,5 @@
 8 апреля 2011 г.-[13:35:01]: Started program
 8 апреля 2011 г.-[13:35:23]: Open map:F:\share\competition\fire\WPaS\mainWindow\bin\Debug\maps\orerre.map
 8 апреля 2011 г.-[13:35:34]: Close program
+8 квітня 2011 р.-[15:37:44]: Started program
+8 квітня 2011 р.-[15:37:45]: Close program
