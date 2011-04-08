@@ -79,31 +79,37 @@ namespace Myprojekt
 
             //filter out all but "the color you want"...seems to be 0 to 128 ?
             pictureBox1.Image = Image_result_RGB[0].InRange(new Gray(trackBar2.Value), new Gray(trackBar1.Value)).Bitmap;
+            labelR1.Text = trackBar1.Value.ToString();
         }
 
         private void trackBar2_Scroll(object sender, EventArgs e)
         {
             pictureBox1.Image = Image_result_RGB[0].InRange(new Gray(trackBar2.Value), new Gray(trackBar1.Value)).Bitmap;
+            labelR2.Text = trackBar2.Value.ToString();
         }
 
         private void trackBar3_Scroll(object sender, EventArgs e)
         {
             pictureBox3.Image = Image_result_RGB[1].InRange(new Gray(trackBar4.Value), new Gray(trackBar3.Value)).Bitmap;
+            labelG1.Text = trackBar3.Value.ToString();
         }
 
         private void trackBar4_Scroll(object sender, EventArgs e)
         {
             pictureBox3.Image = Image_result_RGB[1].InRange(new Gray(trackBar4.Value), new Gray(trackBar3.Value)).Bitmap;
+            labelG2.Text = trackBar4.Value.ToString();
         }
 
         private void trackBar5_Scroll(object sender, EventArgs e)
         {
             pictureBox4.Image = Image_result_RGB[2].InRange(new Gray(trackBar6.Value), new Gray(trackBar5.Value)).Bitmap;
+            labelB1.Text = trackBar5.Value.ToString();
         }
 
         private void trackBar6_Scroll(object sender, EventArgs e)
         {
             pictureBox4.Image = Image_result_RGB[2].InRange(new Gray(trackBar6.Value), new Gray(trackBar5.Value)).Bitmap;
+            labelB2.Text = trackBar6.Value.ToString();
         }
 
         private void checkBox2_CheckedChanged(object sender, EventArgs e)
@@ -195,31 +201,37 @@ namespace Myprojekt
         private void trackBar12_Scroll(object sender, EventArgs e)
         {
             pictureBox7.Image = Image_result_HSV[0].InRange(new Gray(trackBar12.Value), new Gray(trackBar11.Value)).Bitmap;
+            labelH1.Text = trackBar12.Value.ToString();
         }
 
         private void trackBar11_Scroll(object sender, EventArgs e)
         {
             pictureBox7.Image = Image_result_HSV[0].InRange(new Gray(trackBar12.Value), new Gray(trackBar11.Value)).Bitmap;
+            labelH2.Text = trackBar11.Value.ToString();
         }
 
         private void trackBar9_Scroll(object sender, EventArgs e)
         {
             pictureBox6.Image = Image_result_HSV[1].InRange(new Gray(trackBar9.Value), new Gray(trackBar10.Value)).Bitmap;
+            labelS1.Text = trackBar9.Value.ToString();
         }
 
         private void trackBar10_Scroll(object sender, EventArgs e)
         {
             pictureBox6.Image = Image_result_HSV[1].InRange(new Gray(trackBar9.Value), new Gray(trackBar10.Value)).Bitmap;
+            labelS2.Text = trackBar10.Value.ToString();
         }
 
         private void trackBar7_Scroll(object sender, EventArgs e)
         {
             pictureBox5.Image = Image_result_HSV[2].InRange(new Gray(trackBar7.Value), new Gray(trackBar8.Value)).Bitmap;
+            labelV1.Text = trackBar7.Value.ToString();
         }
 
         private void trackBar8_Scroll(object sender, EventArgs e)
         {
             pictureBox5.Image = Image_result_HSV[2].InRange(new Gray(trackBar7.Value), new Gray(trackBar8.Value)).Bitmap;
+            labelV2.Text = trackBar8.Value.ToString();
         }
 
         private void checkBox3_CheckedChanged_1(object sender, EventArgs e)
