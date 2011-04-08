@@ -81,8 +81,6 @@
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.label3 = new System.Windows.Forms.Label();
-            this.pictureBoxResult = new System.Windows.Forms.PictureBox();
             this.groupBoxFilterInfo = new System.Windows.Forms.GroupBox();
             this.label13 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -96,6 +94,20 @@
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.checkBoxSaveNewFile = new System.Windows.Forms.CheckBox();
             this.checkBoxSaveTheOpenFile = new System.Windows.Forms.CheckBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.pictureBoxResult = new System.Windows.Forms.PictureBox();
+            this.labelR1 = new System.Windows.Forms.Label();
+            this.labelR2 = new System.Windows.Forms.Label();
+            this.labelG1 = new System.Windows.Forms.Label();
+            this.labelG2 = new System.Windows.Forms.Label();
+            this.labelB2 = new System.Windows.Forms.Label();
+            this.labelB1 = new System.Windows.Forms.Label();
+            this.labelV2 = new System.Windows.Forms.Label();
+            this.labelV1 = new System.Windows.Forms.Label();
+            this.labelS2 = new System.Windows.Forms.Label();
+            this.labelS1 = new System.Windows.Forms.Label();
+            this.labelH2 = new System.Windows.Forms.Label();
+            this.labelH1 = new System.Windows.Forms.Label();
             this.tabPage2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -123,15 +135,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.tabPage3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxResult)).BeginInit();
             this.groupBoxFilterInfo.SuspendLayout();
             this.groupBoxFileInfo.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxResult)).BeginInit();
             this.SuspendLayout();
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(732, 411);
+            this.button2.Location = new System.Drawing.Point(854, 444);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(78, 23);
             this.button2.TabIndex = 29;
@@ -152,7 +164,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(790, 367);
+            this.tabPage2.Size = new System.Drawing.Size(912, 400);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Вхідні дані";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -172,9 +184,9 @@
             this.groupBox3.Controls.Add(this.CheckVChannel);
             this.groupBox3.Controls.Add(this.CheckSChannel);
             this.groupBox3.Controls.Add(this.CheckHChannel);
-            this.groupBox3.Location = new System.Drawing.Point(198, 245);
+            this.groupBox3.Location = new System.Drawing.Point(223, 245);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(197, 87);
+            this.groupBox3.Size = new System.Drawing.Size(215, 87);
             this.groupBox3.TabIndex = 45;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "HSV Channels";
@@ -216,7 +228,7 @@
             this.groupBox2.Controls.Add(this.CheckRChannel);
             this.groupBox2.Location = new System.Drawing.Point(6, 245);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(186, 87);
+            this.groupBox2.Size = new System.Drawing.Size(211, 87);
             this.groupBox2.TabIndex = 44;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "RGB Channels";
@@ -264,7 +276,7 @@
             this.groupBox1.Controls.Add(this.checkBox1);
             this.groupBox1.Location = new System.Drawing.Point(6, 57);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(389, 182);
+            this.groupBox1.Size = new System.Drawing.Size(432, 182);
             this.groupBox1.TabIndex = 43;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Опції";
@@ -291,7 +303,7 @@
             // 
             this.buttonOpen1.Location = new System.Drawing.Point(308, 110);
             this.buttonOpen1.Name = "buttonOpen1";
-            this.buttonOpen1.Size = new System.Drawing.Size(79, 22);
+            this.buttonOpen1.Size = new System.Drawing.Size(118, 22);
             this.buttonOpen1.TabIndex = 45;
             this.buttonOpen1.Text = "Обзор";
             this.buttonOpen1.UseVisualStyleBackColor = true;
@@ -313,7 +325,7 @@
             this.button4.Enabled = false;
             this.button4.Location = new System.Drawing.Point(229, 154);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(158, 22);
+            this.button4.Size = new System.Drawing.Size(197, 22);
             this.button4.TabIndex = 41;
             this.button4.Text = "Накласти вибраний фільтер";
             this.button4.UseVisualStyleBackColor = true;
@@ -383,7 +395,7 @@
             // 
             this.button5.Location = new System.Drawing.Point(316, 30);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(79, 20);
+            this.button5.Size = new System.Drawing.Size(116, 20);
             this.button5.TabIndex = 40;
             this.button5.Text = "Обзор";
             this.button5.UseVisualStyleBackColor = true;
@@ -391,9 +403,9 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(401, 0);
+            this.pictureBox2.Location = new System.Drawing.Point(444, 0);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(389, 367);
+            this.pictureBox2.Size = new System.Drawing.Size(462, 380);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
@@ -401,6 +413,12 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.Gainsboro;
+            this.tabPage1.Controls.Add(this.labelB2);
+            this.tabPage1.Controls.Add(this.labelB1);
+            this.tabPage1.Controls.Add(this.labelG2);
+            this.tabPage1.Controls.Add(this.labelG1);
+            this.tabPage1.Controls.Add(this.labelR2);
+            this.tabPage1.Controls.Add(this.labelR1);
             this.tabPage1.Controls.Add(this.label8);
             this.tabPage1.Controls.Add(this.label7);
             this.tabPage1.Controls.Add(this.label5);
@@ -416,44 +434,44 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(790, 367);
+            this.tabPage1.Size = new System.Drawing.Size(912, 400);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "RGB Filters";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label8.Location = new System.Drawing.Point(624, 6);
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label8.Location = new System.Drawing.Point(719, 6);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(80, 20);
+            this.label8.Size = new System.Drawing.Size(89, 20);
             this.label8.TabIndex = 39;
             this.label8.Text = "B channel";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label7.Location = new System.Drawing.Point(351, 6);
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label7.Location = new System.Drawing.Point(393, 6);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(82, 20);
+            this.label7.Size = new System.Drawing.Size(91, 20);
             this.label7.TabIndex = 38;
             this.label7.Text = "G channel";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.Location = new System.Drawing.Point(85, 6);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label5.Location = new System.Drawing.Point(107, 6);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(81, 20);
+            this.label5.Size = new System.Drawing.Size(90, 20);
             this.label5.TabIndex = 37;
             this.label5.Text = "R channel";
             // 
             // trackBar5
             // 
             this.trackBar5.Enabled = false;
-            this.trackBar5.Location = new System.Drawing.Point(532, 271);
+            this.trackBar5.Location = new System.Drawing.Point(639, 296);
             this.trackBar5.Maximum = 255;
             this.trackBar5.Name = "trackBar5";
             this.trackBar5.Size = new System.Drawing.Size(262, 45);
@@ -463,7 +481,7 @@
             // trackBar6
             // 
             this.trackBar6.Enabled = false;
-            this.trackBar6.Location = new System.Drawing.Point(532, 322);
+            this.trackBar6.Location = new System.Drawing.Point(639, 347);
             this.trackBar6.Maximum = 255;
             this.trackBar6.Name = "trackBar6";
             this.trackBar6.Size = new System.Drawing.Size(262, 45);
@@ -473,7 +491,7 @@
             // trackBar3
             // 
             this.trackBar3.Enabled = false;
-            this.trackBar3.Location = new System.Drawing.Point(264, 271);
+            this.trackBar3.Location = new System.Drawing.Point(336, 296);
             this.trackBar3.Maximum = 255;
             this.trackBar3.Name = "trackBar3";
             this.trackBar3.Size = new System.Drawing.Size(262, 45);
@@ -483,7 +501,7 @@
             // trackBar4
             // 
             this.trackBar4.Enabled = false;
-            this.trackBar4.Location = new System.Drawing.Point(264, 322);
+            this.trackBar4.Location = new System.Drawing.Point(336, 347);
             this.trackBar4.Maximum = 255;
             this.trackBar4.Name = "trackBar4";
             this.trackBar4.Size = new System.Drawing.Size(262, 45);
@@ -493,7 +511,7 @@
             // trackBar2
             // 
             this.trackBar2.Enabled = false;
-            this.trackBar2.Location = new System.Drawing.Point(0, 322);
+            this.trackBar2.Location = new System.Drawing.Point(38, 347);
             this.trackBar2.Maximum = 255;
             this.trackBar2.Name = "trackBar2";
             this.trackBar2.Size = new System.Drawing.Size(258, 45);
@@ -503,7 +521,7 @@
             // trackBar1
             // 
             this.trackBar1.Enabled = false;
-            this.trackBar1.Location = new System.Drawing.Point(0, 271);
+            this.trackBar1.Location = new System.Drawing.Point(38, 296);
             this.trackBar1.Maximum = 255;
             this.trackBar1.Name = "trackBar1";
             this.trackBar1.Size = new System.Drawing.Size(258, 45);
@@ -512,27 +530,27 @@
             // 
             // pictureBox4
             // 
-            this.pictureBox4.Location = new System.Drawing.Point(532, 29);
+            this.pictureBox4.Location = new System.Drawing.Point(608, 29);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(258, 236);
+            this.pictureBox4.Size = new System.Drawing.Size(293, 261);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 30;
             this.pictureBox4.TabStop = false;
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Location = new System.Drawing.Point(264, 29);
+            this.pictureBox3.Location = new System.Drawing.Point(306, 29);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(262, 236);
+            this.pictureBox3.Size = new System.Drawing.Size(292, 261);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 1;
             this.pictureBox3.TabStop = false;
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(0, 29);
+            this.pictureBox1.Location = new System.Drawing.Point(10, 29);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(258, 236);
+            this.pictureBox1.Size = new System.Drawing.Size(286, 261);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -546,12 +564,18 @@
             this.tabControl1.Location = new System.Drawing.Point(12, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(798, 393);
+            this.tabControl1.Size = new System.Drawing.Size(920, 426);
             this.tabControl1.TabIndex = 3;
             // 
             // tabPage4
             // 
             this.tabPage4.BackColor = System.Drawing.Color.Gainsboro;
+            this.tabPage4.Controls.Add(this.labelH2);
+            this.tabPage4.Controls.Add(this.labelH1);
+            this.tabPage4.Controls.Add(this.labelS2);
+            this.tabPage4.Controls.Add(this.labelS1);
+            this.tabPage4.Controls.Add(this.labelV2);
+            this.tabPage4.Controls.Add(this.labelV1);
             this.tabPage4.Controls.Add(this.label11);
             this.tabPage4.Controls.Add(this.label10);
             this.tabPage4.Controls.Add(this.label9);
@@ -567,44 +591,44 @@
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(790, 367);
+            this.tabPage4.Size = new System.Drawing.Size(912, 400);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "HSV Filters";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label11.Location = new System.Drawing.Point(617, 5);
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label11.Location = new System.Drawing.Point(717, 5);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(80, 20);
+            this.label11.Size = new System.Drawing.Size(89, 20);
             this.label11.TabIndex = 40;
             this.label11.Text = "V channel";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label10.Location = new System.Drawing.Point(355, 5);
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label10.Location = new System.Drawing.Point(413, 5);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(80, 20);
+            this.label10.Size = new System.Drawing.Size(89, 20);
             this.label10.TabIndex = 39;
             this.label10.Text = "S channel";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label9.Location = new System.Drawing.Point(88, 5);
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label9.Location = new System.Drawing.Point(102, 5);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(81, 20);
+            this.label9.Size = new System.Drawing.Size(90, 20);
             this.label9.TabIndex = 38;
             this.label9.Text = "H channel";
             // 
             // trackBar7
             // 
             this.trackBar7.Enabled = false;
-            this.trackBar7.Location = new System.Drawing.Point(532, 270);
+            this.trackBar7.Location = new System.Drawing.Point(644, 296);
             this.trackBar7.Maximum = 255;
             this.trackBar7.Name = "trackBar7";
             this.trackBar7.Size = new System.Drawing.Size(262, 45);
@@ -614,7 +638,7 @@
             // trackBar8
             // 
             this.trackBar8.Enabled = false;
-            this.trackBar8.Location = new System.Drawing.Point(532, 321);
+            this.trackBar8.Location = new System.Drawing.Point(644, 347);
             this.trackBar8.Maximum = 255;
             this.trackBar8.Name = "trackBar8";
             this.trackBar8.Size = new System.Drawing.Size(262, 45);
@@ -624,7 +648,7 @@
             // trackBar9
             // 
             this.trackBar9.Enabled = false;
-            this.trackBar9.Location = new System.Drawing.Point(264, 270);
+            this.trackBar9.Location = new System.Drawing.Point(342, 296);
             this.trackBar9.Maximum = 255;
             this.trackBar9.Name = "trackBar9";
             this.trackBar9.Size = new System.Drawing.Size(262, 45);
@@ -634,7 +658,7 @@
             // trackBar10
             // 
             this.trackBar10.Enabled = false;
-            this.trackBar10.Location = new System.Drawing.Point(264, 321);
+            this.trackBar10.Location = new System.Drawing.Point(342, 347);
             this.trackBar10.Maximum = 255;
             this.trackBar10.Name = "trackBar10";
             this.trackBar10.Size = new System.Drawing.Size(262, 45);
@@ -644,7 +668,7 @@
             // trackBar11
             // 
             this.trackBar11.Enabled = false;
-            this.trackBar11.Location = new System.Drawing.Point(0, 321);
+            this.trackBar11.Location = new System.Drawing.Point(42, 347);
             this.trackBar11.Maximum = 255;
             this.trackBar11.Name = "trackBar11";
             this.trackBar11.Size = new System.Drawing.Size(258, 45);
@@ -654,7 +678,7 @@
             // trackBar12
             // 
             this.trackBar12.Enabled = false;
-            this.trackBar12.Location = new System.Drawing.Point(0, 270);
+            this.trackBar12.Location = new System.Drawing.Point(42, 296);
             this.trackBar12.Maximum = 255;
             this.trackBar12.Name = "trackBar12";
             this.trackBar12.Size = new System.Drawing.Size(258, 45);
@@ -663,27 +687,27 @@
             // 
             // pictureBox5
             // 
-            this.pictureBox5.Location = new System.Drawing.Point(532, 28);
+            this.pictureBox5.Location = new System.Drawing.Point(614, 28);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(258, 236);
+            this.pictureBox5.Size = new System.Drawing.Size(292, 262);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 30;
             this.pictureBox5.TabStop = false;
             // 
             // pictureBox6
             // 
-            this.pictureBox6.Location = new System.Drawing.Point(264, 28);
+            this.pictureBox6.Location = new System.Drawing.Point(310, 28);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(262, 236);
+            this.pictureBox6.Size = new System.Drawing.Size(294, 262);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox6.TabIndex = 1;
             this.pictureBox6.TabStop = false;
             // 
             // pictureBox7
             // 
-            this.pictureBox7.Location = new System.Drawing.Point(0, 28);
+            this.pictureBox7.Location = new System.Drawing.Point(10, 28);
             this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(258, 236);
+            this.pictureBox7.Size = new System.Drawing.Size(290, 262);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox7.TabIndex = 0;
             this.pictureBox7.TabStop = false;
@@ -698,27 +722,10 @@
             this.tabPage3.Controls.Add(this.pictureBoxResult);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(790, 367);
+            this.tabPage3.Size = new System.Drawing.Size(912, 400);
             this.tabPage3.TabIndex = 4;
             this.tabPage3.Text = "After treatment";
             this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(395, 9);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(280, 13);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Зображення після застосування загального фільтру :";
-            // 
-            // pictureBoxResult
-            // 
-            this.pictureBoxResult.Location = new System.Drawing.Point(398, 25);
-            this.pictureBoxResult.Name = "pictureBoxResult";
-            this.pictureBoxResult.Size = new System.Drawing.Size(389, 321);
-            this.pictureBoxResult.TabIndex = 0;
-            this.pictureBoxResult.TabStop = false;
             // 
             // groupBoxFilterInfo
             // 
@@ -726,7 +733,7 @@
             this.groupBoxFilterInfo.Controls.Add(this.textBox3);
             this.groupBoxFilterInfo.Location = new System.Drawing.Point(6, 200);
             this.groupBoxFilterInfo.Name = "groupBoxFilterInfo";
-            this.groupBoxFilterInfo.Size = new System.Drawing.Size(386, 67);
+            this.groupBoxFilterInfo.Size = new System.Drawing.Size(431, 67);
             this.groupBoxFilterInfo.TabIndex = 37;
             this.groupBoxFilterInfo.TabStop = false;
             this.groupBoxFilterInfo.Text = "Дані про фільтер :";
@@ -745,7 +752,7 @@
             // 
             this.textBox3.Location = new System.Drawing.Point(6, 35);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(374, 20);
+            this.textBox3.Size = new System.Drawing.Size(419, 20);
             this.textBox3.TabIndex = 53;
             // 
             // groupBoxFileInfo
@@ -757,7 +764,7 @@
             this.groupBoxFileInfo.Controls.Add(this.textBoxFileSave);
             this.groupBoxFileInfo.Location = new System.Drawing.Point(6, 81);
             this.groupBoxFileInfo.Name = "groupBoxFileInfo";
-            this.groupBoxFileInfo.Size = new System.Drawing.Size(386, 113);
+            this.groupBoxFileInfo.Size = new System.Drawing.Size(431, 113);
             this.groupBoxFileInfo.TabIndex = 36;
             this.groupBoxFileInfo.TabStop = false;
             this.groupBoxFileInfo.Text = "Дані про файл в який буде збережено фільтер :";
@@ -778,7 +785,7 @@
             this.textBoxNewFileName.Enabled = false;
             this.textBoxNewFileName.Location = new System.Drawing.Point(6, 82);
             this.textBoxNewFileName.Name = "textBoxNewFileName";
-            this.textBoxNewFileName.Size = new System.Drawing.Size(374, 20);
+            this.textBoxNewFileName.Size = new System.Drawing.Size(419, 20);
             this.textBoxNewFileName.TabIndex = 51;
             // 
             // labelFileSave
@@ -795,9 +802,9 @@
             // buttonObzorFileSave
             // 
             this.buttonObzorFileSave.Enabled = false;
-            this.buttonObzorFileSave.Location = new System.Drawing.Point(301, 35);
+            this.buttonObzorFileSave.Location = new System.Drawing.Point(323, 35);
             this.buttonObzorFileSave.Name = "buttonObzorFileSave";
-            this.buttonObzorFileSave.Size = new System.Drawing.Size(79, 22);
+            this.buttonObzorFileSave.Size = new System.Drawing.Size(102, 22);
             this.buttonObzorFileSave.TabIndex = 48;
             this.buttonObzorFileSave.Text = "Обзор";
             this.buttonObzorFileSave.UseVisualStyleBackColor = true;
@@ -807,13 +814,13 @@
             this.textBoxFileSave.Enabled = false;
             this.textBoxFileSave.Location = new System.Drawing.Point(6, 37);
             this.textBoxFileSave.Name = "textBoxFileSave";
-            this.textBoxFileSave.Size = new System.Drawing.Size(287, 20);
+            this.textBoxFileSave.Size = new System.Drawing.Size(311, 20);
             this.textBoxFileSave.TabIndex = 49;
             // 
             // buttonSeveFilter
             // 
             this.buttonSeveFilter.Enabled = false;
-            this.buttonSeveFilter.Location = new System.Drawing.Point(197, 273);
+            this.buttonSeveFilter.Location = new System.Drawing.Point(242, 273);
             this.buttonSeveFilter.Name = "buttonSeveFilter";
             this.buttonSeveFilter.Size = new System.Drawing.Size(195, 23);
             this.buttonSeveFilter.TabIndex = 35;
@@ -826,7 +833,7 @@
             this.groupBox4.Controls.Add(this.checkBoxSaveTheOpenFile);
             this.groupBox4.Location = new System.Drawing.Point(6, 9);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(386, 66);
+            this.groupBox4.Size = new System.Drawing.Size(431, 66);
             this.groupBox4.TabIndex = 34;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Опції збереження фільтрів :";
@@ -853,15 +860,152 @@
             this.checkBoxSaveTheOpenFile.UseVisualStyleBackColor = true;
             this.checkBoxSaveTheOpenFile.CheckedChanged += new System.EventHandler(this.checkBoxSaveTheOpenFile_CheckedChanged);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(443, 9);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(280, 13);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Зображення після застосування загального фільтру :";
+            // 
+            // pictureBoxResult
+            // 
+            this.pictureBoxResult.Location = new System.Drawing.Point(446, 25);
+            this.pictureBoxResult.Name = "pictureBoxResult";
+            this.pictureBoxResult.Size = new System.Drawing.Size(463, 372);
+            this.pictureBoxResult.TabIndex = 0;
+            this.pictureBoxResult.TabStop = false;
+            // 
+            // labelR1
+            // 
+            this.labelR1.AutoSize = true;
+            this.labelR1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelR1.Location = new System.Drawing.Point(6, 301);
+            this.labelR1.Name = "labelR1";
+            this.labelR1.Size = new System.Drawing.Size(19, 20);
+            this.labelR1.TabIndex = 40;
+            this.labelR1.Text = "0";
+            // 
+            // labelR2
+            // 
+            this.labelR2.AutoSize = true;
+            this.labelR2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelR2.Location = new System.Drawing.Point(6, 354);
+            this.labelR2.Name = "labelR2";
+            this.labelR2.Size = new System.Drawing.Size(19, 20);
+            this.labelR2.TabIndex = 41;
+            this.labelR2.Text = "0";
+            // 
+            // labelG1
+            // 
+            this.labelG1.AutoSize = true;
+            this.labelG1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelG1.Location = new System.Drawing.Point(302, 301);
+            this.labelG1.Name = "labelG1";
+            this.labelG1.Size = new System.Drawing.Size(19, 20);
+            this.labelG1.TabIndex = 42;
+            this.labelG1.Text = "0";
+            // 
+            // labelG2
+            // 
+            this.labelG2.AutoSize = true;
+            this.labelG2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelG2.Location = new System.Drawing.Point(302, 354);
+            this.labelG2.Name = "labelG2";
+            this.labelG2.Size = new System.Drawing.Size(19, 20);
+            this.labelG2.TabIndex = 43;
+            this.labelG2.Text = "0";
+            // 
+            // labelB2
+            // 
+            this.labelB2.AutoSize = true;
+            this.labelB2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelB2.Location = new System.Drawing.Point(604, 354);
+            this.labelB2.Name = "labelB2";
+            this.labelB2.Size = new System.Drawing.Size(19, 20);
+            this.labelB2.TabIndex = 45;
+            this.labelB2.Text = "0";
+            // 
+            // labelB1
+            // 
+            this.labelB1.AutoSize = true;
+            this.labelB1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelB1.Location = new System.Drawing.Point(604, 301);
+            this.labelB1.Name = "labelB1";
+            this.labelB1.Size = new System.Drawing.Size(19, 20);
+            this.labelB1.TabIndex = 44;
+            this.labelB1.Text = "0";
+            // 
+            // labelV2
+            // 
+            this.labelV2.AutoSize = true;
+            this.labelV2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelV2.Location = new System.Drawing.Point(610, 355);
+            this.labelV2.Name = "labelV2";
+            this.labelV2.Size = new System.Drawing.Size(19, 20);
+            this.labelV2.TabIndex = 47;
+            this.labelV2.Text = "0";
+            // 
+            // labelV1
+            // 
+            this.labelV1.AutoSize = true;
+            this.labelV1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelV1.Location = new System.Drawing.Point(610, 302);
+            this.labelV1.Name = "labelV1";
+            this.labelV1.Size = new System.Drawing.Size(19, 20);
+            this.labelV1.TabIndex = 46;
+            this.labelV1.Text = "0";
+            // 
+            // labelS2
+            // 
+            this.labelS2.AutoSize = true;
+            this.labelS2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelS2.Location = new System.Drawing.Point(306, 355);
+            this.labelS2.Name = "labelS2";
+            this.labelS2.Size = new System.Drawing.Size(19, 20);
+            this.labelS2.TabIndex = 49;
+            this.labelS2.Text = "0";
+            // 
+            // labelS1
+            // 
+            this.labelS1.AutoSize = true;
+            this.labelS1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelS1.Location = new System.Drawing.Point(306, 302);
+            this.labelS1.Name = "labelS1";
+            this.labelS1.Size = new System.Drawing.Size(19, 20);
+            this.labelS1.TabIndex = 48;
+            this.labelS1.Text = "0";
+            // 
+            // labelH2
+            // 
+            this.labelH2.AutoSize = true;
+            this.labelH2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelH2.Location = new System.Drawing.Point(6, 355);
+            this.labelH2.Name = "labelH2";
+            this.labelH2.Size = new System.Drawing.Size(19, 20);
+            this.labelH2.TabIndex = 51;
+            this.labelH2.Text = "0";
+            // 
+            // labelH1
+            // 
+            this.labelH1.AutoSize = true;
+            this.labelH1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelH1.Location = new System.Drawing.Point(6, 302);
+            this.labelH1.Name = "labelH1";
+            this.labelH1.Size = new System.Drawing.Size(19, 20);
+            this.labelH1.TabIndex = 50;
+            this.labelH1.Text = "0";
+            // 
             // frmFilters
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(822, 438);
+            this.ClientSize = new System.Drawing.Size(945, 479);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.tabControl1);
             this.Name = "frmFilters";
-            this.Text = "Filters";
+            this.Text = "0";
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
@@ -896,13 +1040,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxResult)).EndInit();
             this.groupBoxFilterInfo.ResumeLayout(false);
             this.groupBoxFilterInfo.PerformLayout();
             this.groupBoxFileInfo.ResumeLayout(false);
             this.groupBoxFileInfo.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxResult)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -977,6 +1121,18 @@
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.CheckBox checkBoxSaveNewFile;
         private System.Windows.Forms.CheckBox checkBoxSaveTheOpenFile;
+        private System.Windows.Forms.Label labelB2;
+        private System.Windows.Forms.Label labelB1;
+        private System.Windows.Forms.Label labelG2;
+        private System.Windows.Forms.Label labelG1;
+        private System.Windows.Forms.Label labelR2;
+        private System.Windows.Forms.Label labelR1;
+        private System.Windows.Forms.Label labelH2;
+        private System.Windows.Forms.Label labelH1;
+        private System.Windows.Forms.Label labelS2;
+        private System.Windows.Forms.Label labelS1;
+        private System.Windows.Forms.Label labelV2;
+        private System.Windows.Forms.Label labelV1;
     }
 }
 
