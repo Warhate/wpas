@@ -17,7 +17,6 @@ namespace Myprojekt
 
         // имя файла для сохранения настроек
         private String m_settingsFilename = "wpasSettings.xml";
-
         // адрес сервера для получения данных
         private String m_serverAddress;
         // частота обновления данных
