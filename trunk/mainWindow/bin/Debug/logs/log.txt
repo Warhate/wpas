@@ -55,3 +55,12 @@
 6 квітня 2011 р.-[13:10:48]: Map save
 6 квітня 2011 р.-[13:10:50]: Close program
 6 квітня 2011 р.-[13:10:55]: Open map:D:\Project\Layout\Layout\Layout\bin\Debug\maps\colorado.map
+8 апреля 2011 г.-[13:31:46]: Started program
+8 апреля 2011 г.-[13:31:48]: Close program
+8 апреля 2011 г.-[13:31:50]: Started program
+8 апреля 2011 г.-[13:31:52]: Close program
+8 апреля 2011 г.-[13:31:57]: Started program
+8 апреля 2011 г.-[13:32:00]: Close program
+8 апреля 2011 г.-[13:35:01]: Started program
+8 апреля 2011 г.-[13:35:23]: Open map:F:\share\competition\fire\WPaS\mainWindow\bin\Debug\maps\orerre.map
+8 апреля 2011 г.-[13:35:34]: Close program

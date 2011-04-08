@@ -62,6 +62,7 @@
             this.bWCalcute = new System.ComponentModel.BackgroundWorker();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.tmAskServ = new System.Windows.Forms.Timer(this.components);
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -145,12 +146,14 @@
             this.startEmulationToolStripMenuItem.Name = "startEmulationToolStripMenuItem";
             this.startEmulationToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.startEmulationToolStripMenuItem.Text = "Start emulation";
+            this.startEmulationToolStripMenuItem.Click += new System.EventHandler(this.startEmulationToolStripMenuItem_Click);
             // 
             // stopEmulationToolStripMenuItem
             // 
             this.stopEmulationToolStripMenuItem.Name = "stopEmulationToolStripMenuItem";
             this.stopEmulationToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.stopEmulationToolStripMenuItem.Text = "Stop emulation";
+            this.stopEmulationToolStripMenuItem.Click += new System.EventHandler(this.stopEmulationToolStripMenuItem_Click);
             // 
             // mapsToolStripMenuItem
             // 
@@ -380,6 +383,11 @@
             this.splitContainer1.SplitterWidth = 5;
             this.splitContainer1.TabIndex = 15;
             // 
+            // tmAskServ
+            // 
+            this.tmAskServ.Interval = 1000;
+            this.tmAskServ.Tick += new System.EventHandler(this.tmAskServ_Tick);
+            // 
             // frmMainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -450,5 +458,6 @@
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.SplitContainer splitContainer1;
+        public System.Windows.Forms.Timer tmAskServ;
     }
 }

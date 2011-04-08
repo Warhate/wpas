@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using Layout;
+using System.Net.Sockets;
+using System.Threading;
+using System.Net;
 
 namespace Myprojekt
 {
@@ -259,5 +262,36 @@ namespace Myprojekt
         {
             settingsForm.ShowDialog();
         }
+
+        private void startEmulationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            tmAskServ.Enabled = true;
+        }
+
+        private void stopEmulationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            tmAskServ.Enabled = false;
+        }
+
+        private void tmAskServ_Tick(object sender, EventArgs e)
+        {
+            TcpClient client = new TcpClient();
+
+            IPEndPoint serverEndPoint = new IPEndPoint(IPAddress.Parse(settingsForm.appSettings.serverAddress), 3000);
+
+            client.Connect(serverEndPoint);
+
+            NetworkStream clientStream = client.GetStream();
+
+            ASCIIEncoding encoder = new ASCIIEncoding();
+            byte[] buffer = encoder.GetBytes("Hello Server!");
+
+            clientStream.Write(buffer, 0, buffer.Length);
+            clientStream.Flush();
+
+            tmAskServ.Interval = settingsForm.appSettings.updateRate * 60000;
+        }
+
+
     }
 }
