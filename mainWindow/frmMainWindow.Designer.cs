@@ -83,8 +83,7 @@
             this.filterToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1447, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1085, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -97,37 +96,37 @@
             this.toolStripMenuItem1,
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(44, 24);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(35, 20);
             this.fileToolStripMenuItem.Text = "File";
             // 
             // createProjectToolStripMenuItem
             // 
             this.createProjectToolStripMenuItem.Name = "createProjectToolStripMenuItem";
-            this.createProjectToolStripMenuItem.Size = new System.Drawing.Size(172, 24);
+            this.createProjectToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
             this.createProjectToolStripMenuItem.Text = "Create project";
             // 
             // openProjeToolStripMenuItem
             // 
             this.openProjeToolStripMenuItem.Name = "openProjeToolStripMenuItem";
-            this.openProjeToolStripMenuItem.Size = new System.Drawing.Size(172, 24);
+            this.openProjeToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
             this.openProjeToolStripMenuItem.Text = "Open project";
             // 
             // settingsToolStripMenuItem
             // 
             this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
-            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(172, 24);
+            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
             this.settingsToolStripMenuItem.Text = "Settings";
             this.settingsToolStripMenuItem.Click += new System.EventHandler(this.settingsToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(169, 6);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(152, 6);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(172, 24);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -137,21 +136,21 @@
             this.startEmulationToolStripMenuItem,
             this.stopEmulationToolStripMenuItem});
             this.fireSimulationToolStripMenuItem.Name = "fireSimulationToolStripMenuItem";
-            this.fireSimulationToolStripMenuItem.Size = new System.Drawing.Size(92, 24);
+            this.fireSimulationToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
             this.fireSimulationToolStripMenuItem.Text = "Eimulation";
             this.fireSimulationToolStripMenuItem.Click += new System.EventHandler(this.fireSimulationToolStripMenuItem_Click);
             // 
             // startEmulationToolStripMenuItem
             // 
             this.startEmulationToolStripMenuItem.Name = "startEmulationToolStripMenuItem";
-            this.startEmulationToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.startEmulationToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
             this.startEmulationToolStripMenuItem.Text = "Start emulation";
             this.startEmulationToolStripMenuItem.Click += new System.EventHandler(this.startEmulationToolStripMenuItem_Click);
             // 
             // stopEmulationToolStripMenuItem
             // 
             this.stopEmulationToolStripMenuItem.Name = "stopEmulationToolStripMenuItem";
-            this.stopEmulationToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.stopEmulationToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
             this.stopEmulationToolStripMenuItem.Text = "Stop emulation";
             this.stopEmulationToolStripMenuItem.Click += new System.EventHandler(this.stopEmulationToolStripMenuItem_Click);
             // 
@@ -161,20 +160,20 @@
             this.createMapToolStripMenuItem,
             this.openMapToolStripMenuItem});
             this.mapsToolStripMenuItem.Name = "mapsToolStripMenuItem";
-            this.mapsToolStripMenuItem.Size = new System.Drawing.Size(57, 24);
+            this.mapsToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.mapsToolStripMenuItem.Text = "Maps";
             // 
             // createMapToolStripMenuItem
             // 
             this.createMapToolStripMenuItem.Name = "createMapToolStripMenuItem";
-            this.createMapToolStripMenuItem.Size = new System.Drawing.Size(155, 24);
+            this.createMapToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.createMapToolStripMenuItem.Text = "Create map";
             this.createMapToolStripMenuItem.Click += new System.EventHandler(this.createMapToolStripMenuItem_Click);
             // 
             // openMapToolStripMenuItem
             // 
             this.openMapToolStripMenuItem.Name = "openMapToolStripMenuItem";
-            this.openMapToolStripMenuItem.Size = new System.Drawing.Size(155, 24);
+            this.openMapToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.openMapToolStripMenuItem.Text = "Open map";
             this.openMapToolStripMenuItem.Click += new System.EventHandler(this.openMapToolStripMenuItem_Click);
             // 
@@ -184,20 +183,20 @@
             this.createFiltersToolStripMenuItem,
             this.openFiltersToolStripMenuItem});
             this.filterToolStripMenuItem.Name = "filterToolStripMenuItem";
-            this.filterToolStripMenuItem.Size = new System.Drawing.Size(54, 24);
+            this.filterToolStripMenuItem.Size = new System.Drawing.Size(43, 20);
             this.filterToolStripMenuItem.Text = "Filter";
             // 
             // createFiltersToolStripMenuItem
             // 
             this.createFiltersToolStripMenuItem.Name = "createFiltersToolStripMenuItem";
-            this.createFiltersToolStripMenuItem.Size = new System.Drawing.Size(162, 24);
+            this.createFiltersToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
             this.createFiltersToolStripMenuItem.Text = "Create filters";
             this.createFiltersToolStripMenuItem.Click += new System.EventHandler(this.createFiltersToolStripMenuItem_Click);
             // 
             // openFiltersToolStripMenuItem
             // 
             this.openFiltersToolStripMenuItem.Name = "openFiltersToolStripMenuItem";
-            this.openFiltersToolStripMenuItem.Size = new System.Drawing.Size(162, 24);
+            this.openFiltersToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
             this.openFiltersToolStripMenuItem.Text = "Open filters";
             // 
             // panel1
@@ -206,9 +205,8 @@
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1366, 756);
+            this.panel1.Size = new System.Drawing.Size(1024, 612);
             this.panel1.TabIndex = 13;
             this.panel1.Scroll += new System.Windows.Forms.ScrollEventHandler(this.panel1_Scroll);
             // 
@@ -217,8 +215,7 @@
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.BackgroundImage = global::Myprojekt.Properties.Resources.map_pripyat;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureBox1.Location = new System.Drawing.Point(-29, 4);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(3516, 3083);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -237,19 +234,17 @@
             this.panel2.Controls.Add(this.btnOpenMap);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(76, 756);
+            this.panel2.Size = new System.Drawing.Size(57, 612);
             this.panel2.TabIndex = 2;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // txtBlockSize
             // 
             this.txtBlockSize.Font = new System.Drawing.Font("Calibri", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.txtBlockSize.Location = new System.Drawing.Point(7, 347);
-            this.txtBlockSize.Margin = new System.Windows.Forms.Padding(4);
+            this.txtBlockSize.Location = new System.Drawing.Point(5, 282);
             this.txtBlockSize.Name = "txtBlockSize";
-            this.txtBlockSize.Size = new System.Drawing.Size(63, 58);
+            this.txtBlockSize.Size = new System.Drawing.Size(48, 48);
             this.txtBlockSize.TabIndex = 6;
             this.toolTip1.SetToolTip(this.txtBlockSize, "Розмір блоку розмітки");
             // 
@@ -257,10 +252,9 @@
             // 
             this.btnDrawPolygon.BackgroundImage = global::Myprojekt.Properties.Resources._1301475484_draw_polygon_curves;
             this.btnDrawPolygon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnDrawPolygon.Location = new System.Drawing.Point(7, 281);
-            this.btnDrawPolygon.Margin = new System.Windows.Forms.Padding(4);
+            this.btnDrawPolygon.Location = new System.Drawing.Point(5, 228);
             this.btnDrawPolygon.Name = "btnDrawPolygon";
-            this.btnDrawPolygon.Size = new System.Drawing.Size(64, 59);
+            this.btnDrawPolygon.Size = new System.Drawing.Size(48, 48);
             this.btnDrawPolygon.TabIndex = 5;
             this.toolTip1.SetToolTip(this.btnDrawPolygon, "Показати особливі зони мапи");
             this.btnDrawPolygon.UseVisualStyleBackColor = true;
@@ -270,10 +264,9 @@
             // 
             this.btnCalcute.BackgroundImage = global::Myprojekt.Properties.Resources._1301423055_Maps;
             this.btnCalcute.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnCalcute.Location = new System.Drawing.Point(7, 214);
-            this.btnCalcute.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCalcute.Location = new System.Drawing.Point(5, 174);
             this.btnCalcute.Name = "btnCalcute";
-            this.btnCalcute.Size = new System.Drawing.Size(64, 59);
+            this.btnCalcute.Size = new System.Drawing.Size(48, 48);
             this.btnCalcute.TabIndex = 4;
             this.toolTip1.SetToolTip(this.btnCalcute, "Розрахувати небезпеку зон мапи");
             this.btnCalcute.UseVisualStyleBackColor = true;
@@ -283,10 +276,9 @@
             // 
             this.buttonDrawGrid.BackgroundImage = global::Myprojekt.Properties.Resources._1301423012_3x3_grid_2;
             this.buttonDrawGrid.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.buttonDrawGrid.Location = new System.Drawing.Point(7, 148);
-            this.buttonDrawGrid.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonDrawGrid.Location = new System.Drawing.Point(5, 120);
             this.buttonDrawGrid.Name = "buttonDrawGrid";
-            this.buttonDrawGrid.Size = new System.Drawing.Size(64, 59);
+            this.buttonDrawGrid.Size = new System.Drawing.Size(48, 48);
             this.buttonDrawGrid.TabIndex = 3;
             this.toolTip1.SetToolTip(this.buttonDrawGrid, "Розмітити сітку на мапі");
             this.buttonDrawGrid.UseVisualStyleBackColor = true;
@@ -296,10 +288,9 @@
             // 
             this.btnAd.BackgroundImage = global::Myprojekt.Properties.Resources._1289309280_11;
             this.btnAd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnAd.Location = new System.Drawing.Point(7, 81);
-            this.btnAd.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAd.Location = new System.Drawing.Point(5, 66);
             this.btnAd.Name = "btnAd";
-            this.btnAd.Size = new System.Drawing.Size(64, 59);
+            this.btnAd.Size = new System.Drawing.Size(48, 48);
             this.btnAd.TabIndex = 2;
             this.toolTip1.SetToolTip(this.btnAd, "Згенерувати новий файл мапи");
             this.btnAd.UseVisualStyleBackColor = true;
@@ -309,10 +300,9 @@
             // 
             this.btnOpenMap.BackgroundImage = global::Myprojekt.Properties.Resources._1301423033_folder_64;
             this.btnOpenMap.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnOpenMap.Location = new System.Drawing.Point(7, 15);
-            this.btnOpenMap.Margin = new System.Windows.Forms.Padding(4);
+            this.btnOpenMap.Location = new System.Drawing.Point(5, 12);
             this.btnOpenMap.Name = "btnOpenMap";
-            this.btnOpenMap.Size = new System.Drawing.Size(64, 59);
+            this.btnOpenMap.Size = new System.Drawing.Size(48, 48);
             this.btnOpenMap.TabIndex = 0;
             this.toolTip1.SetToolTip(this.btnOpenMap, "Відкрити згенеровану мапу для подальшої роботи.\r\n");
             this.btnOpenMap.UseVisualStyleBackColor = true;
@@ -327,10 +317,9 @@
             this.statusStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ProgressBar,
             this.labelStatus});
-            this.statusStrip2.Location = new System.Drawing.Point(0, 784);
+            this.statusStrip2.Location = new System.Drawing.Point(0, 636);
             this.statusStrip2.Name = "statusStrip2";
-            this.statusStrip2.Padding = new System.Windows.Forms.Padding(1, 0, 19, 0);
-            this.statusStrip2.Size = new System.Drawing.Size(1447, 26);
+            this.statusStrip2.Size = new System.Drawing.Size(1085, 22);
             this.statusStrip2.TabIndex = 14;
             this.statusStrip2.Text = "statusStrip2";
             this.statusStrip2.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.statusStrip2_ItemClicked);
@@ -338,12 +327,12 @@
             // ProgressBar
             // 
             this.ProgressBar.Name = "ProgressBar";
-            this.ProgressBar.Size = new System.Drawing.Size(133, 20);
+            this.ProgressBar.Size = new System.Drawing.Size(100, 16);
             // 
             // labelStatus
             // 
             this.labelStatus.Name = "labelStatus";
-            this.labelStatus.Size = new System.Drawing.Size(0, 21);
+            this.labelStatus.Size = new System.Drawing.Size(0, 17);
             // 
             // bWDrawGrid
             // 
@@ -367,8 +356,7 @@
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer1.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
-            this.splitContainer1.Location = new System.Drawing.Point(0, 28);
-            this.splitContainer1.Margin = new System.Windows.Forms.Padding(4);
+            this.splitContainer1.Location = new System.Drawing.Point(0, 24);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
@@ -378,9 +366,8 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.panel1);
-            this.splitContainer1.Size = new System.Drawing.Size(1447, 756);
-            this.splitContainer1.SplitterDistance = 76;
-            this.splitContainer1.SplitterWidth = 5;
+            this.splitContainer1.Size = new System.Drawing.Size(1085, 612);
+            this.splitContainer1.SplitterDistance = 57;
             this.splitContainer1.TabIndex = 15;
             // 
             // tmAskServ
@@ -390,16 +377,15 @@
             // 
             // frmMainWindow
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(1447, 810);
+            this.ClientSize = new System.Drawing.Size(1085, 658);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.statusStrip2);
             this.DoubleBuffered = true;
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmMainWindow";
             this.Text = "WS&P";
             this.Load += new System.EventHandler(this.MainForm_Load);
