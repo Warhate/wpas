@@ -66,3 +66,5 @@
 8 апреля 2011 г.-[13:35:34]: Close program
 8 квітня 2011 р.-[15:37:44]: Started program
 8 квітня 2011 р.-[15:37:45]: Close program
+9 квітня 2011 р.-[23:44:53]: Started program
+9 квітня 2011 р.-[23:44:55]: Close program
