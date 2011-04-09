@@ -1,0 +1,11 @@
+D:\Project\Layout\Layout\Layout\bin\Release\Layout.exe
+D:\Project\Layout\Layout\Layout\bin\Release\Layout.pdb
+D:\Project\Layout\Layout\Layout\obj\x86\Release\ResolveAssemblyReference.cache
+D:\Project\Layout\Layout\Layout\obj\x86\Release\Layout.AddMap.resources
+D:\Project\Layout\Layout\Layout\obj\x86\Release\Layout.AddPoligon.resources
+D:\Project\Layout\Layout\Layout\obj\x86\Release\Layout.MapForm.resources
+D:\Project\Layout\Layout\Layout\obj\x86\Release\Layout.Properties.Resources.resources
+D:\Project\Layout\Layout\Layout\obj\x86\Release\GenerateResource.read.1.tlog
+D:\Project\Layout\Layout\Layout\obj\x86\Release\GenerateResource.write.1.tlog
+D:\Project\Layout\Layout\Layout\obj\x86\Release\Layout.exe
+D:\Project\Layout\Layout\Layout\obj\x86\Release\Layout.pdb
