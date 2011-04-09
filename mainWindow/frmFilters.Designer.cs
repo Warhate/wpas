@@ -1007,7 +1007,7 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.tabControl1);
             this.Name = "frmFilters";
-            this.Text = "0";
+            this.Text = "filter";
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
