@@ -347,7 +347,7 @@ namespace Myprojekt
             {
                 CvInvoke.cvAdd(Image_result_HSV[2], Image_result_RGB[0], Image_result_RGB[0], IntPtr.Zero);
             }
-            CvInvoke.cvCanny(Image_result_RGB[0], Image_result_RGB[0], 10, 100, 3);
+            //CvInvoke.cvCanny(Image_result_RGB[0], Image_result_RGB[0], 10, 100, 3);//Виявлення контурів
             pictureBoxResult.Image = Image_result_RGB[0].Bitmap;
         }
 
@@ -403,8 +403,7 @@ namespace Myprojekt
 
             if (checkBoxSaveNewFile.Checked == true)
             {
-                FLI.CreateFileFilter(textBoxNewFileName.Text);
-                FLI.SaveFilterFile(textBoxNewFileName.Text+".txt", filter);
+                FLI.SaveFilterFile(textBoxNewFileName.Text, filter);
             }
         }
     }
