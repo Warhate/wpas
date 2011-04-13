@@ -7,10 +7,10 @@
 
     <Command Name="cmdButtonCreate"
      Id="1001"
-     LabelTitle="&amp;Create"
-     LabelDescription="Create Description"
-     TooltipTitle="Create"
-     TooltipDescription="Create a new project.">
+     LabelTitle="&amp;Створити"
+     LabelDescription="Створити"
+     TooltipTitle="Створити проект"
+     TooltipDescription="Створіть новий проект, щоб приступити до роботи.">
       <Command.LargeImages>
         <Image>Res/Create32.bmp</Image>
       </Command.LargeImages>
@@ -21,10 +21,10 @@
 
     <Command Name="cmdButtonOpen"
         Id="1002"
-        LabelTitle="&amp;Open"
-        LabelDescription="Open Description"
-        TooltipTitle="Open"
-        TooltipDescription="Open a new project.">
+        LabelTitle="&amp;Відкрити"
+        LabelDescription="Відкрити"
+        TooltipTitle="Відкрити проект"
+        TooltipDescription="Відкрийте проект мапи, щоб приступити до роботи.">
       <Command.LargeImages>
         <Image>Res/Open32.bmp</Image>
       </Command.LargeImages>
@@ -35,10 +35,10 @@
 
     <Command Name="cmdButtonSettings"
        Id="1003"
-       LabelTitle="&amp;Settings"
-       LabelDescription="Settings Description"
-       TooltipTitle="Settings"
-       TooltipDescription="Settings">
+       LabelTitle="&amp;Налаштування"
+       LabelDescription="Налаштування"
+       TooltipTitle="Налаштування програми"
+       TooltipDescription="В вікні, що відкриється можна задати налаштування зєднання з сервером.">
       <Command.LargeImages>
         <Image>Res/Settings32.bmp</Image>
       </Command.LargeImages>
@@ -49,10 +49,10 @@
 
     <Command Name="cmdButtonExit"
    Id="1004"
-   LabelTitle="&amp;Exit"
-   LabelDescription="Exit Description"
-   TooltipTitle="Exit"
-   TooltipDescription="Exit">
+   LabelTitle="&amp;Вихід"
+   LabelDescription="Вихід"
+   TooltipTitle="Вихід"
+   TooltipDescription="Всі незбережені дані будуть втрачені.">
       <Command.LargeImages>
         <Image>Res/Exit32.bmp</Image>
       </Command.LargeImages>
@@ -64,20 +64,20 @@
 
     <Command Name="cmdMenuGroupFile"
             Id="1005"
-            LabelTitle="File Menu">
+            LabelTitle="Робота з файлом проекту">
     </Command>
 
     <Command Name="cmdMenuGroupExit"
             Id="1006"
-            LabelTitle="Exit Menu">
+            LabelTitle="Вихід">
     </Command>
 
     <Command Name="cmdButtonSave"
         Id="1007"
-        LabelTitle="&amp;Save"
-        LabelDescription="Save Description"
-        TooltipTitle="Save"
-        TooltipDescription="Save">
+        LabelTitle="&amp;Зберегти"
+        LabelDescription="Зберегти"
+        TooltipTitle="Зберегти"
+        TooltipDescription="Натисніть, щоб зберегти файл мапи.">
       <Command.LargeImages>
         <Image>Res/Save32.bmp</Image>
       </Command.LargeImages>
@@ -89,28 +89,28 @@
 
     <Command Name="cmdMenuGroupSettings"
         Id="1008"
-        LabelTitle="Settings Menu">
+        LabelTitle="Меню налаштування">
     </Command>
 
     <Command Name="cmdTabMain"
          Id="1009"
-         LabelTitle="Main">
+         LabelTitle="Головна">
     </Command>
 
 
     <Command Name="cmdGroupFile"
             Id="1011"
-            LabelTitle="File Actions">
+            LabelTitle="Робота з файлом проекту">
     </Command>
 
     <Command Name="cmdGroupSettings"
         Id="1012"
-        LabelTitle="Settings">
+        LabelTitle="Налаштування">
     </Command>
 
     <Command Name="cmdGroupExit"
     Id="1013"
-    LabelTitle="Exit">
+    LabelTitle="Вихід">
     </Command>
 
     <Command Name="cmdHelpButton"
@@ -119,7 +119,7 @@
 
     <Command Name="cmdTabEmulation"
      Id="1015"
-     LabelTitle="Emulation">
+     LabelTitle="Емуляція">
     </Command>
 
     <Command Name="cmdGroupEmulation"
@@ -129,10 +129,10 @@
 
     <Command Name="cmdButtonStart"
     Id="1017"
-    LabelTitle="&amp;Star"
-    LabelDescription="Star Emulation"
-    TooltipTitle="Star Emulation"
-    TooltipDescription="Star Emulation">
+    LabelTitle="&amp;Запуск емуляції"
+    LabelDescription="Запуск емуляції"
+    TooltipTitle="Запуск емуляції"
+    TooltipDescription="Натисніть, щоб розпочати емуляцію.">
       <Command.LargeImages>
         <Image>Res/Start32.bmp</Image>
       </Command.LargeImages>
@@ -144,10 +144,10 @@
 
     <Command Name="cmdButtonStop"
    Id="1018"
-   LabelTitle="&amp;Stop"
-   LabelDescription="Stop Emulation"
-   TooltipTitle="Stop Emulation"
-   TooltipDescription="Stop Emulation">
+   LabelTitle="&amp;Зупинити емуляцію"
+   LabelDescription="Зупинити емуляцію"
+   TooltipTitle="Зупинити емуляцію"
+   TooltipDescription="Натисніть, щоб зупинити емуляцію">
       <Command.LargeImages>
         <Image>Res/Stop32.bmp</Image>
       </Command.LargeImages>
@@ -171,10 +171,10 @@
 
     <Command Name="cmdButtonCreateMap"
 Id="1021"
-LabelTitle="&amp;Create a new map"
-LabelDescription="Create a new map"
-TooltipTitle="Create a new map"
-TooltipDescription="Create a new map">
+LabelTitle="&amp;Створити мапу"
+LabelDescription="Створити мапу"
+TooltipTitle="Створити мапу"
+TooltipDescription="Натисніть, щоб створити новий проект мапи">
       <Command.LargeImages>
         <Image>Res/CreateMap32.bmp</Image>
       </Command.LargeImages>
@@ -186,10 +186,10 @@ TooltipDescription="Create a new map">
 
     <Command Name="cmdButtonMarkerMap"
    Id="1022"
-   LabelTitle="&amp;Markup"
-   LabelDescription="Markup"
-   TooltipTitle="Markup"
-   TooltipDescription="Markup">
+   LabelTitle="&amp;Розмітка мапи"
+   LabelDescription="Розмітка мапи"
+   TooltipTitle="Розмітка мапи"
+   TooltipDescription="Натисніть, щоб позначтити зони на мапі">
       <Command.LargeImages>
         <Image>Res/MarkerMap32.bmp</Image>
       </Command.LargeImages>
@@ -201,7 +201,7 @@ TooltipDescription="Create a new map">
 
     <Command Name="cmdTabFilters"
  Id="1023"
- LabelTitle="Filters">
+ LabelTitle="Фільтри">
     </Command>
 
     <Command Name="cmdGroupFilters"
@@ -211,10 +211,10 @@ TooltipDescription="Create a new map">
 
     <Command Name="cmdButtonCreateFilters"
 Id="1025"
-LabelTitle="&amp;Create a new filters"
-LabelDescription="Create a new filters"
-TooltipTitle="Create a new filters"
-TooltipDescription="Create a new filters">
+LabelTitle="&amp;Створити фільтри"
+LabelDescription="Створити фільтри"
+TooltipTitle="Створити фільтри"
+TooltipDescription="Натисніть, щоб створити нові фільтри для розпізнання пожару.">
       <Command.LargeImages>
         <Image>Res/CreateFilters32.bmp</Image>
       </Command.LargeImages>
@@ -226,10 +226,10 @@ TooltipDescription="Create a new filters">
 
     <Command Name="cmdButtonOpenFilters"
    Id="1026"
-   LabelTitle="&amp;Open filters"
-   LabelDescription="Open filters"
-   TooltipTitle="Open filters"
-   TooltipDescription="Open filters">
+   LabelTitle="&amp;Відкрити фільтри"
+   LabelDescription="Відкрити фільтри"
+   TooltipTitle="Відкрити фільтри"
+   TooltipDescription="Натисніть, щоб відкрити існуючі фільтри.">
       <Command.LargeImages>
         <Image>Res/Open32.bmp</Image>
       </Command.LargeImages>
@@ -240,7 +240,7 @@ TooltipDescription="Create a new filters">
 
     <Command Name="cmdTabTools"
  Id="1027"
- LabelTitle="Tools">
+ LabelTitle="Інструменти">
     </Command>
 
     <Command Name="cmdGroupTools"
@@ -250,10 +250,10 @@ TooltipDescription="Create a new filters">
 
     <Command Name="cmdButtonGrid"
 Id="1029"
-LabelTitle="&amp;Show grid"
-LabelDescription="Show grid"
-TooltipTitle="Show grid"
-TooltipDescription="Show grid">
+LabelTitle="&amp;Відобразити решітку"
+LabelDescription="Відобразити решітку"
+TooltipTitle="Відобразити решітку"
+TooltipDescription="Натисніть, щоб відобразити решітку на карті">
       <Command.LargeImages>
         <Image>Res/Grid32.bmp</Image>
       </Command.LargeImages>
@@ -265,10 +265,10 @@ TooltipDescription="Show grid">
 
     <Command Name="cmdButtonCalculate"
    Id="1030"
-   LabelTitle="&amp;Calculate"
-   LabelDescription="Calculate"
-   TooltipTitle="Calculate"
-   TooltipDescription="Calculate">
+   LabelTitle="&amp;Розразунок мапи"
+   LabelDescription="Розразунок мапи"
+   TooltipTitle="Розразунок мапи"
+   TooltipDescription="Натичніть, щоб розрахувати небезпечність ділянок на мапі.">
       <Command.LargeImages>
         <Image>Res/MarkerMap32.bmp</Image>
       </Command.LargeImages>
@@ -279,10 +279,10 @@ TooltipDescription="Show grid">
 
     <Command Name="cmdButtonShowPolygons"
    Id="1031"
-   LabelTitle="&amp;Show Polygons"
-   LabelDescription="Show Polygons"
-   TooltipTitle="Show Polygons"
-   TooltipDescription="Show Polygons">
+   LabelTitle="&amp;Відобразити ділянки"
+   LabelDescription="Відобразити ділянки"
+   TooltipTitle="Відобразити ділянки"
+   TooltipDescription="Натисніть, щоб відобразити ділянки мапи">
       <Command.LargeImages>
         <Image>Res/Polygon32.bmp</Image>
       </Command.LargeImages>
@@ -293,7 +293,7 @@ TooltipDescription="Show grid">
 
     <Command Name="cmdBlockSize"
              Id="1032"
-             LabelTitle="Size of block">
+             LabelTitle="Розмір блоків решітки">
     </Command>
 
     <Command Name="cmdGroupBS"

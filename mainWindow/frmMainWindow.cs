@@ -24,9 +24,10 @@ namespace Myprojekt
         Marker marker;
         int width, hight;
         Map map;
+        frmPolygons frmPoly;
         List<Block> blocks;
         public frmSettings settingsForm;
-        
+        frmAbout frmAbout;
                 #region Ribbon Start
 
         
@@ -122,11 +123,14 @@ namespace Myprojekt
 
         void _helpButton_ExecuteEvent(object sender, ExecuteEventArgs e)
         {
-            
+            frmAbout = new frmAbout();
+            frmAbout.ShowDialog();
         }
 
         void _buttonShowPolygons_ExecuteEvent(object sender, ExecuteEventArgs e)
         {
+
+          
             
         }
 
@@ -182,6 +186,11 @@ namespace Myprojekt
 
         void _buttonOpenFilters_ExecuteEvent(object sender, ExecuteEventArgs e)
         {
+            if (map != null && map.Poligons.Count > 0)
+            {
+                frmPoly = new frmPolygons();
+                frmPoly.ShowDialog(map.Poligons);
+            }
            
         }
 
@@ -340,6 +349,22 @@ namespace Myprojekt
 
             labelMessage.Visible = false;
 
+            setMapLocal();
+
+        }
+
+        private void setMapLocal()
+        {
+            if (this.Size.Width > hight)
+            {
+                pictureBox1.Location = new Point((this.Size.Width - hight) / 2);
+
+            }
+            else
+            {
+                pictureBox1.Location = new Point(0,0);
+            
+            }
         }
 
 
@@ -370,6 +395,11 @@ namespace Myprojekt
             clientStream.Flush();
 
             tmAskServ.Interval = settingsForm.appSettings.updateRate * 60000;
+        }
+
+        private void frmMainWindow_SizeChanged(object sender, EventArgs e)
+        {
+            setMapLocal();
         }
 
 
