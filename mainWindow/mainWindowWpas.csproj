@@ -46,6 +46,9 @@
     <Reference Include="Emgu.Util">
       <HintPath>..\..\..\..\..\..\..\Emgu\emgucv-windows-x86 2.2.1.1150\bin\Emgu.Util.dll</HintPath>
     </Reference>
+    <Reference Include="Ribbon">
+      <HintPath>..\..\rbb\Ribbon\bin\Release\Ribbon.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Net" />
@@ -114,6 +117,14 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <EmbeddedResource Include="RibbonMarkup.ribbon">
+      <DependentUpon>RibbonMarkup.xml</DependentUpon>
+    </EmbeddedResource>
+    <None Include="RibbonMarkup.log">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RibbonMarkup.xml</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\image08012006_500m.jpg" />
@@ -144,6 +155,12 @@
       <Project>{EC203A42-2122-4DC3-B14D-8020084DAB05}</Project>
       <Name>mapsModeling</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="RibbonMarkup.xml">
+      <Generator>RibbonGenerator</Generator>
+      <LastGenOutput>RibbonMarkup.log</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
