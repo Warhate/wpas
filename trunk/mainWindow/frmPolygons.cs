@@ -22,7 +22,13 @@ namespace Myprojekt
             
             for (int i = 0; i < polygons.Count; i++)
             {
-                polygonView.Rows.Add(polygons[i].Type, polygons[i].Description);
+                polygonView.Rows.Add();
+                polygonView.Rows[i].Cells[0].Value = polygons[i].Type;
+                polygonView.Rows[i].Cells[1].Value = polygons[i].Description;
+                polygonView.Rows[i].Cells[2].Style.BackColor = polygons[i].Color;
+                
+                
+                
             
             }
             base.ShowDialog();

@@ -353,6 +353,9 @@ namespace Myprojekt
 
         }
 
+        /// <summary>
+        /// Отцентровует карту, если она меньше ширины окна
+        /// </summary>
         private void setMapLocal()
         {
             if (this.Size.Width > hight)
