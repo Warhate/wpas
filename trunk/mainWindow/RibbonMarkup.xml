@@ -1,0 +1,417 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<Application xmlns='http://schemas.microsoft.com/windows/2009/Ribbon'>
+  <Application.Commands>
+
+    <Command Name="cmdApplicationMenu" Id="1000" />
+
+
+    <Command Name="cmdButtonCreate"
+     Id="1001"
+     LabelTitle="&amp;Create"
+     LabelDescription="Create Description"
+     TooltipTitle="Create"
+     TooltipDescription="Create a new project.">
+      <Command.LargeImages>
+        <Image>Res/Create32.bmp</Image>
+      </Command.LargeImages>
+      <Command.SmallImages>
+        <Image>Res/Create16.bmp</Image>
+      </Command.SmallImages>
+    </Command>
+
+    <Command Name="cmdButtonOpen"
+        Id="1002"
+        LabelTitle="&amp;Open"
+        LabelDescription="Open Description"
+        TooltipTitle="Open"
+        TooltipDescription="Open a new project.">
+      <Command.LargeImages>
+        <Image>Res/Open32.bmp</Image>
+      </Command.LargeImages>
+      <Command.SmallImages>
+        <Image>Res/Open16.bmp</Image>
+      </Command.SmallImages>
+    </Command>
+
+    <Command Name="cmdButtonSettings"
+       Id="1003"
+       LabelTitle="&amp;Settings"
+       LabelDescription="Settings Description"
+       TooltipTitle="Settings"
+       TooltipDescription="Settings">
+      <Command.LargeImages>
+        <Image>Res/Settings32.bmp</Image>
+      </Command.LargeImages>
+      <Command.SmallImages>
+        <Image>Res/Settings16.bmp</Image>
+      </Command.SmallImages>
+    </Command>
+
+    <Command Name="cmdButtonExit"
+   Id="1004"
+   LabelTitle="&amp;Exit"
+   LabelDescription="Exit Description"
+   TooltipTitle="Exit"
+   TooltipDescription="Exit">
+      <Command.LargeImages>
+        <Image>Res/Exit32.bmp</Image>
+      </Command.LargeImages>
+      <Command.SmallImages>
+        <Image>Res/Exit16.bmp</Image>
+      </Command.SmallImages>
+    </Command>
+
+
+    <Command Name="cmdMenuGroupFile"
+            Id="1005"
+            LabelTitle="File Menu">
+    </Command>
+
+    <Command Name="cmdMenuGroupExit"
+            Id="1006"
+            LabelTitle="Exit Menu">
+    </Command>
+
+    <Command Name="cmdButtonSave"
+        Id="1007"
+        LabelTitle="&amp;Save"
+        LabelDescription="Save Description"
+        TooltipTitle="Save"
+        TooltipDescription="Save">
+      <Command.LargeImages>
+        <Image>Res/Save32.bmp</Image>
+      </Command.LargeImages>
+      <Command.SmallImages>
+        <Image>Res/Save16.bmp</Image>
+      </Command.SmallImages>
+    </Command>
+
+
+    <Command Name="cmdMenuGroupSettings"
+        Id="1008"
+        LabelTitle="Settings Menu">
+    </Command>
+
+    <Command Name="cmdTabMain"
+         Id="1009"
+         LabelTitle="Main">
+    </Command>
+
+
+    <Command Name="cmdGroupFile"
+            Id="1011"
+            LabelTitle="File Actions">
+    </Command>
+
+    <Command Name="cmdGroupSettings"
+        Id="1012"
+        LabelTitle="Settings">
+    </Command>
+
+    <Command Name="cmdGroupExit"
+    Id="1013"
+    LabelTitle="Exit">
+    </Command>
+
+    <Command Name="cmdHelpButton"
+         Id="1014">
+    </Command>
+
+    <Command Name="cmdTabEmulation"
+     Id="1015"
+     LabelTitle="Emulation">
+    </Command>
+
+    <Command Name="cmdGroupEmulation"
+      Id="1016"
+      LabelTitle="">
+    </Command>
+
+    <Command Name="cmdButtonStart"
+    Id="1017"
+    LabelTitle="&amp;Star"
+    LabelDescription="Star Emulation"
+    TooltipTitle="Star Emulation"
+    TooltipDescription="Star Emulation">
+      <Command.LargeImages>
+        <Image>Res/Start32.bmp</Image>
+      </Command.LargeImages>
+      <Command.SmallImages>
+        <Image>Res/Start16.bmp</Image>
+      </Command.SmallImages>
+    </Command>
+
+
+    <Command Name="cmdButtonStop"
+   Id="1018"
+   LabelTitle="&amp;Stop"
+   LabelDescription="Stop Emulation"
+   TooltipTitle="Stop Emulation"
+   TooltipDescription="Stop Emulation">
+      <Command.LargeImages>
+        <Image>Res/Stop32.bmp</Image>
+      </Command.LargeImages>
+      <Command.SmallImages>
+        <Image>Res/Stop16.bmp</Image>
+      </Command.SmallImages>
+    </Command>
+
+
+
+
+    <Command Name="cmdTabMap"
+ Id="1019"
+ LabelTitle="Map">
+    </Command>
+
+    <Command Name="cmdGroupMap"
+      Id="1020"
+      LabelTitle="">
+    </Command>
+
+    <Command Name="cmdButtonCreateMap"
+Id="1021"
+LabelTitle="&amp;Create a new map"
+LabelDescription="Create a new map"
+TooltipTitle="Create a new map"
+TooltipDescription="Create a new map">
+      <Command.LargeImages>
+        <Image>Res/CreateMap32.bmp</Image>
+      </Command.LargeImages>
+      <Command.SmallImages>
+        <Image>Res/CreateMap16.bmp</Image>
+      </Command.SmallImages>
+    </Command>
+
+
+    <Command Name="cmdButtonMarkerMap"
+   Id="1022"
+   LabelTitle="&amp;Markup"
+   LabelDescription="Markup"
+   TooltipTitle="Markup"
+   TooltipDescription="Markup">
+      <Command.LargeImages>
+        <Image>Res/MarkerMap32.bmp</Image>
+      </Command.LargeImages>
+      <Command.SmallImages>
+        <Image>Res/MarkerMap16.bmp</Image>
+      </Command.SmallImages>
+    </Command>
+
+
+    <Command Name="cmdTabFilters"
+ Id="1023"
+ LabelTitle="Filters">
+    </Command>
+
+    <Command Name="cmdGroupFilters"
+      Id="1024"
+      LabelTitle="">
+    </Command>
+
+    <Command Name="cmdButtonCreateFilters"
+Id="1025"
+LabelTitle="&amp;Create a new filters"
+LabelDescription="Create a new filters"
+TooltipTitle="Create a new filters"
+TooltipDescription="Create a new filters">
+      <Command.LargeImages>
+        <Image>Res/CreateFilters32.bmp</Image>
+      </Command.LargeImages>
+      <Command.SmallImages>
+        <Image>Res/CreateFilters16.bmp</Image>
+      </Command.SmallImages>
+    </Command>
+
+
+    <Command Name="cmdButtonOpenFilters"
+   Id="1026"
+   LabelTitle="&amp;Open filters"
+   LabelDescription="Open filters"
+   TooltipTitle="Open filters"
+   TooltipDescription="Open filters">
+      <Command.LargeImages>
+        <Image>Res/Open32.bmp</Image>
+      </Command.LargeImages>
+      <Command.SmallImages>
+        <Image>Res/Open16.bmp</Image>
+      </Command.SmallImages>
+    </Command>
+
+    <Command Name="cmdTabTools"
+ Id="1027"
+ LabelTitle="Tools">
+    </Command>
+
+    <Command Name="cmdGroupTools"
+      Id="1028"
+      LabelTitle="">
+    </Command>
+
+    <Command Name="cmdButtonGrid"
+Id="1029"
+LabelTitle="&amp;Show grid"
+LabelDescription="Show grid"
+TooltipTitle="Show grid"
+TooltipDescription="Show grid">
+      <Command.LargeImages>
+        <Image>Res/Grid32.bmp</Image>
+      </Command.LargeImages>
+      <Command.SmallImages>
+        <Image>Res/Grid16.bmp</Image>
+      </Command.SmallImages>
+    </Command>
+
+
+    <Command Name="cmdButtonCalculate"
+   Id="1030"
+   LabelTitle="&amp;Calculate"
+   LabelDescription="Calculate"
+   TooltipTitle="Calculate"
+   TooltipDescription="Calculate">
+      <Command.LargeImages>
+        <Image>Res/MarkerMap32.bmp</Image>
+      </Command.LargeImages>
+      <Command.SmallImages>
+        <Image>Res/MarkerMap16.bmp</Image>
+      </Command.SmallImages>
+    </Command>
+
+    <Command Name="cmdButtonShowPolygons"
+   Id="1031"
+   LabelTitle="&amp;Show Polygons"
+   LabelDescription="Show Polygons"
+   TooltipTitle="Show Polygons"
+   TooltipDescription="Show Polygons">
+      <Command.LargeImages>
+        <Image>Res/Polygon32.bmp</Image>
+      </Command.LargeImages>
+      <Command.SmallImages>
+        <Image>Res/Polygon16.bmp</Image>
+      </Command.SmallImages>
+    </Command>
+
+    <Command Name="cmdBlockSize"
+             Id="1032"
+             LabelTitle="Size of block">
+    </Command>
+
+    <Command Name="cmdGroupBS"
+      Id="1033"
+      LabelTitle="">
+    </Command>
+
+  </Application.Commands>
+
+  <Application.Views>
+
+    <Ribbon>
+      <Ribbon.HelpButton>
+        <HelpButton CommandName="cmdHelpButton" />
+      </Ribbon.HelpButton>
+
+      <Ribbon.Tabs>
+        <Tab CommandName="cmdTabMain">
+          <!-- scary part -->
+          <Tab.ScalingPolicy>
+            <ScalingPolicy>
+              <ScalingPolicy.IdealSizes>
+                <Scale Group="cmdGroupFile" Size="Large" />
+                <Scale Group="cmdGroupSettings" Size="Large" />
+                <Scale Group="cmdGroupExit" Size="Large" />
+              </ScalingPolicy.IdealSizes>
+              <Scale Group="cmdGroupFile" Size="Medium" />
+            </ScalingPolicy>
+          </Tab.ScalingPolicy>
+
+          <!-- useful part -->
+          <Group CommandName="cmdGroupFile" SizeDefinition="ThreeButtons">
+            <Button CommandName="cmdButtonCreate" />
+            <Button CommandName="cmdButtonOpen" />
+            <Button CommandName="cmdButtonSave" />
+          </Group>
+
+          <Group CommandName="cmdGroupSettings" SizeDefinition="OneButton">
+            <Button CommandName="cmdButtonSettings" />
+          </Group>
+
+          <Group CommandName="cmdGroupExit" SizeDefinition="OneButton">
+            <Button CommandName="cmdButtonExit" />
+
+          </Group>
+
+        </Tab>
+
+        <Tab CommandName="cmdTabEmulation" >
+
+          <!-- useful part -->
+          <Group CommandName="cmdGroupEmulation" SizeDefinition="TwoButtons" >
+            <Button CommandName="cmdButtonStart" />
+            <Button CommandName="cmdButtonStop" />
+          </Group>
+
+        </Tab>
+
+
+        <Tab CommandName="cmdTabMap" >
+
+          <!-- useful part -->
+          <Group CommandName="cmdGroupMap" SizeDefinition="TwoButtons" >
+            <Button CommandName="cmdButtonCreateMap" />
+            <Button CommandName="cmdButtonMarkerMap" />
+          </Group>
+
+        </Tab>
+
+
+        <Tab CommandName="cmdTabFilters" >
+
+          <!-- useful part -->
+          <Group CommandName="cmdGroupFilters" SizeDefinition="TwoButtons" >
+            <Button CommandName="cmdButtonCreateFilters" />
+            <Button CommandName="cmdButtonOpenFilters" />
+          </Group>
+
+        </Tab>
+
+        <Tab CommandName="cmdTabTools" >
+
+          <!-- useful part -->
+          <Group CommandName="cmdGroupTools" SizeDefinition="ThreeButtons" >
+            <Button CommandName="cmdButtonGrid" />
+            <Button CommandName="cmdButtonCalculate" />
+            <Button CommandName="cmdButtonShowPolygons" />
+          </Group>
+          <Group CommandName="cmdGroupBS" >
+            <Spinner CommandName="cmdBlockSize" />
+          </Group>
+        </Tab>
+
+
+      </Ribbon.Tabs>
+
+
+
+      <Ribbon.ApplicationMenu>
+        <ApplicationMenu CommandName="cmdApplicationMenu">
+          <MenuGroup CommandName="cmdMenuGroupFile">
+            <Button CommandName='cmdButtonCreate' />
+            <Button CommandName='cmdButtonOpen' />
+            <Button CommandName='cmdButtonSave' />
+          </MenuGroup>
+
+          <MenuGroup CommandName="cmdMenuGroupSettings" >
+            <Button CommandName='cmdButtonSettings' />
+          </MenuGroup>
+
+          <MenuGroup CommandName="cmdMenuGroupExit" >
+            <Button CommandName='cmdButtonExit' />
+          </MenuGroup>
+        </ApplicationMenu>
+      </Ribbon.ApplicationMenu>
+
+
+
+    </Ribbon>
+  </Application.Views>
+</Application>

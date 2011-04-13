@@ -29,22 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.createProjectToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.openProjeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
-            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.fireSimulationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.startEmulationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.stopEmulationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.mapsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.createMapToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.openMapToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.filterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.createFiltersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.openFiltersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -63,7 +47,8 @@
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.tmAskServ = new System.Windows.Forms.Timer(this.components);
-            this.menuStrip1.SuspendLayout();
+            this.ribbon1 = new RibbonLib.Ribbon();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -72,132 +57,8 @@
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fileToolStripMenuItem,
-            this.fireSimulationToolStripMenuItem,
-            this.mapsToolStripMenuItem,
-            this.filterToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1085, 24);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // fileToolStripMenuItem
-            // 
-            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.createProjectToolStripMenuItem,
-            this.openProjeToolStripMenuItem,
-            this.settingsToolStripMenuItem,
-            this.toolStripMenuItem1,
-            this.exitToolStripMenuItem});
-            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(35, 20);
-            this.fileToolStripMenuItem.Text = "File";
-            // 
-            // createProjectToolStripMenuItem
-            // 
-            this.createProjectToolStripMenuItem.Name = "createProjectToolStripMenuItem";
-            this.createProjectToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
-            this.createProjectToolStripMenuItem.Text = "Create project";
-            // 
-            // openProjeToolStripMenuItem
-            // 
-            this.openProjeToolStripMenuItem.Name = "openProjeToolStripMenuItem";
-            this.openProjeToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
-            this.openProjeToolStripMenuItem.Text = "Open project";
-            // 
-            // settingsToolStripMenuItem
-            // 
-            this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
-            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
-            this.settingsToolStripMenuItem.Text = "Settings";
-            this.settingsToolStripMenuItem.Click += new System.EventHandler(this.settingsToolStripMenuItem_Click);
-            // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(152, 6);
-            // 
-            // exitToolStripMenuItem
-            // 
-            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
-            this.exitToolStripMenuItem.Text = "Exit";
-            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
-            // 
-            // fireSimulationToolStripMenuItem
-            // 
-            this.fireSimulationToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.startEmulationToolStripMenuItem,
-            this.stopEmulationToolStripMenuItem});
-            this.fireSimulationToolStripMenuItem.Name = "fireSimulationToolStripMenuItem";
-            this.fireSimulationToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
-            this.fireSimulationToolStripMenuItem.Text = "Eimulation";
-            this.fireSimulationToolStripMenuItem.Click += new System.EventHandler(this.fireSimulationToolStripMenuItem_Click);
-            // 
-            // startEmulationToolStripMenuItem
-            // 
-            this.startEmulationToolStripMenuItem.Name = "startEmulationToolStripMenuItem";
-            this.startEmulationToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
-            this.startEmulationToolStripMenuItem.Text = "Start emulation";
-            this.startEmulationToolStripMenuItem.Click += new System.EventHandler(this.startEmulationToolStripMenuItem_Click);
-            // 
-            // stopEmulationToolStripMenuItem
-            // 
-            this.stopEmulationToolStripMenuItem.Name = "stopEmulationToolStripMenuItem";
-            this.stopEmulationToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
-            this.stopEmulationToolStripMenuItem.Text = "Stop emulation";
-            this.stopEmulationToolStripMenuItem.Click += new System.EventHandler(this.stopEmulationToolStripMenuItem_Click);
-            // 
-            // mapsToolStripMenuItem
-            // 
-            this.mapsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.createMapToolStripMenuItem,
-            this.openMapToolStripMenuItem});
-            this.mapsToolStripMenuItem.Name = "mapsToolStripMenuItem";
-            this.mapsToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
-            this.mapsToolStripMenuItem.Text = "Maps";
-            // 
-            // createMapToolStripMenuItem
-            // 
-            this.createMapToolStripMenuItem.Name = "createMapToolStripMenuItem";
-            this.createMapToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
-            this.createMapToolStripMenuItem.Text = "Create map";
-            this.createMapToolStripMenuItem.Click += new System.EventHandler(this.createMapToolStripMenuItem_Click);
-            // 
-            // openMapToolStripMenuItem
-            // 
-            this.openMapToolStripMenuItem.Name = "openMapToolStripMenuItem";
-            this.openMapToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
-            this.openMapToolStripMenuItem.Text = "Open map";
-            this.openMapToolStripMenuItem.Click += new System.EventHandler(this.openMapToolStripMenuItem_Click);
-            // 
-            // filterToolStripMenuItem
-            // 
-            this.filterToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.createFiltersToolStripMenuItem,
-            this.openFiltersToolStripMenuItem});
-            this.filterToolStripMenuItem.Name = "filterToolStripMenuItem";
-            this.filterToolStripMenuItem.Size = new System.Drawing.Size(43, 20);
-            this.filterToolStripMenuItem.Text = "Filter";
-            // 
-            // createFiltersToolStripMenuItem
-            // 
-            this.createFiltersToolStripMenuItem.Name = "createFiltersToolStripMenuItem";
-            this.createFiltersToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
-            this.createFiltersToolStripMenuItem.Text = "Create filters";
-            this.createFiltersToolStripMenuItem.Click += new System.EventHandler(this.createFiltersToolStripMenuItem_Click);
-            // 
-            // openFiltersToolStripMenuItem
-            // 
-            this.openFiltersToolStripMenuItem.Name = "openFiltersToolStripMenuItem";
-            this.openFiltersToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
-            this.openFiltersToolStripMenuItem.Text = "Open filters";
             // 
             // panel1
             // 
@@ -206,7 +67,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1024, 612);
+            this.panel1.Size = new System.Drawing.Size(1024, 491);
             this.panel1.TabIndex = 13;
             this.panel1.Scroll += new System.Windows.Forms.ScrollEventHandler(this.panel1_Scroll);
             // 
@@ -235,7 +96,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(57, 612);
+            this.panel2.Size = new System.Drawing.Size(57, 491);
             this.panel2.TabIndex = 2;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
@@ -356,7 +217,7 @@
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer1.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
-            this.splitContainer1.Location = new System.Drawing.Point(0, 24);
+            this.splitContainer1.Location = new System.Drawing.Point(0, 0);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
@@ -366,7 +227,7 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.panel1);
-            this.splitContainer1.Size = new System.Drawing.Size(1085, 612);
+            this.splitContainer1.Size = new System.Drawing.Size(1085, 491);
             this.splitContainer1.SplitterDistance = 57;
             this.splitContainer1.TabIndex = 15;
             // 
@@ -375,23 +236,40 @@
             this.tmAskServ.Interval = 1000;
             this.tmAskServ.Tick += new System.EventHandler(this.tmAskServ_Tick);
             // 
+            // ribbon1
+            // 
+            this.ribbon1.AllowDrop = true;
+            this.ribbon1.Location = new System.Drawing.Point(0, 0);
+            this.ribbon1.Minimized = false;
+            this.ribbon1.Name = "ribbon1";
+            this.ribbon1.ResourceName = "Myprojekt.RibbonMarkup.ribbon";
+            this.ribbon1.ShortcutTableResourceName = null;
+            this.ribbon1.Size = new System.Drawing.Size(1085, 145);
+            this.ribbon1.TabIndex = 16;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.splitContainer1);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(0, 145);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1085, 491);
+            this.panel3.TabIndex = 17;
+            // 
             // frmMainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1085, 658);
-            this.Controls.Add(this.splitContainer1);
-            this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.ribbon1);
             this.Controls.Add(this.statusStrip2);
             this.DoubleBuffered = true;
-            this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmMainWindow";
             this.Text = "WS&P";
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.Shown += new System.EventHandler(this.MainForm_Shown);
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -403,6 +281,7 @@
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -410,22 +289,6 @@
 
         #endregion
 
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem fireSimulationToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem createProjectToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem openProjeToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem settingsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem startEmulationToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem stopEmulationToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem mapsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem filterToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem createFiltersToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem openFiltersToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem createMapToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem openMapToolStripMenuItem;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
 
@@ -445,5 +308,7 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.SplitContainer splitContainer1;
         public System.Windows.Forms.Timer tmAskServ;
+        private RibbonLib.Ribbon ribbon1;
+        private System.Windows.Forms.Panel panel3;
     }
 }
