@@ -89,4 +89,7 @@
 14 квітня 2011 р.-[0:17:03]: Open map:D:\Project\WPASSVN\mapsModeling\project\bin\Debug\maps\BigMap.map
 14 квітня 2011 р.-[0:24:39]: Open map:D:\Project\WPASSVN\mapsModeling\project\bin\Debug\maps\colorado.map
 14 квітня 2011 р.-[0:24:43]: Open map:D:\Project\WPASSVN\mapsModeling\project\bin\Debug\maps\BigMap.map
-14 квітня 2011 р.-[0:37:08]: Open map:D:\Project\WPASSVN\mapsModeling\project\bin\Debug\maps\BigMap.map
+14 апреля 2011 г.-[0:29:25]: Open map:F:\share\competition\fire\WPaS\mainWindow\bin\Debug\maps\testPlace.map
+14 апреля 2011 г.-[0:30:21]: Open map:F:\share\competition\fire\WPaS\mainWindow\bin\Debug\maps\orerre.map
+14 апреля 2011 г.-[1:05:57]: Started program
+14 апреля 2011 г.-[1:05:59]: Close program
