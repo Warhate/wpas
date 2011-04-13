@@ -1,7 +1,42 @@
-﻿namespace Myprojekt
+﻿using RibbonLib;
+using RibbonLib.Controls;
+using RibbonLib.Controls.Events;
+using RibbonLib.Interop;
+
+namespace Myprojekt
 {
     partial class frmMainWindow
     {
+        /// <summary>
+        /// Команды меню
+        /// </summary>
+        public enum RibbonMarkupCommands : uint
+        {
+            cmdMenuGroupFile=1005,
+            cmdButtonCreate=1001,
+            cmdButtonOpen=1002,
+            cmdButtonSave=1007,
+            cmdButtonSettings=1003,
+            cmdButtonExit=1004,
+            cmdHelpButton = 1014,
+            cmdButtonStart=1017,
+            cmdButtonStop=1018,
+            cmdButtonCreateMap=1021,
+            cmdButtonMarkerMap=1022,
+            cmdButtonCreateFilters=1025,
+            cmdButtonOpenFilters=1026,
+            cmdButtonGrid=1029,
+            cmdButtonCalculate=1030,
+            cmdButtonShowPolygons=1031,
+            cmdBlockSize=1032
+        }
+
+
+
+
+
+
+
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -29,15 +64,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.txtBlockSize = new System.Windows.Forms.TextBox();
-            this.btnDrawPolygon = new System.Windows.Forms.Button();
-            this.btnCalcute = new System.Windows.Forms.Button();
-            this.buttonDrawGrid = new System.Windows.Forms.Button();
-            this.btnAd = new System.Windows.Forms.Button();
-            this.btnOpenMap = new System.Windows.Forms.Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMainWindow));
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.statusStrip2 = new System.Windows.Forms.StatusStrip();
             this.ProgressBar = new System.Windows.Forms.ToolStripProgressBar();
@@ -45,129 +72,15 @@
             this.bWDrawGrid = new System.ComponentModel.BackgroundWorker();
             this.bWCalcute = new System.ComponentModel.BackgroundWorker();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.tmAskServ = new System.Windows.Forms.Timer(this.components);
-            this.ribbon1 = new RibbonLib.Ribbon();
+            this._ribbon = new RibbonLib.Ribbon();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel2.SuspendLayout();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.labelMessage = new System.Windows.Forms.Label();
             this.statusStrip2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
-            this.splitContainer1.Panel1.SuspendLayout();
-            this.splitContainer1.Panel2.SuspendLayout();
-            this.splitContainer1.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // panel1
-            // 
-            this.panel1.AutoScroll = true;
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1024, 491);
-            this.panel1.TabIndex = 13;
-            this.panel1.Scroll += new System.Windows.Forms.ScrollEventHandler(this.panel1_Scroll);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BackgroundImage = global::Myprojekt.Properties.Resources.map_pripyat;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(3516, 3083);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Tag = "1";
-            this.pictureBox1.WaitOnLoad = true;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.txtBlockSize);
-            this.panel2.Controls.Add(this.btnDrawPolygon);
-            this.panel2.Controls.Add(this.btnCalcute);
-            this.panel2.Controls.Add(this.buttonDrawGrid);
-            this.panel2.Controls.Add(this.btnAd);
-            this.panel2.Controls.Add(this.btnOpenMap);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(57, 491);
-            this.panel2.TabIndex = 2;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
-            // 
-            // txtBlockSize
-            // 
-            this.txtBlockSize.Font = new System.Drawing.Font("Calibri", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.txtBlockSize.Location = new System.Drawing.Point(5, 282);
-            this.txtBlockSize.Name = "txtBlockSize";
-            this.txtBlockSize.Size = new System.Drawing.Size(48, 48);
-            this.txtBlockSize.TabIndex = 6;
-            this.toolTip1.SetToolTip(this.txtBlockSize, "Розмір блоку розмітки");
-            // 
-            // btnDrawPolygon
-            // 
-            this.btnDrawPolygon.BackgroundImage = global::Myprojekt.Properties.Resources._1301475484_draw_polygon_curves;
-            this.btnDrawPolygon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnDrawPolygon.Location = new System.Drawing.Point(5, 228);
-            this.btnDrawPolygon.Name = "btnDrawPolygon";
-            this.btnDrawPolygon.Size = new System.Drawing.Size(48, 48);
-            this.btnDrawPolygon.TabIndex = 5;
-            this.toolTip1.SetToolTip(this.btnDrawPolygon, "Показати особливі зони мапи");
-            this.btnDrawPolygon.UseVisualStyleBackColor = true;
-            this.btnDrawPolygon.Click += new System.EventHandler(this.btnOpenMap_Click);
-            // 
-            // btnCalcute
-            // 
-            this.btnCalcute.BackgroundImage = global::Myprojekt.Properties.Resources._1301423055_Maps;
-            this.btnCalcute.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnCalcute.Location = new System.Drawing.Point(5, 174);
-            this.btnCalcute.Name = "btnCalcute";
-            this.btnCalcute.Size = new System.Drawing.Size(48, 48);
-            this.btnCalcute.TabIndex = 4;
-            this.toolTip1.SetToolTip(this.btnCalcute, "Розрахувати небезпеку зон мапи");
-            this.btnCalcute.UseVisualStyleBackColor = true;
-            this.btnCalcute.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // buttonDrawGrid
-            // 
-            this.buttonDrawGrid.BackgroundImage = global::Myprojekt.Properties.Resources._1301423012_3x3_grid_2;
-            this.buttonDrawGrid.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.buttonDrawGrid.Location = new System.Drawing.Point(5, 120);
-            this.buttonDrawGrid.Name = "buttonDrawGrid";
-            this.buttonDrawGrid.Size = new System.Drawing.Size(48, 48);
-            this.buttonDrawGrid.TabIndex = 3;
-            this.toolTip1.SetToolTip(this.buttonDrawGrid, "Розмітити сітку на мапі");
-            this.buttonDrawGrid.UseVisualStyleBackColor = true;
-            this.buttonDrawGrid.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // btnAd
-            // 
-            this.btnAd.BackgroundImage = global::Myprojekt.Properties.Resources._1289309280_11;
-            this.btnAd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnAd.Location = new System.Drawing.Point(5, 66);
-            this.btnAd.Name = "btnAd";
-            this.btnAd.Size = new System.Drawing.Size(48, 48);
-            this.btnAd.TabIndex = 2;
-            this.toolTip1.SetToolTip(this.btnAd, "Згенерувати новий файл мапи");
-            this.btnAd.UseVisualStyleBackColor = true;
-            this.btnAd.Click += new System.EventHandler(this.btnCalcute_Click);
-            // 
-            // btnOpenMap
-            // 
-            this.btnOpenMap.BackgroundImage = global::Myprojekt.Properties.Resources._1301423033_folder_64;
-            this.btnOpenMap.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnOpenMap.Location = new System.Drawing.Point(5, 12);
-            this.btnOpenMap.Name = "btnOpenMap";
-            this.btnOpenMap.Size = new System.Drawing.Size(48, 48);
-            this.btnOpenMap.TabIndex = 0;
-            this.toolTip1.SetToolTip(this.btnOpenMap, "Відкрити згенеровану мапу для подальшої роботи.\r\n");
-            this.btnOpenMap.UseVisualStyleBackColor = true;
-            this.btnOpenMap.Click += new System.EventHandler(this.btnOpenMap_Click_1);
             // 
             // toolTip1
             // 
@@ -183,7 +96,6 @@
             this.statusStrip2.Size = new System.Drawing.Size(1085, 22);
             this.statusStrip2.TabIndex = 14;
             this.statusStrip2.Text = "statusStrip2";
-            this.statusStrip2.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.statusStrip2_ItemClicked);
             // 
             // ProgressBar
             // 
@@ -199,7 +111,6 @@
             // 
             this.bWDrawGrid.WorkerReportsProgress = true;
             this.bWDrawGrid.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bWDrawGrid_DoWork);
-            this.bWDrawGrid.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.bWDrawGrid_ProgressChanged);
             this.bWDrawGrid.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bWDrawGrid_RunWorkerCompleted);
             // 
             // bWCalcute
@@ -213,48 +124,55 @@
             this.openFileDialog1.Filter = "Map file(*.map)|*.map";
             this.openFileDialog1.InitialDirectory = "/maps";
             // 
-            // splitContainer1
-            // 
-            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
-            this.splitContainer1.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer1.Name = "splitContainer1";
-            // 
-            // splitContainer1.Panel1
-            // 
-            this.splitContainer1.Panel1.Controls.Add(this.panel2);
-            // 
-            // splitContainer1.Panel2
-            // 
-            this.splitContainer1.Panel2.Controls.Add(this.panel1);
-            this.splitContainer1.Size = new System.Drawing.Size(1085, 491);
-            this.splitContainer1.SplitterDistance = 57;
-            this.splitContainer1.TabIndex = 15;
-            // 
             // tmAskServ
             // 
             this.tmAskServ.Interval = 1000;
             this.tmAskServ.Tick += new System.EventHandler(this.tmAskServ_Tick);
             // 
-            // ribbon1
+            // _ribbon
             // 
-            this.ribbon1.AllowDrop = true;
-            this.ribbon1.Location = new System.Drawing.Point(0, 0);
-            this.ribbon1.Minimized = false;
-            this.ribbon1.Name = "ribbon1";
-            this.ribbon1.ResourceName = "Myprojekt.RibbonMarkup.ribbon";
-            this.ribbon1.ShortcutTableResourceName = null;
-            this.ribbon1.Size = new System.Drawing.Size(1085, 145);
-            this.ribbon1.TabIndex = 16;
+            this._ribbon.AllowDrop = true;
+            this._ribbon.Location = new System.Drawing.Point(0, 0);
+            this._ribbon.Minimized = false;
+            this._ribbon.Name = "_ribbon";
+            this._ribbon.ResourceName = "Myprojekt.RibbonMarkup.ribbon";
+            this._ribbon.ShortcutTableResourceName = null;
+            this._ribbon.Size = new System.Drawing.Size(1085, 145);
+            this._ribbon.TabIndex = 16;
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.splitContainer1);
+            this.panel3.AutoScroll = true;
+            this.panel3.Controls.Add(this.labelMessage);
+            this.panel3.Controls.Add(this.pictureBox1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(0, 145);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1085, 491);
             this.panel3.TabIndex = 17;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(200, 200);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Tag = "1";
+            this.pictureBox1.WaitOnLoad = true;
+            // 
+            // labelMessage
+            // 
+            this.labelMessage.AutoSize = true;
+            this.labelMessage.Font = new System.Drawing.Font("Calibri", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelMessage.Location = new System.Drawing.Point(12, 12);
+            this.labelMessage.Name = "labelMessage";
+            this.labelMessage.Size = new System.Drawing.Size(541, 41);
+            this.labelMessage.TabIndex = 1;
+            this.labelMessage.Text = "Для початку роботи відкрийте карту";
             // 
             // frmMainWindow
             // 
@@ -263,41 +181,28 @@
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1085, 658);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.ribbon1);
+            this.Controls.Add(this._ribbon);
             this.Controls.Add(this.statusStrip2);
             this.DoubleBuffered = true;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MinimumSize = new System.Drawing.Size(500, 500);
             this.Name = "frmMainWindow";
             this.Text = "WS&P";
             this.Load += new System.EventHandler(this.MainForm_Load);
-            this.Shown += new System.EventHandler(this.MainForm_Shown);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.statusStrip2.ResumeLayout(false);
             this.statusStrip2.PerformLayout();
-            this.splitContainer1.Panel1.ResumeLayout(false);
-            this.splitContainer1.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
-            this.splitContainer1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
+       
+
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-
-        private System.Windows.Forms.Button btnOpenMap;
-        private System.Windows.Forms.Button btnDrawPolygon;
-        private System.Windows.Forms.Button btnCalcute;
-        private System.Windows.Forms.Button buttonDrawGrid;
-        private System.Windows.Forms.Button btnAd;
-        private System.Windows.Forms.TextBox txtBlockSize;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.StatusStrip statusStrip2;
         private System.Windows.Forms.ToolStripProgressBar ProgressBar;
@@ -305,10 +210,14 @@
         private System.ComponentModel.BackgroundWorker bWDrawGrid;
         private System.ComponentModel.BackgroundWorker bWCalcute;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.SplitContainer splitContainer1;
         public System.Windows.Forms.Timer tmAskServ;
-        private RibbonLib.Ribbon ribbon1;
+        private RibbonLib.Ribbon _ribbon;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label labelMessage;
+
+
+
+
     }
 }

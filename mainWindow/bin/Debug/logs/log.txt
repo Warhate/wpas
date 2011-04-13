@@ -68,3 +68,8 @@
 8 квітня 2011 р.-[15:37:45]: Close program
 9 квітня 2011 р.-[23:44:53]: Started program
 9 квітня 2011 р.-[23:44:55]: Close program
+13 квітня 2011 р.-[22:46:59]: Started program
+13 квітня 2011 р.-[22:47:00]: Close program
+13 квітня 2011 р.-[23:04:24]: Open map:D:\Project\WPASSVN\mapsModeling\project\bin\Debug\maps\BigMap.map
+13 квітня 2011 р.-[23:08:51]: Started program
+13 квітня 2011 р.-[23:08:54]: Close program

@@ -10,6 +10,10 @@ using Layout;
 using System.Net.Sockets;
 using System.Threading;
 using System.Net;
+using RibbonLib;
+using RibbonLib.Controls;
+using RibbonLib.Controls.Events;
+using RibbonLib.Interop;
 
 namespace Myprojekt
 {
@@ -23,6 +27,31 @@ namespace Myprojekt
         List<Block> blocks;
         public frmSettings settingsForm;
         
+                #region Ribbon Start
+
+        
+
+        //Ribbon
+        private RibbonButton _buttonCreate;
+        private RibbonButton _buttonOpen;
+        private RibbonButton _buttonSave;
+        private RibbonButton _buttonSettings;
+        private RibbonButton _buttonExit;
+        private RibbonButton _buttonStart;
+        private RibbonButton _buttonStop;
+        private RibbonButton _buttonCreateMap;
+        private RibbonButton _buttonMarkerMap;
+        private RibbonButton _buttonCreateFilters;
+        private RibbonButton _buttonOpenFilters;
+        private RibbonButton _buttonGrid;
+        private RibbonButton _buttonCalculate;
+        private RibbonButton _buttonShowPolygons;
+        private RibbonHelpButton _helpButton;
+        private RibbonSpinner _blockSize;
+
+        #endregion
+
+
         public frmMainWindow()
         {
             settingsForm = new frmSettings();
@@ -39,56 +68,196 @@ namespace Myprojekt
             //panel2.Parent = pictureBox1;
             marker = new Marker();
 
-            width = pictureBox1.BackgroundImage.Width;
-            hight = pictureBox1.BackgroundImage.Height;
+
             blocks = new List<Block>();
-            panel1.AutoScrollPosition = new Point(100, 100);
+
 
             this.WindowState = FormWindowState.Maximized;
+
+            #region Ribbon init
+
+
+            //Ribbon init
+            _buttonCreate = new RibbonButton(_ribbon, (uint)RibbonMarkupCommands.cmdButtonCreate);
+            _buttonCalculate = new RibbonButton(_ribbon, (uint)RibbonMarkupCommands.cmdButtonCalculate);
+            _buttonCreateFilters = new RibbonButton(_ribbon, (uint)RibbonMarkupCommands.cmdButtonCreateFilters);
+            _buttonCreateMap = new RibbonButton(_ribbon, (uint)RibbonMarkupCommands.cmdButtonCreateMap);
+            _buttonExit = new RibbonButton(_ribbon, (uint)RibbonMarkupCommands.cmdButtonExit);
+            _buttonGrid = new RibbonButton(_ribbon, (uint)RibbonMarkupCommands.cmdButtonGrid);
+            _buttonMarkerMap = new RibbonButton(_ribbon, (uint)RibbonMarkupCommands.cmdButtonMarkerMap);
+            _buttonOpen = new RibbonButton(_ribbon, (uint)RibbonMarkupCommands.cmdButtonOpen);
+            _buttonOpenFilters = new RibbonButton(_ribbon, (uint)RibbonMarkupCommands.cmdButtonOpenFilters);
+            _buttonSave = new RibbonButton(_ribbon, (uint)RibbonMarkupCommands.cmdButtonSave);
+            _buttonSettings = new RibbonButton(_ribbon, (uint)RibbonMarkupCommands.cmdButtonSettings);
+            _buttonShowPolygons = new RibbonButton(_ribbon, (uint)RibbonMarkupCommands.cmdButtonShowPolygons);
+            _buttonStart = new RibbonButton(_ribbon, (uint)RibbonMarkupCommands.cmdButtonStart);
+            _buttonStop = new RibbonButton(_ribbon, (uint)RibbonMarkupCommands.cmdButtonStop);
+            _helpButton = new RibbonHelpButton(_ribbon, (uint)RibbonMarkupCommands.cmdHelpButton);
+            _blockSize = new RibbonSpinner(_ribbon, (uint)RibbonMarkupCommands.cmdBlockSize);
+
+            //Ribbon events
+            _buttonCreate.ExecuteEvent += new System.EventHandler<ExecuteEventArgs>(_buttonCreate_ExecuteEvent);
+            _buttonOpen.ExecuteEvent += new System.EventHandler<ExecuteEventArgs>(_buttonOpen_ExecuteEvent);
+            _buttonSave.ExecuteEvent += new System.EventHandler<ExecuteEventArgs>(_buttonSave_ExecuteEvent);
+            _buttonSettings.ExecuteEvent += new System.EventHandler<ExecuteEventArgs>(_buttonSettings_ExecuteEvent);
+            _buttonExit.ExecuteEvent += new System.EventHandler<ExecuteEventArgs>(_buttonExit_ExecuteEvent);
+            _buttonStart.ExecuteEvent += new System.EventHandler<ExecuteEventArgs>(_buttonStart_ExecuteEvent);
+            _buttonStop.ExecuteEvent += new System.EventHandler<ExecuteEventArgs>(_buttonStop_ExecuteEvent);
+            _buttonCreateMap.ExecuteEvent += new System.EventHandler<ExecuteEventArgs>(_buttonCreateMap_ExecuteEvent);
+            _buttonMarkerMap.ExecuteEvent += new System.EventHandler<ExecuteEventArgs>(_buttonMarkerMap_ExecuteEvent);
+            _buttonCreateFilters.ExecuteEvent += new System.EventHandler<ExecuteEventArgs>(_buttonCreateFilters_ExecuteEvent);
+            _buttonOpenFilters.ExecuteEvent += new System.EventHandler<ExecuteEventArgs>(_buttonOpenFilters_ExecuteEvent);
+            _buttonGrid.ExecuteEvent += new System.EventHandler<ExecuteEventArgs>(_buttonGrid_ExecuteEvent);
+            _buttonCalculate.ExecuteEvent += new System.EventHandler<ExecuteEventArgs>(_buttonCalculate_ExecuteEvent);
+            _buttonShowPolygons.ExecuteEvent += new System.EventHandler<ExecuteEventArgs>(_buttonShowPolygons_ExecuteEvent);
+            _helpButton.ExecuteEvent += new System.EventHandler<ExecuteEventArgs>(_helpButton_ExecuteEvent);
+
+            #endregion
             
         }
 
 
-        frmFilters FormFilter = new frmFilters();
-        AddMap addMap = new AddMap();
 
-        private void fireSimulationToolStripMenuItem_Click(object sender, EventArgs e)
+        #region Ribbon events
+
+        void _helpButton_ExecuteEvent(object sender, ExecuteEventArgs e)
         {
-
+            
         }
 
-        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        void _buttonShowPolygons_ExecuteEvent(object sender, ExecuteEventArgs e)
+        {
+            
+        }
+
+        void _buttonCalculate_ExecuteEvent(object sender, ExecuteEventArgs e)
+        {
+
+
+            if (map != null)
+            {
+                drawableImage = new Bitmap(width, hight);
+                graf = Graphics.FromImage(drawableImage);
+
+
+                ProgressBar.Style = ProgressBarStyle.Marquee;
+                labelStatus.Text = "Розраховується небезпечність зон...";
+
+                bWCalcute.RunWorkerAsync(_blockSize.DecimalValue <= 0 ? 100 : (int)_blockSize.DecimalValue);
+
+
+            }
+            else
+            {
+                MessageBox.Show("Для розрахунку карти її необхідно відкрити.", "Карту невідкрито", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
+
+
+            // Gradation(width, higth, bSize);
+            // marker.GetListBlocks(width, higth, bSize);
+            //pictureBox.Refresh();
+        }
+
+        void _buttonGrid_ExecuteEvent(object sender, ExecuteEventArgs e)
+        {
+            if (map != null)
+            {
+                drawableImage = new Bitmap(width, hight);
+                graf = Graphics.FromImage(drawableImage);
+
+
+                ProgressBar.Style = ProgressBarStyle.Marquee;
+                labelStatus.Text = "Розраховується градація...";
+
+                bWDrawGrid.RunWorkerAsync(_blockSize.DecimalValue <= 0 ? 100 : (int)_blockSize.DecimalValue);
+            }
+            else
+            {
+                MessageBox.Show("Для розрахунку карти її необхідно відкрити.", "Карту невідкрито", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+            
+        }
+
+        void _buttonOpenFilters_ExecuteEvent(object sender, ExecuteEventArgs e)
+        {
+           
+        }
+
+        void _buttonCreateFilters_ExecuteEvent(object sender, ExecuteEventArgs e)
+        {
+            FormFilter.ShowDialog();
+        }
+
+        void _buttonMarkerMap_ExecuteEvent(object sender, ExecuteEventArgs e)
+        {
+            MapForm mf = new MapForm();
+            mf.ShowDialog();
+        }
+
+        void _buttonCreateMap_ExecuteEvent(object sender, ExecuteEventArgs e)
+        {
+            addMap.ShowDialog();
+        }
+
+        void _buttonStop_ExecuteEvent(object sender, ExecuteEventArgs e)
+        {
+            tmAskServ.Enabled = false;
+        }
+
+        void _buttonStart_ExecuteEvent(object sender, ExecuteEventArgs e)
+        {
+            tmAskServ.Enabled = true;
+        }
+
+        void _buttonExit_ExecuteEvent(object sender, ExecuteEventArgs e)
         {
             DialogResult result = MessageBox.Show("Ви впевнені, що хочете вийти?", "Question",
             MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes) Application.Exit();
         }
 
-        private void createFiltersToolStripMenuItem_Click(object sender, EventArgs e)
+        void _buttonSettings_ExecuteEvent(object sender, ExecuteEventArgs e)
         {
-            FormFilter.ShowDialog();
+            settingsForm.ShowDialog();
         }
 
-        private void MainForm_Shown(object sender, EventArgs e)
+        void _buttonSave_ExecuteEvent(object sender, ExecuteEventArgs e)
+        {
+           
+        }
+
+        void _buttonOpen_ExecuteEvent(object sender, ExecuteEventArgs e)
+        {
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                OpenMap(openFileDialog1.FileName);
+                Log.AddLogMessage("Open map:" + openFileDialog1.FileName);
+
+
+            }
+        }
+
+        void _buttonCreate_ExecuteEvent(object sender, ExecuteEventArgs e)
         {
             
         }
+
+
+
+        #endregion
+
+        frmFilters FormFilter = new frmFilters();
+        AddMap addMap = new AddMap();
+
 
         private void MainForm_Load(object sender, EventArgs e)
         {
             this.DoubleBuffered = true;
         }
 
-        private void createMapToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            addMap.ShowDialog();
-        }
 
-        private void openMapToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            MapForm mf = new MapForm();
-            mf.ShowDialog();
-        }
 
         private void panel1_Scroll(object sender, ScrollEventArgs e)
         {
@@ -111,51 +280,6 @@ namespace Myprojekt
            
         }
 
-        private void toolStripContainer1_RightToolStripPanel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void statusStrip2_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-
-            drawableImage = new Bitmap(width, hight);
-            graf = Graphics.FromImage(drawableImage);
-
-
-            ProgressBar.Style = ProgressBarStyle.Marquee;
-            labelStatus.Text = "Розраховується градація...";
-
-            bWDrawGrid.RunWorkerAsync(txtBlockSize.Text == "" ? 100 : Convert.ToInt32(txtBlockSize.Text));
-            
-              
-
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-
-            drawableImage = new Bitmap(width, hight);
-            graf = Graphics.FromImage(drawableImage);
-
-
-            ProgressBar.Style = ProgressBarStyle.Marquee;
-            labelStatus.Text = "Розраховується небезпечність зон...";
-
-            bWCalcute.RunWorkerAsync(txtBlockSize.Text == "" ? 100 : Convert.ToInt32(txtBlockSize.Text));
-
-
-
-
-            // Gradation(width, higth, bSize);
-            // marker.GetListBlocks(width, higth, bSize);
-            //pictureBox.Refresh();
-        }
 
         private void bWDrawGrid_DoWork(object sender, DoWorkEventArgs e)
         {
@@ -166,10 +290,7 @@ namespace Myprojekt
              
         }
 
-        private void bWDrawGrid_ProgressChanged(object sender, ProgressChangedEventArgs e)
-        {
 
-        }
 
         private void bWDrawGrid_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
@@ -180,13 +301,13 @@ namespace Myprojekt
 
         }
 
-        private void btnCalcute_Click(object sender, EventArgs e)
-        {
-            
-        }
+
 
         private void bWCalcute_DoWork(object sender, DoWorkEventArgs e)
         {
+
+
+
             marker.DrawGrid(width, hight, (int)e.Argument, ref graf);
 
             blocks = marker.GetListBlocks(width, hight, (int)e.Argument);
@@ -196,11 +317,11 @@ namespace Myprojekt
             marker.DrawPowerBlocks(ref graf, blocks);
         }
 
-        private void btnOpenMap_Click(object sender, EventArgs e)
-        {
 
-        }
-
+        /// <summary>
+        /// Открытие карты
+        /// </summary>
+        /// <param name="filename">Имя файла</param>
         private void OpenMap(string filename)
         {
             map = SerializHelper.OpenMapFile(filename);
@@ -217,18 +338,10 @@ namespace Myprojekt
             hight = pictureBox1.BackgroundImage.Height;
             graf = Graphics.FromImage(drawableImage);
 
+            labelMessage.Visible = false;
+
         }
 
-        private void btnOpenMap_Click_1(object sender, EventArgs e)
-        {
-            if (openFileDialog1.ShowDialog() == DialogResult.OK)
-            {
-                OpenMap(openFileDialog1.FileName);
-                Log.AddLogMessage("Open map:" + openFileDialog1.FileName);
-
-
-            }
-        }
 
         private void bWCalcute_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
@@ -238,40 +351,7 @@ namespace Myprojekt
             pictureBox1.Refresh();
         }
 
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-            
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void button1_MouseClick(object sender, MouseEventArgs e)
-        {
-            
-        }
-
-        private void button1_KeyDown(object sender, KeyEventArgs e)
-        {
-            
-        }
-
-        private void settingsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            settingsForm.ShowDialog();
-        }
-
-        private void startEmulationToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            tmAskServ.Enabled = true;
-        }
-
-        private void stopEmulationToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            tmAskServ.Enabled = false;
-        }
+ 
 
         private void tmAskServ_Tick(object sender, EventArgs e)
         {
@@ -291,6 +371,7 @@ namespace Myprojekt
 
             tmAskServ.Interval = settingsForm.appSettings.updateRate * 60000;
         }
+
 
 
 
