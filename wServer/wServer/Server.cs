@@ -12,6 +12,7 @@ namespace wServer
     {
         private TcpListener tcpListener;
         private Thread listenThread;
+        private TcpClient client;
 
         public Server()
         {
@@ -27,7 +28,7 @@ namespace wServer
             while (true)
             {
                 //blocks until a client has connected to the server
-                TcpClient client = this.tcpListener.AcceptTcpClient();
+                client = this.tcpListener.AcceptTcpClient();
 
                 //create a thread to handle communication 
                 //with connected client
@@ -67,6 +68,8 @@ namespace wServer
                 //message has successfully been received
                 ASCIIEncoding encoder = new ASCIIEncoding();
                 Console.WriteLine("Recived data:" + encoder.GetString(message, 0, bytesRead));
+                byte[] buffer = encoder.GetBytes("Wind NW 102 ms");
+                clientStream.Write(buffer, 0, buffer.Length);
             }
 
             tcpClient.Close();

@@ -386,9 +386,16 @@ namespace Myprojekt
             TcpClient client = new TcpClient();
 
             IPEndPoint serverEndPoint = new IPEndPoint(IPAddress.Parse(settingsForm.appSettings.serverAddress), 3000);
-
-            client.Connect(serverEndPoint);
-
+            try
+            {
+                client.Connect(serverEndPoint);
+            }
+            catch
+            {
+                tmAskServ.Enabled = false;
+                MessageBox.Show("Check your connection options.", "Error connecting to server.", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             NetworkStream clientStream = client.GetStream();
 
             ASCIIEncoding encoder = new ASCIIEncoding();
