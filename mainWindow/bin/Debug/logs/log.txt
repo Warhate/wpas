@@ -89,3 +89,4 @@
 14 квітня 2011 р.-[0:17:03]: Open map:D:\Project\WPASSVN\mapsModeling\project\bin\Debug\maps\BigMap.map
 14 квітня 2011 р.-[0:24:39]: Open map:D:\Project\WPASSVN\mapsModeling\project\bin\Debug\maps\colorado.map
 14 квітня 2011 р.-[0:24:43]: Open map:D:\Project\WPASSVN\mapsModeling\project\bin\Debug\maps\BigMap.map
+14 квітня 2011 р.-[0:37:08]: Open map:D:\Project\WPASSVN\mapsModeling\project\bin\Debug\maps\BigMap.map

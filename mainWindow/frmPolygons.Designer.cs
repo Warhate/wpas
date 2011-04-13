@@ -31,6 +31,7 @@
             this.polygonView = new System.Windows.Forms.DataGridView();
             this.Type = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Color = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.polygonView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -40,7 +41,8 @@
             this.polygonView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.polygonView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Type,
-            this.Description});
+            this.Description,
+            this.Color});
             this.polygonView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.polygonView.Location = new System.Drawing.Point(0, 0);
             this.polygonView.Name = "polygonView";
@@ -58,7 +60,14 @@
             this.Description.HeaderText = "Опис";
             this.Description.Name = "Description";
             this.Description.ReadOnly = true;
-            this.Description.Width = 350;
+            this.Description.Width = 300;
+            // 
+            // Color
+            // 
+            this.Color.HeaderText = "Колір";
+            this.Color.Name = "Color";
+            this.Color.ReadOnly = true;
+            this.Color.Width = 50;
             // 
             // frmPolygons
             // 
@@ -67,6 +76,8 @@
             this.ClientSize = new System.Drawing.Size(521, 317);
             this.Controls.Add(this.polygonView);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmPolygons";
             this.ShowIcon = false;
             this.Text = "Визначені ділянки";
@@ -80,5 +91,6 @@
         private System.Windows.Forms.DataGridView polygonView;
         private System.Windows.Forms.DataGridViewTextBoxColumn Type;
         private System.Windows.Forms.DataGridViewTextBoxColumn Description;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Color;
     }
 }
