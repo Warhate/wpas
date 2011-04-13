@@ -48,3 +48,5 @@ D:\Project\WPASSVN\mainWindow\obj\x86\Debug\GenerateResource.read.1.tlog
 D:\Project\WPASSVN\mainWindow\obj\x86\Debug\GenerateResource.write.1.tlog
 D:\Project\WPASSVN\mainWindow\bin\Debug\Ribbon.dll
 D:\Project\WPASSVN\mainWindow\bin\Debug\Ribbon.pdb
+D:\Project\WPASSVN\mainWindow\obj\x86\Debug\Myprojekt.frmAbout.resources
+D:\Project\WPASSVN\mainWindow\obj\x86\Debug\Myprojekt.frmPolygons.resources

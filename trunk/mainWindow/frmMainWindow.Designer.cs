@@ -189,6 +189,7 @@ namespace Myprojekt
             this.Name = "frmMainWindow";
             this.Text = "WS&P";
             this.Load += new System.EventHandler(this.MainForm_Load);
+            this.SizeChanged += new System.EventHandler(this.frmMainWindow_SizeChanged);
             this.statusStrip2.ResumeLayout(false);
             this.statusStrip2.PerformLayout();
             this.panel3.ResumeLayout(false);
