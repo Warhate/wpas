@@ -14,6 +14,7 @@ using RibbonLib;
 using RibbonLib.Controls;
 using RibbonLib.Controls.Events;
 using RibbonLib.Interop;
+using wParams;
 
 namespace Myprojekt
 {

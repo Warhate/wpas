@@ -13,3 +13,5 @@ D:\Project\WPASSVN\wServer\wServer\obj\x86\Debug\wServer.pdb
 D:\Project\WPASSVN\wServer\wServer\bin\Debug\wServer.exe
 D:\Project\WPASSVN\wServer\wServer\bin\Debug\wServer.pdb
 D:\Project\WPASSVN\wServer\wServer\obj\x86\Debug\ResolveAssemblyReference.cache
+F:\share\competition\fire\WPaS\wServer\wServer\bin\Debug\wParams.dll
+F:\share\competition\fire\WPaS\wServer\wServer\bin\Debug\wParams.pdb

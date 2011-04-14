@@ -91,21 +91,22 @@ namespace Myprojekt
             this.statusStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ProgressBar,
             this.labelStatus});
-            this.statusStrip2.Location = new System.Drawing.Point(0, 587);
+            this.statusStrip2.Location = new System.Drawing.Point(0, 724);
             this.statusStrip2.Name = "statusStrip2";
-            this.statusStrip2.Size = new System.Drawing.Size(1028, 22);
+            this.statusStrip2.Padding = new System.Windows.Forms.Padding(1, 0, 19, 0);
+            this.statusStrip2.Size = new System.Drawing.Size(1371, 26);
             this.statusStrip2.TabIndex = 14;
             this.statusStrip2.Text = "statusStrip2";
             // 
             // ProgressBar
             // 
             this.ProgressBar.Name = "ProgressBar";
-            this.ProgressBar.Size = new System.Drawing.Size(100, 16);
+            this.ProgressBar.Size = new System.Drawing.Size(133, 20);
             // 
             // labelStatus
             // 
             this.labelStatus.Name = "labelStatus";
-            this.labelStatus.Size = new System.Drawing.Size(0, 17);
+            this.labelStatus.Size = new System.Drawing.Size(0, 21);
             // 
             // bWDrawGrid
             // 
@@ -133,11 +134,12 @@ namespace Myprojekt
             // 
             this._ribbon.AllowDrop = true;
             this._ribbon.Location = new System.Drawing.Point(0, 0);
+            this._ribbon.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this._ribbon.Minimized = false;
             this._ribbon.Name = "_ribbon";
             this._ribbon.ResourceName = "Myprojekt.RibbonMarkup.ribbon";
             this._ribbon.ShortcutTableResourceName = null;
-            this._ribbon.Size = new System.Drawing.Size(1028, 145);
+            this._ribbon.Size = new System.Drawing.Size(1371, 178);
             this._ribbon.TabIndex = 16;
             // 
             // panel3
@@ -146,18 +148,20 @@ namespace Myprojekt
             this.panel3.Controls.Add(this.labelMessage);
             this.panel3.Controls.Add(this.pictureBox1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(0, 145);
+            this.panel3.Location = new System.Drawing.Point(0, 178);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1028, 442);
+            this.panel3.Size = new System.Drawing.Size(1371, 546);
             this.panel3.TabIndex = 17;
             // 
             // labelMessage
             // 
             this.labelMessage.AutoSize = true;
             this.labelMessage.Font = new System.Drawing.Font("Calibri", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelMessage.Location = new System.Drawing.Point(12, 12);
+            this.labelMessage.Location = new System.Drawing.Point(16, 15);
+            this.labelMessage.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelMessage.Name = "labelMessage";
-            this.labelMessage.Size = new System.Drawing.Size(541, 41);
+            this.labelMessage.Size = new System.Drawing.Size(667, 51);
             this.labelMessage.TabIndex = 1;
             this.labelMessage.Text = "Для початку роботи відкрийте карту";
             // 
@@ -165,7 +169,8 @@ namespace Myprojekt
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox1.Location = new System.Drawing.Point(4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(200, 200);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -176,16 +181,17 @@ namespace Myprojekt
             // 
             // frmMainWindow
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(1028, 609);
+            this.ClientSize = new System.Drawing.Size(1371, 750);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this._ribbon);
             this.Controls.Add(this.statusStrip2);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MinimumSize = new System.Drawing.Size(500, 499);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MinimumSize = new System.Drawing.Size(661, 604);
             this.Name = "frmMainWindow";
             this.Text = "WS&P";
             this.Load += new System.EventHandler(this.MainForm_Load);
