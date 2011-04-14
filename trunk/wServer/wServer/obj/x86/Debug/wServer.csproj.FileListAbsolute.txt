@@ -8,3 +8,8 @@ D:\WapS\wServer\wServer\obj\x86\Debug\wServer.pdb
 D:\WapS\wServer\wServer\bin\Debug\wServer.exe
 D:\WapS\wServer\wServer\bin\Debug\wServer.pdb
 D:\WapS\wServer\wServer\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Project\WPASSVN\wServer\wServer\obj\x86\Debug\wServer.exe
+D:\Project\WPASSVN\wServer\wServer\obj\x86\Debug\wServer.pdb
+D:\Project\WPASSVN\wServer\wServer\bin\Debug\wServer.exe
+D:\Project\WPASSVN\wServer\wServer\bin\Debug\wServer.pdb
+D:\Project\WPASSVN\wServer\wServer\obj\x86\Debug\ResolveAssemblyReference.cache

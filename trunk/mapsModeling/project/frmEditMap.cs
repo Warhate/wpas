@@ -20,6 +20,8 @@ namespace Layout
         List<Point> points = new List<Point>();
         Marker marker = new Marker();
         List<Block> blocks = new List<Block>();
+        Bitmap bmp;
+        Graphics grf;
 
         enum MarketMethod
         { 
@@ -399,6 +401,7 @@ namespace Layout
             graf = Graphics.FromImage(bImg);
             Pen p = new Pen(color,4.0f);
             graf.DrawPolygon(p, p1);
+            pictureBox.Image = bImg;
             pictureBox.Refresh();
         
         }
@@ -429,10 +432,12 @@ namespace Layout
 
         private void pictureBox_MouseClick(object sender, MouseEventArgs e)
         {
+
             if(isDrawPoligon)
             {
 
                 SetPoligon(e);
+
 
                
             }
@@ -442,7 +447,9 @@ namespace Layout
         {
             if (e.Button == MouseButtons.Left)
             {
-
+                grf.FillEllipse(Brushes.RoyalBlue, e.X, e.Y, 10.0f, 10.0f);
+                pictureBox.Image = bmp;
+                pictureBox.Refresh();
                 points.Add(new Point(e.X, e.Y));
             }
             else if (e.Button == MouseButtons.Right)
@@ -521,7 +528,7 @@ namespace Layout
         {
             labelInProggres.Visible = false;
             toolStripProgressBar1.Visible = false;
-            notifyIcon1.ShowBalloonTip(1000, "Complite", "Gradation map is complite. (=", ToolTipIcon.Info);
+           
             pictureBox.Refresh();
 
         }
@@ -557,6 +564,9 @@ namespace Layout
         private void toolStripButton9_Click(object sender, EventArgs e)
         {
             isDrawPoligon = true;
+            bmp = new Bitmap(pictureBox.BackgroundImage.Width, pictureBox.BackgroundImage.Height);
+            grf = Graphics.FromImage(bmp);
+
         }
 
         private void toolStripButton10_Click(object sender, EventArgs e)

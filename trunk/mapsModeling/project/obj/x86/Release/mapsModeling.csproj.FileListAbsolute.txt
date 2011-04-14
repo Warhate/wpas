@@ -1,0 +1,11 @@
+D:\Project\WPASSVN\mapsModeling\project\bin\Release\Layout.dll
+D:\Project\WPASSVN\mapsModeling\project\bin\Release\Layout.pdb
+D:\Project\WPASSVN\mapsModeling\project\obj\x86\Release\ResolveAssemblyReference.cache
+D:\Project\WPASSVN\mapsModeling\project\obj\x86\Release\Layout.AddMap.resources
+D:\Project\WPASSVN\mapsModeling\project\obj\x86\Release\Layout.AddPoligon.resources
+D:\Project\WPASSVN\mapsModeling\project\obj\x86\Release\Layout.MapForm.resources
+D:\Project\WPASSVN\mapsModeling\project\obj\x86\Release\Layout.Properties.Resources.resources
+D:\Project\WPASSVN\mapsModeling\project\obj\x86\Release\GenerateResource.read.1.tlog
+D:\Project\WPASSVN\mapsModeling\project\obj\x86\Release\GenerateResource.write.1.tlog
+D:\Project\WPASSVN\mapsModeling\project\obj\x86\Release\Layout.dll
+D:\Project\WPASSVN\mapsModeling\project\obj\x86\Release\Layout.pdb

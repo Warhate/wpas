@@ -1,0 +1,9 @@
+D:\Project\WPASSVN\mainWindow\obj\x86\Release\ResolveAssemblyReference.cache
+D:\Project\WPASSVN\mainWindow\obj\x86\Release\Myprojekt.frmAbout.resources
+D:\Project\WPASSVN\mainWindow\obj\x86\Release\Myprojekt.frmFilters.resources
+D:\Project\WPASSVN\mainWindow\obj\x86\Release\Myprojekt.frmMainWindow.resources
+D:\Project\WPASSVN\mainWindow\obj\x86\Release\Myprojekt.frmPolygons.resources
+D:\Project\WPASSVN\mainWindow\obj\x86\Release\Myprojekt.frmSettings.resources
+D:\Project\WPASSVN\mainWindow\obj\x86\Release\Myprojekt.Properties.Resources.resources
+D:\Project\WPASSVN\mainWindow\obj\x86\Release\GenerateResource.read.1.tlog
+D:\Project\WPASSVN\mainWindow\obj\x86\Release\GenerateResource.write.1.tlog

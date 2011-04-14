@@ -129,6 +129,9 @@
   <metadata name="toolStripPoly.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>867, 17</value>
   </metadata>
+  <metadata name="toolStrip3.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>598, 17</value>
+  </metadata>
   <metadata name="Column1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -138,8 +141,14 @@
   <metadata name="Column3.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="toolStrip3.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>598, 17</value>
+  <metadata name="Column1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Column2.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Column3.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="toolStripButton7.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -163,31 +172,4 @@
   <metadata name="backgroundWorker1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>703, 17</value>
   </metadata>
-  <metadata name="notifyIcon1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>972, 17</value>
-  </metadata>
-  <data name="notifyIcon1.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        AAABAAEAEBAAAAAAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAQAQAAAAAAAAAAAAAAAAAAAAA
-        AAD///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
-        /wH///8BmWYzv5lmM5WZZjM9////Af///wGZZjM9mWYzlZlmM/+ZZjP/mWYzlZlmMz3///8B////AZlm
-        Mz2ZZjOVmWYzv5xpNv+4hVL/p3RB/5xpNv+caTb/p3RB/7iFUv/MmWb/zJlm/7iFUv+ndEH/nGk2/5xp
-        Nv+ndEH/uIVS/5xpNv+gbTr/z5xp/9qvhP/PnGn/z5xp/9qvhP/rzKz//+7d///Mmf/rzKz/2q+E/8+c
-        af/PnGn/2q+E/8+caf+gbTr/pXI//9Shbv//7t3//+7d///u3f//7t3//+7d///u3f//zJn//+7d///u
-        3f//7t3//+7d///u3f/UoW7/pXI//6p3RP/ZpnP//+/f///v3///79///+/f///v3///7t3//8yZ///v
-        3///79///+/f///v3///79//2aZz/6p3RP+wfUr/36x5///x4//Mu6r/3cy7/+7dzP//8eP//+7d///M
-        mf//8eP/7t3M/93Mu//Mu6r///Hj/9+sef+wfUr/tYJP/+WygP//8+f///Pn///z5///8+f///Pn///u
-        3f//zJn///Pn///z5///8+f///Pn///z5//lsoD/tYJP/7uIVf/suYb///Xs/8y7qv/dzLv/7t3M///1
-        7P//7t3//8yZ///17P/u3cz/3cy7/8y7qv//9ez/7LmG/7uIVf/AjVr/8r+M///48P//+PD///jw///4
-        8P//+PD//+7d///Mmf//+PD///jw///48P//+PD///jw//K/jP/AjVr/xZJf//fEkf//+vX/zLuq/93M
-        u//u3cz///r1///u3f//zJn///r1/+7dzP/dzLv/zLuq///69f/3xJH/xZJf/8mWY//8yZb///z5///8
-        +f///Pn///z5///8+f//7t3//8yZ///8+f///Pn///z5///8+f///Pn//MmW/8mWY//MmWb//8yZ///+
-        /f/Mu6r/3cy7/+7dzP///v3//+7d///Mmf///v3/7t3M/93Mu//Mu6r///79///Mmf/MmWb/zJlmv+Gu
-        e///8+f/////////////8+f//+HE///Mmf//zJn//+HE///z5//////////////z5//hrnv/zJlmv///
-        /wHMmWZr/8yZw//Mmf//zJn//8yZw//MmWv///8B////Af/MmWv/zJnD/8yZ///Mmf//zJnDzJlma///
-        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
-        /wH///8BAAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA
-        //8AAP//AAD//w==
-</value>
-  </data>
 </root>
