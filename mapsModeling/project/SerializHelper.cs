@@ -21,7 +21,7 @@ namespace Layout
         public static void SaveMap(String name, Map map)
         {
             Stream stream = File.Open(@"maps/"+name+".map", FileMode.OpenOrCreate);
-            
+            Stream sr = Stream.Null; 
             BinaryFormatter bf = new BinaryFormatter();
             
             bf.Serialize(stream, map);
@@ -29,6 +29,8 @@ namespace Layout
             stream.Close();
 
         }
+
+
 
         /// <summary>
         /// Десерилезирует карту

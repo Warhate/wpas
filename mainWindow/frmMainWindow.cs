@@ -75,6 +75,8 @@ namespace Myprojekt
 
             this.WindowState = FormWindowState.Maximized;
 
+            
+
             #region Ribbon init
 
 
@@ -130,7 +132,27 @@ namespace Myprojekt
         void _buttonShowPolygons_ExecuteEvent(object sender, ExecuteEventArgs e)
         {
 
-          
+            if (map != null)
+            {
+                drawableImage = new Bitmap(width, hight);
+                graf = Graphics.FromImage(drawableImage);
+
+                for (int i = 0; i < 100;i++ )
+                {
+                    marker.MakeFaire(ref graf, map.Poligons[0],i,Marker.WindDirect.E);
+                    pictureBox1.Image = drawableImage;
+                    pictureBox1.Update();
+                    Thread.Sleep(50);
+                }
+
+
+
+
+            }
+            else
+            {
+                MessageBox.Show("Для розрахунку карти її необхідно відкрити.", "Карту невідкрито", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
             
         }
 

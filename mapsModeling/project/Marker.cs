@@ -14,10 +14,259 @@ namespace Layout
         private List<Block> blocks = new List<Block>();
         List<Line> lines = new List<Line>();
         
+       public enum WindDirect
+       {
+           N,
+           W,
+           E,
+           S
+       
+       
+       }
        
        
        public Marker()
-        { }
+        { 
+        
+       
+       }
+
+
+       /// <summary>
+       /// Наносит изображение на карту
+       /// </summary>
+       /// <param name="position"></param>
+       /// <param name="img"></param>
+       /// <param name="graph"></param>
+       public void DrawFire(Point position,Image img, ref Graphics graph)
+       {
+
+           graph.DrawImage(img, position);
+                
+       
+       
+       }
+
+
+       public void DrawPoint(Point position, ref Graphics graph)
+       {
+           
+       
+       }
+
+
+
+       public void MakeFaire(ref Graphics graph, MarkPlace polygon, int step,WindDirect wd)
+       {
+           int maxX = polygon.Points[0].X,
+               minX =  polygon.Points[0].X,
+               maxY = polygon.Points[0].Y,
+               minY = polygon.Points[0].Y,
+               midleX = 0,
+               midleY = 0;
+
+
+
+           for (int i = 0; i < polygon.Points.Length; i++)
+           {
+               if (polygon.Points[i].X < minX)
+               {
+                   minX = polygon.Points[i].X;
+               }
+
+               if (polygon.Points[i].X > maxX)
+               {
+                   maxX = polygon.Points[i].X;
+               }
+
+               if (polygon.Points[i].Y < minY)
+               {
+                   minY = polygon.Points[i].Y;
+               }
+
+               if (polygon.Points[i].Y > maxY)
+               {
+                   maxY = polygon.Points[i].Y;
+               }
+               
+                
+           }
+
+           midleX = (minX + maxX) / 2;
+           midleY = (minY + maxY) / 2;
+
+           /*
+           for (int i = 0; i < polygon.Points.Length; i++)
+           {
+
+               if (polygon.Points[i].X > midleX) 
+               {
+                   if (polygon.Points[i].Y > midleY) //1
+                   {
+                       polygon.Points[i].X += step;
+                       polygon.Points[i].Y += step;
+                   
+                   }
+
+                   if (polygon.Points[i].Y < midleY) //4
+                   {
+                       polygon.Points[i].X += step;
+                       polygon.Points[i].Y -= step;
+
+                   }
+
+               
+               }
+
+
+               if (polygon.Points[i].X < midleX) 
+               {
+                   if (polygon.Points[i].Y > midleY) //2
+                   {
+                       polygon.Points[i].X -= step;
+                       polygon.Points[i].Y += step;
+
+                   }
+
+                   if (polygon.Points[i].Y < midleY) //3
+                   {
+                       polygon.Points[i].X -= step;
+                       polygon.Points[i].Y -= step;
+
+                   }
+
+
+               }
+
+               if (polygon.Points[i].X == midleX)
+               {
+                   if (polygon.Points[i].Y > midleY) //2
+                   {
+                       polygon.Points[i].X -= step;
+                       polygon.Points[i].Y += step;
+
+                   }
+
+                   if (polygon.Points[i].Y < midleY) //3
+                   {
+                       polygon.Points[i].X -= step;
+                       polygon.Points[i].Y -= step;
+
+                   }
+
+                   if (polygon.Points[i].Y == midleY) //2
+                   {
+                       polygon.Points[i].X -= step;
+                       polygon.Points[i].Y += step;
+
+                   }
+
+
+
+               }
+           
+           
+           }
+
+           */
+
+               graph.FillPolygon(Brushes.Red, polygon.Points);
+
+               switch (wd)
+               {
+                   case (WindDirect.N):
+                       {
+
+
+                           graph.DrawBezier(Pens.Red, new Point(minX, midleY), new Point(minX - step * 3, minY - step * 3), new Point(maxX + step * 3, minY - step * 3), new Point(maxX , midleY));
+                           
+
+                           break;
+
+                       
+                       }
+
+                   case (WindDirect.S):
+                       {
+
+
+                           graph.DrawBezier(Pens.Red, new Point(minX, midleY), new Point(minX - step * 3, maxY + step * 3), new Point(maxX + step * 3, maxY + step * 3), new Point(maxX, midleY));
+
+
+                           break;
+
+
+                       }
+
+                   case (WindDirect.W):
+                       {
+
+
+                           graph.DrawBezier(Pens.Red, new Point(midleX, maxY), new Point(minX - step * 3, maxY + step * 3), new Point(minX - step * 3, minY - step * 3), new Point(midleX, minY));
+
+
+                           break;
+
+
+                       }
+
+                   case (WindDirect.E):
+                       {
+
+
+                           graph.DrawBezier(Pens.Red, new Point(midleX, maxY), new Point(maxX + step * 3, maxY + step * 3), new Point(maxX + step * 3, minY - step * 3), new Point(midleX, minY));
+
+
+                           break;
+
+
+                       }
+               
+               
+               }
+               
+
+           //graph.DrawBezier(Pens.Red, new Point(100, 500), new Point(200, 450), new Point(200, 550), new Point(100, 500));
+           //graph.DrawBezier(Pens.Red, new Point(100, 500), new Point(250, 400), new Point(250, 600), new Point(100, 500));
+           //graph.DrawBezier(Pens.Red, new Point(100, 500), new Point(300, 350), new Point(300, 650), new Point(100, 500));
+           //graph.DrawBezier(Pens.Red, new Point(100, 500), new Point(350,300), new Point(350, 700), new Point(100, 500));
+           //graph.DrawBezier(Pens.Red, new Point(100, 100), new Point(200, 100), new Point(100, 200), new Point(100, 100));
+
+
+           //List<Point> points = CalcutePoints(1000);
+
+           //for (int i = 0; i < 1000; i++)
+           //{
+           //    //DrawPoint(points[i], ref graph);
+
+           //    graph.DrawLine(new Pen(Brushes.Red), points[i], new Point(points[i].X+1,points[i].Y+1));
+           
+           //}
+       
+       }
+
+       public List<Point> CalcutePoints(int count)
+       {
+           List<Point> points = new List<Point>(count);
+
+           points.Add(new Point(100, 100));
+
+           for (int i = 0; i < count; i++)
+           {
+               for (int j = 0; j < i + 1; j++)
+               {
+
+                   points.Add(new Point(points[j].X + j, points[j].Y + j));
+                   points.Add(new Point(points[j].X, points[j].Y + j));
+                   points.Add(new Point(points[j].X - j, points[j].Y + j));
+
+               }
+
+           }
+
+           return points;
+       
+       }
 
         /// <summary>
         /// Рисование сетки 
