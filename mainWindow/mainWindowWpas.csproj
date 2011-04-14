@@ -64,6 +64,9 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="wParams">
+      <HintPath>..\wParams\wParams\bin\Debug\wParams.dll</HintPath>
+    </Reference>
     <Reference Include="ZedGraph">
       <HintPath>..\..\..\..\..\..\..\Emgu\emgucv-windows-x86 2.2.1.1150\bin\ZedGraph.dll</HintPath>
     </Reference>

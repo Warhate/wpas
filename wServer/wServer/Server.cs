@@ -5,6 +5,10 @@ using System.Text;
 using System.Net.Sockets;
 using System.Threading;
 using System.Net;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Formatters;
+using System.Runtime.Serialization.Formatters.Binary;
+using wParams;
 
 namespace wServer
 {
@@ -13,6 +17,7 @@ namespace wServer
         private TcpListener tcpListener;
         private Thread listenThread;
         private TcpClient client;
+        private EnviParams someData = new EnviParams();
 
         public Server()
         {
@@ -47,6 +52,8 @@ namespace wServer
             while (true)
             {
                 bytesRead = 0;
+                someData.WindDirection = 12;
+                someData.Windforce = 234;
 
                 try
                 {
@@ -68,8 +75,8 @@ namespace wServer
                 //message has successfully been received
                 ASCIIEncoding encoder = new ASCIIEncoding();
                 Console.WriteLine("Recived data:" + encoder.GetString(message, 0, bytesRead));
-                byte[] buffer = encoder.GetBytes("Wind NW 102 ms");
-                clientStream.Write(buffer, 0, buffer.Length);
+                BinaryFormatter bf = new BinaryFormatter();
+                bf.Serialize(clientStream, someData);
             }
 
             tcpClient.Close();
