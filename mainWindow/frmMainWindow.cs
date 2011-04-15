@@ -15,6 +15,7 @@ using RibbonLib.Controls;
 using RibbonLib.Controls.Events;
 using RibbonLib.Interop;
 using wParams;
+using System.Runtime.Serialization.Formatters.Binary;
 
 namespace Myprojekt
 {
@@ -29,6 +30,7 @@ namespace Myprojekt
         List<Block> blocks;
         public frmSettings settingsForm;
         frmAbout frmAbout;
+        EnviParams servData = new EnviParams();
                 #region Ribbon Start
 
         
@@ -419,15 +421,26 @@ namespace Myprojekt
                 MessageBox.Show("Check your connection options.", "Error connecting to server.", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            NetworkStream clientStream = client.GetStream();
 
-            ASCIIEncoding encoder = new ASCIIEncoding();
-            byte[] buffer = encoder.GetBytes("Hello Server!");
+            try
+            {
+                NetworkStream clientStream = client.GetStream();
 
-            clientStream.Write(buffer, 0, buffer.Length);
-            clientStream.Flush();
+                ASCIIEncoding encoder = new ASCIIEncoding();
+                byte[] buffer = encoder.GetBytes("gibe_me_some_stats");
+                clientStream.Write(buffer, 0, buffer.Length);
 
-            tmAskServ.Interval = settingsForm.appSettings.updateRate * 60000;
+                BinaryFormatter bf = new BinaryFormatter();
+                servData = (EnviParams)bf.Deserialize(clientStream);
+                MessageBox.Show("Wind force is: " + servData.Windforce, "Data", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                clientStream.Flush();
+                tmAskServ.Interval = settingsForm.appSettings.updateRate * 60000;
+            }
+            catch
+            {
+                MessageBox.Show("Bad server output.", "Error.", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
         }
 
         private void frmMainWindow_SizeChanged(object sender, EventArgs e)
