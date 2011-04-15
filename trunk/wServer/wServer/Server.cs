@@ -52,8 +52,9 @@ namespace wServer
             while (true)
             {
                 bytesRead = 0;
-                someData.WindDirection = 12;
-                someData.Windforce = 234;
+                Random random = new Random();
+                someData.WindDirection = random.Next(1, 8); ;
+                someData.Windforce = random.Next(10, 100); ;
 
                 try
                 {
@@ -75,8 +76,11 @@ namespace wServer
                 //message has successfully been received
                 ASCIIEncoding encoder = new ASCIIEncoding();
                 Console.WriteLine("Recived data:" + encoder.GetString(message, 0, bytesRead));
-                BinaryFormatter bf = new BinaryFormatter();
-                bf.Serialize(clientStream, someData);
+                if (encoder.GetString(message, 0, bytesRead) == "gibe_me_some_stats")
+                {
+                    BinaryFormatter bf = new BinaryFormatter();
+                    bf.Serialize(clientStream, someData);
+                }
             }
 
             tcpClient.Close();
