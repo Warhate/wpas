@@ -31,3 +31,14 @@ D:\Project\WPASSVN\mapsModeling\project\obj\x86\Debug\GenerateResource.read.1.tl
 D:\Project\WPASSVN\mapsModeling\project\obj\x86\Debug\GenerateResource.write.1.tlog
 D:\Project\WPASSVN\mapsModeling\project\obj\x86\Debug\Layout.dll
 D:\Project\WPASSVN\mapsModeling\project\obj\x86\Debug\Layout.pdb
+D:\WPaS\mapsModeling\project\bin\Debug\Layout.dll
+D:\WPaS\mapsModeling\project\bin\Debug\Layout.pdb
+D:\WPaS\mapsModeling\project\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\WPaS\mapsModeling\project\obj\x86\Debug\Layout.AddMap.resources
+D:\WPaS\mapsModeling\project\obj\x86\Debug\Layout.AddPoligon.resources
+D:\WPaS\mapsModeling\project\obj\x86\Debug\Layout.MapForm.resources
+D:\WPaS\mapsModeling\project\obj\x86\Debug\Layout.Properties.Resources.resources
+D:\WPaS\mapsModeling\project\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\WPaS\mapsModeling\project\obj\x86\Debug\GenerateResource.write.1.tlog
+D:\WPaS\mapsModeling\project\obj\x86\Debug\Layout.dll
+D:\WPaS\mapsModeling\project\obj\x86\Debug\Layout.pdb

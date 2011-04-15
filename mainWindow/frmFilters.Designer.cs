@@ -69,9 +69,9 @@
             this.trackBar4 = new System.Windows.Forms.TrackBar();
             this.trackBar2 = new System.Windows.Forms.TrackBar();
             this.trackBar1 = new System.Windows.Forms.TrackBar();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxBChannel = new System.Windows.Forms.PictureBox();
+            this.pictureBoxGChannel = new System.Windows.Forms.PictureBox();
+            this.pictureBoxRChannel = new System.Windows.Forms.PictureBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.labelH2 = new System.Windows.Forms.Label();
@@ -89,9 +89,9 @@
             this.trackBar10 = new System.Windows.Forms.TrackBar();
             this.trackBar11 = new System.Windows.Forms.TrackBar();
             this.trackBar12 = new System.Windows.Forms.TrackBar();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxVChannel = new System.Windows.Forms.PictureBox();
+            this.pictureBoxSChannel = new System.Windows.Forms.PictureBox();
+            this.pictureBoxHChannel = new System.Windows.Forms.PictureBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.groupBoxFilterInfo = new System.Windows.Forms.GroupBox();
             this.label13 = new System.Windows.Forms.Label();
@@ -108,6 +108,7 @@
             this.checkBoxSaveTheOpenFile = new System.Windows.Forms.CheckBox();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBoxResult = new System.Windows.Forms.PictureBox();
+            this.buttonCountur = new System.Windows.Forms.Button();
             this.tabPage2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -120,9 +121,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.trackBar4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBChannel)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxGChannel)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxRChannel)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar7)).BeginInit();
@@ -131,9 +132,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.trackBar10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar12)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxVChannel)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSChannel)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxHChannel)).BeginInit();
             this.tabPage3.SuspendLayout();
             this.groupBoxFilterInfo.SuspendLayout();
             this.groupBoxFileInfo.SuspendLayout();
@@ -428,9 +429,9 @@
             this.tabPage1.Controls.Add(this.trackBar4);
             this.tabPage1.Controls.Add(this.trackBar2);
             this.tabPage1.Controls.Add(this.trackBar1);
-            this.tabPage1.Controls.Add(this.pictureBox4);
-            this.tabPage1.Controls.Add(this.pictureBox3);
-            this.tabPage1.Controls.Add(this.pictureBox1);
+            this.tabPage1.Controls.Add(this.pictureBoxBChannel);
+            this.tabPage1.Controls.Add(this.pictureBoxGChannel);
+            this.tabPage1.Controls.Add(this.pictureBoxRChannel);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -588,32 +589,32 @@
             this.trackBar1.TabIndex = 31;
             this.trackBar1.Scroll += new System.EventHandler(this.trackBar1_Scroll);
             // 
-            // pictureBox4
+            // pictureBoxBChannel
             // 
-            this.pictureBox4.Location = new System.Drawing.Point(608, 29);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(293, 261);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 30;
-            this.pictureBox4.TabStop = false;
+            this.pictureBoxBChannel.Location = new System.Drawing.Point(608, 29);
+            this.pictureBoxBChannel.Name = "pictureBoxBChannel";
+            this.pictureBoxBChannel.Size = new System.Drawing.Size(293, 261);
+            this.pictureBoxBChannel.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxBChannel.TabIndex = 30;
+            this.pictureBoxBChannel.TabStop = false;
             // 
-            // pictureBox3
+            // pictureBoxGChannel
             // 
-            this.pictureBox3.Location = new System.Drawing.Point(306, 29);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(292, 261);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 1;
-            this.pictureBox3.TabStop = false;
+            this.pictureBoxGChannel.Location = new System.Drawing.Point(306, 29);
+            this.pictureBoxGChannel.Name = "pictureBoxGChannel";
+            this.pictureBoxGChannel.Size = new System.Drawing.Size(292, 261);
+            this.pictureBoxGChannel.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxGChannel.TabIndex = 1;
+            this.pictureBoxGChannel.TabStop = false;
             // 
-            // pictureBox1
+            // pictureBoxRChannel
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(10, 29);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(286, 261);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.pictureBoxRChannel.Location = new System.Drawing.Point(10, 29);
+            this.pictureBoxRChannel.Name = "pictureBoxRChannel";
+            this.pictureBoxRChannel.Size = new System.Drawing.Size(286, 261);
+            this.pictureBoxRChannel.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxRChannel.TabIndex = 0;
+            this.pictureBoxRChannel.TabStop = false;
             // 
             // tabControl1
             // 
@@ -645,9 +646,9 @@
             this.tabPage4.Controls.Add(this.trackBar10);
             this.tabPage4.Controls.Add(this.trackBar11);
             this.tabPage4.Controls.Add(this.trackBar12);
-            this.tabPage4.Controls.Add(this.pictureBox5);
-            this.tabPage4.Controls.Add(this.pictureBox6);
-            this.tabPage4.Controls.Add(this.pictureBox7);
+            this.tabPage4.Controls.Add(this.pictureBoxVChannel);
+            this.tabPage4.Controls.Add(this.pictureBoxSChannel);
+            this.tabPage4.Controls.Add(this.pictureBoxHChannel);
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
@@ -805,35 +806,36 @@
             this.trackBar12.TabIndex = 31;
             this.trackBar12.Scroll += new System.EventHandler(this.trackBar12_Scroll);
             // 
-            // pictureBox5
+            // pictureBoxVChannel
             // 
-            this.pictureBox5.Location = new System.Drawing.Point(614, 28);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(292, 262);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 30;
-            this.pictureBox5.TabStop = false;
+            this.pictureBoxVChannel.Location = new System.Drawing.Point(614, 28);
+            this.pictureBoxVChannel.Name = "pictureBoxVChannel";
+            this.pictureBoxVChannel.Size = new System.Drawing.Size(292, 262);
+            this.pictureBoxVChannel.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxVChannel.TabIndex = 30;
+            this.pictureBoxVChannel.TabStop = false;
             // 
-            // pictureBox6
+            // pictureBoxSChannel
             // 
-            this.pictureBox6.Location = new System.Drawing.Point(310, 28);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(294, 262);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 1;
-            this.pictureBox6.TabStop = false;
+            this.pictureBoxSChannel.Location = new System.Drawing.Point(310, 28);
+            this.pictureBoxSChannel.Name = "pictureBoxSChannel";
+            this.pictureBoxSChannel.Size = new System.Drawing.Size(294, 262);
+            this.pictureBoxSChannel.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxSChannel.TabIndex = 1;
+            this.pictureBoxSChannel.TabStop = false;
             // 
-            // pictureBox7
+            // pictureBoxHChannel
             // 
-            this.pictureBox7.Location = new System.Drawing.Point(10, 28);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(290, 262);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox7.TabIndex = 0;
-            this.pictureBox7.TabStop = false;
+            this.pictureBoxHChannel.Location = new System.Drawing.Point(10, 28);
+            this.pictureBoxHChannel.Name = "pictureBoxHChannel";
+            this.pictureBoxHChannel.Size = new System.Drawing.Size(290, 262);
+            this.pictureBoxHChannel.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxHChannel.TabIndex = 0;
+            this.pictureBoxHChannel.TabStop = false;
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.buttonCountur);
             this.tabPage3.Controls.Add(this.groupBoxFilterInfo);
             this.tabPage3.Controls.Add(this.groupBoxFileInfo);
             this.tabPage3.Controls.Add(this.buttonSeveFilter);
@@ -941,9 +943,9 @@
             // buttonSeveFilter
             // 
             this.buttonSeveFilter.Enabled = false;
-            this.buttonSeveFilter.Location = new System.Drawing.Point(242, 273);
+            this.buttonSeveFilter.Location = new System.Drawing.Point(231, 273);
             this.buttonSeveFilter.Name = "buttonSeveFilter";
-            this.buttonSeveFilter.Size = new System.Drawing.Size(195, 23);
+            this.buttonSeveFilter.Size = new System.Drawing.Size(206, 23);
             this.buttonSeveFilter.TabIndex = 35;
             this.buttonSeveFilter.Text = "Save filter";
             this.buttonSeveFilter.UseVisualStyleBackColor = true;
@@ -1000,6 +1002,16 @@
             this.pictureBoxResult.TabIndex = 0;
             this.pictureBoxResult.TabStop = false;
             // 
+            // buttonCountur
+            // 
+            this.buttonCountur.Location = new System.Drawing.Point(6, 273);
+            this.buttonCountur.Name = "buttonCountur";
+            this.buttonCountur.Size = new System.Drawing.Size(219, 23);
+            this.buttonCountur.TabIndex = 48;
+            this.buttonCountur.Text = "Select circuit";
+            this.buttonCountur.UseVisualStyleBackColor = true;
+            this.buttonCountur.Click += new System.EventHandler(this.buttonCountur_Click);
+            // 
             // frmFilters
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1026,9 +1038,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.trackBar4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBChannel)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxGChannel)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxRChannel)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
@@ -1038,9 +1050,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.trackBar10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar12)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxVChannel)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSChannel)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxHChannel)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
             this.groupBoxFilterInfo.ResumeLayout(false);
@@ -1060,10 +1072,10 @@
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBoxRChannel;
         private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBoxBChannel;
+        private System.Windows.Forms.PictureBox pictureBoxGChannel;
         private System.Windows.Forms.TrackBar trackBar5;
         private System.Windows.Forms.TrackBar trackBar6;
         private System.Windows.Forms.TrackBar trackBar3;
@@ -1086,9 +1098,9 @@
         private System.Windows.Forms.TrackBar trackBar10;
         private System.Windows.Forms.TrackBar trackBar11;
         private System.Windows.Forms.TrackBar trackBar12;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.PictureBox pictureBoxVChannel;
+        private System.Windows.Forms.PictureBox pictureBoxSChannel;
+        private System.Windows.Forms.PictureBox pictureBoxHChannel;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.Button GenerateFullFilterButton;
@@ -1136,6 +1148,7 @@
         private System.Windows.Forms.Label labelS1;
         private System.Windows.Forms.Label labelV2;
         private System.Windows.Forms.Label labelV1;
+        private System.Windows.Forms.Button buttonCountur;
     }
 }
 
