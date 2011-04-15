@@ -72,6 +72,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Face_Contour.cs" />
     <Compile Include="Filters.cs" />
     <Compile Include="frmAbout.cs">
       <SubType>Form</SubType>
