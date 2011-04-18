@@ -76,34 +76,37 @@ namespace Layout
         /// <param name="p"></param>
         private void OpenMap()
         {
-            
-            img = map.Img;
-            pictureBox.BackgroundImage = img;
+            try
+            {
+                img = map.Img;
+                pictureBox.BackgroundImage = img;
 
-            img = map.Img;
+                img = map.Img;
 
-            bImg = new Bitmap(img.Width, img.Height);
-            pictureBox.Image = bImg;
+                bImg = new Bitmap(img.Width, img.Height);
+                pictureBox.Image = bImg;
 
 
-            //textBoxSpeed.Text = map.Speed.ToString();
-            //textBoxScale.Text = map.Scale.ToString();
+                //textBoxSpeed.Text = map.Speed.ToString();
+                //textBoxScale.Text = map.Scale.ToString();
 
-            //trackBarDirection.Value = (int)map.Direction;
-            //labelDirection.Text = "Direction = " + trackBarDirection.Value + "%";
+                //trackBarDirection.Value = (int)map.Direction;
+                //labelDirection.Text = "Direction = " + trackBarDirection.Value + "%";
 
-            //trackBarHumi.Value = (int)map.Humi;
-            //labelHumi.Text = "Humidity = " +trackBarHumi.Value+ "%";
+                //trackBarHumi.Value = (int)map.Humi;
+                //labelHumi.Text = "Humidity = " +trackBarHumi.Value+ "%";
 
-            //trackBarTemp.Value = (int)map.Temp;
-            //labelTemp.Text = "Temp = " + trackBarTemp.Value;
+                //trackBarTemp.Value = (int)map.Temp;
+                //labelTemp.Text = "Temp = " + trackBarTemp.Value;
 
-            RefreshLines();
+                RefreshLines();
 
-            width = pictureBox.BackgroundImage.Width;
-            higth = pictureBox.BackgroundImage.Height;
-            graf = Graphics.FromImage(bImg);
-            
+                width = pictureBox.BackgroundImage.Width;
+                higth = pictureBox.BackgroundImage.Height;
+                graf = Graphics.FromImage(bImg);
+            }
+            catch (Exception)
+            { }
         }
 
         //private void trackBarDirection_Scroll(object sender, EventArgs e)
