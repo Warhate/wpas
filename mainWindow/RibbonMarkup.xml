@@ -301,6 +301,35 @@ TooltipDescription="Натисніть, щоб відобразити решіт
       LabelTitle="">
     </Command>
 
+
+    <Command Name="cmdButtonShowFire"
+ Id="1034"
+ LabelTitle="&amp;Відобразити пожежу"
+ LabelDescription="Відобразити пожежу"
+ TooltipTitle="Відобразити пожежу"
+ TooltipDescription="Натисніть, щоб відобразити ділянки пожежі">
+      <Command.LargeImages>
+        <Image>Res/ShowFire32.bmp</Image>
+      </Command.LargeImages>
+
+    </Command>
+
+    <Command Name="cmdButtonCalcFire"
+ Id="1035"
+ LabelTitle="&amp;Розрахувати  пожежу"
+ LabelDescription="Розрахувати  пожежу"
+ TooltipTitle="Розрахувати  пожежу"
+ TooltipDescription="Натисніть, щоб розрахувати можливу поведынку пожежі">
+      <Command.LargeImages>
+        <Image>Res/CalcFire32.bmp</Image>
+      </Command.LargeImages>
+    </Command>
+
+    <Command Name="cmdGroupToolsFire"
+  Id="1036"
+  LabelTitle="">
+    </Command>
+
   </Application.Commands>
 
   <Application.Views>
@@ -384,6 +413,11 @@ TooltipDescription="Натисніть, щоб відобразити решіт
           </Group>
           <Group CommandName="cmdGroupBS" >
             <Spinner CommandName="cmdBlockSize" />
+          </Group>
+
+          <Group CommandName="cmdGroupToolsFire" SizeDefinition="TwoButtons" >
+            <Button CommandName="cmdButtonShowFire" />
+            <Button CommandName="cmdButtonCalcFire" />
           </Group>
         </Tab>
 

@@ -16,7 +16,7 @@ namespace Layout
         Graphics grafLinr;
         Graphics graf;
         int width, higth;
-        bool isDrawPoligon;
+        bool isDrawPoligon, isDrawFire;
         List<Point> points = new List<Point>();
         Marker marker = new Marker();
         List<Block> blocks = new List<Block>();
@@ -60,24 +60,23 @@ namespace Layout
 
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
-            if (openFileDialog1.ShowDialog() == DialogResult.OK)
-            {
-                OpenMap(openFileDialog1.FileName);
-                Log.AddLogMessage("Open map:" + openFileDialog1.FileName);
-                toolStripPoly.Enabled = true;
-                saveMapButton.Enabled = true;
+            //if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            //{
+            //    OpenMap(openFileDialog1.FileName);
+            //    Log.AddLogMessage("Open map:" + openFileDialog1.FileName);
+            //    toolStripPoly.Enabled = true;
+
                 
-            }
+            //}
         }
 
         /// <summary>
         /// 
         /// </summary>
         /// <param name="p"></param>
-        private void OpenMap(string filename)
+        private void OpenMap()
         {
-            map = SerializHelper.OpenMapFile(filename);
-
+            
             img = map.Img;
             pictureBox.BackgroundImage = img;
 
@@ -87,17 +86,17 @@ namespace Layout
             pictureBox.Image = bImg;
 
 
-            textBoxSpeed.Text = map.Speed.ToString();
-            textBoxScale.Text = map.Scale.ToString();
+            //textBoxSpeed.Text = map.Speed.ToString();
+            //textBoxScale.Text = map.Scale.ToString();
 
-            trackBarDirection.Value = (int)map.Direction;
-            labelDirection.Text = "Direction = " + trackBarDirection.Value + "%";
+            //trackBarDirection.Value = (int)map.Direction;
+            //labelDirection.Text = "Direction = " + trackBarDirection.Value + "%";
 
-            trackBarHumi.Value = (int)map.Humi;
-            labelHumi.Text = "Humidity = " +trackBarHumi.Value+ "%";
+            //trackBarHumi.Value = (int)map.Humi;
+            //labelHumi.Text = "Humidity = " +trackBarHumi.Value+ "%";
 
-            trackBarTemp.Value = (int)map.Temp;
-            labelTemp.Text = "Temp = " + trackBarTemp.Value;
+            //trackBarTemp.Value = (int)map.Temp;
+            //labelTemp.Text = "Temp = " + trackBarTemp.Value;
 
             RefreshLines();
 
@@ -107,20 +106,20 @@ namespace Layout
             
         }
 
-        private void trackBarDirection_Scroll(object sender, EventArgs e)
-        {
-            labelDirection.Text = "Direction = " + trackBarDirection.Value + "%";
-        }
+        //private void trackBarDirection_Scroll(object sender, EventArgs e)
+        //{
+        //    labelDirection.Text = "Direction = " + trackBarDirection.Value + "%";
+        //}
 
-        private void trackBarHumi_Scroll(object sender, EventArgs e)
-        {
-            labelHumi.Text = "Humidity = " + trackBarHumi.Value + "%";
-        }
+        //private void trackBarHumi_Scroll(object sender, EventArgs e)
+        //{
+        //    labelHumi.Text = "Humidity = " + trackBarHumi.Value + "%";
+        //}
 
-        private void trackBarTemp_Scroll(object sender, EventArgs e)
-        {
-            labelTemp.Text = "Temp = " + trackBarTemp.Value;
-        }
+        //private void trackBarTemp_Scroll(object sender, EventArgs e)
+        //{
+        //    labelTemp.Text = "Temp = " + trackBarTemp.Value;
+        //}
 
 
         /// <summary>
@@ -147,25 +146,25 @@ namespace Layout
         /// </summary>
         private void RefreshLines()
         {
-            listBox1.Items.Clear();
-            if (grafLinr != null)
-            {
-                grafLinr.Clear(Color.Transparent);
-            }
+            //listBox1.Items.Clear();
+            //if (grafLinr != null)
+            //{
+            //    grafLinr.Clear(Color.Transparent);
+            //}
 
-            for (int i = 0; i < map.StartPoints.Count; i++)
-            {
-                if (textBoxScale.Text == "")
-                {
-                    listBox1.Items.Add(map.StartPoints[i].ToString());
-                }
-                else
-                {
-                    listBox1.Items.Add(map.StartPoints[i].ToString(Convert.ToInt32(textBoxScale.Text)));
-                }
-                DrawLineInImage(map.StartPoints[i].Point1.X, map.StartPoints[i].Point1.Y, map.StartPoints[i].Point2.X, map.StartPoints[i].Point2.Y);
+            //for (int i = 0; i < map.StartPoints.Count; i++)
+            //{
+            //    if (textBoxScale.Text == "")
+            //    {
+            //        listBox1.Items.Add(map.StartPoints[i].ToString());
+            //    }
+            //    else
+            //    {
+            //        listBox1.Items.Add(map.StartPoints[i].ToString(Convert.ToInt32(textBoxScale.Text)));
+            //    }
+            //    DrawLineInImage(map.StartPoints[i].Point1.X, map.StartPoints[i].Point1.Y, map.StartPoints[i].Point2.X, map.StartPoints[i].Point2.Y);
 
-            }
+            //}
         }
 
         private void toolStripMenuItem2_Click(object sender, EventArgs e)
@@ -189,40 +188,63 @@ namespace Layout
             Log.AddLogMessage("Map save");
         }
 
-        private void textBoxSpeed_Leave(object sender, EventArgs e)
-        {
-            map.Speed = Convert.ToInt32(textBoxSpeed.Text);
-        }
+        //private void textBoxSpeed_Leave(object sender, EventArgs e)
+        //{
+        //    map.Speed = Convert.ToInt32(textBoxSpeed.Text);
+        //}
 
-        private void trackBarDirection_Leave(object sender, EventArgs e)
-        {
-            map.Direction = trackBarDirection.Value;
-        }
+        //private void trackBarDirection_Leave(object sender, EventArgs e)
+        //{
+        //    map.Direction = trackBarDirection.Value;
+        //}
 
-        private void trackBarHumi_Leave(object sender, EventArgs e)
-        {
-            map.Humi = trackBarHumi.Value;
-        }
+        //private void trackBarHumi_Leave(object sender, EventArgs e)
+        //{
+        //    map.Humi = trackBarHumi.Value;
+        //}
 
-        private void trackBarTemp_Leave(object sender, EventArgs e)
-        {
-            map.Temp = trackBarTemp.Value;
-        }
+        //private void trackBarTemp_Leave(object sender, EventArgs e)
+        //{
+        //    map.Temp = trackBarTemp.Value;
+        //}
 
-        private void textBoxScale_Leave(object sender, EventArgs e)
-        {
-            try
-            {
-                map.Scale = Convert.ToInt32(textBoxScale.Text);
-            }
-            catch (Exception)
-            {
-                map.Scale = 0;
+        //private void textBoxScale_Leave(object sender, EventArgs e)
+        //{
+        //    try
+        //    {
+        //        map.Scale = Convert.ToInt32(textBoxScale.Text);
+        //    }
+        //    catch (Exception)
+        //    {
+        //        map.Scale = 0;
             
-            }
+        //    }
 
+        //}
+
+        public Map ShowThis(Map map)
+        {
+
+            this.map = map;
+            OpenMap();
+            ShowPolygons();
+            PrintPolygons();
+            toolStripPoly.Enabled = true;
+            this.ShowDialog();
+            return this.map;
+            
+        
         }
 
+        private void PrintPolygons()
+        {
+            
+        }
+
+        private void ShowPolygons()
+        {
+            
+        }
 
         public void DrawGrid()
         {
@@ -239,21 +261,21 @@ namespace Layout
             width = pictureBox.BackgroundImage.Width;
             higth = pictureBox.BackgroundImage.Height;
 
-            if (textBoxBSize.Text == "")
-            {
-                bSize = 100;
+            //if (textBoxBSize.Text == "")
+            //{
+            //    bSize = 100;
 
 
-            }
-            else
-            {
-                bSize = Convert.ToInt32(textBoxBSize.Text);
+            //}
+            //else
+            //{
+            //    bSize = Convert.ToInt32(textBoxBSize.Text);
             
-            }
+            //}
 
             labelInProggres.Visible = true;
             toolStripProgressBar1.Visible = true;
-            backgroundWorker1.RunWorkerAsync(bSize);
+            //backgroundWorker1.RunWorkerAsync(bSize);
            // Gradation(width, higth, bSize);
            // marker.GetListBlocks(width, higth, bSize);
             //pictureBox.Refresh();
@@ -398,17 +420,20 @@ namespace Layout
 
         public void DrawBound(Point[] p1,Color color)
         {
-            graf = Graphics.FromImage(bImg);
-            Pen p = new Pen(color,4.0f);
-            graf.DrawPolygon(p, p1);
-            pictureBox.Image = bImg;
-            pictureBox.Refresh();
+            if (p1!=null&&p1.Length != 0)
+            {
+                graf = Graphics.FromImage(bImg);
+                Pen p = new Pen(color, 4.0f);
+                graf.DrawPolygon(p, p1);
+                pictureBox.Image = bImg;
+                pictureBox.Refresh();
+            }
         
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            tabControl1.TabPages[1].Hide();
+            //tabControl1.TabPages[1].Hide();
             Log.AddLogMessage("Started program");
         }
 
@@ -424,7 +449,7 @@ namespace Layout
 
         private void pictureBox_MouseMove(object sender, MouseEventArgs e)
         {
-            if (isDrawPoligon)
+            if (isDrawPoligon||isDrawFire)
             {
                 Cursor.Current = Cursors.Cross;
             }
@@ -440,6 +465,14 @@ namespace Layout
 
 
                
+            }
+            if (isDrawFire)
+            {
+
+                SetFire(e);
+
+
+
             }
         }
 
@@ -483,15 +516,47 @@ namespace Layout
             }
         }
 
+        private void SetFire(MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                grf.FillEllipse(Brushes.RoyalBlue, e.X, e.Y, 10.0f, 10.0f);
+                pictureBox.Image = bmp;
+                pictureBox.Refresh();
+                points.Add(new Point(e.X, e.Y));
+            }
+            else if (e.Button == MouseButtons.Right)
+            {
+                Point[] ps = new Point[points.Count];
+
+                for (int i = 0; i < points.Count; i++)
+                {
+                    ps[i] = points[i];
+
+                }
+
+                map.FirePoint = new MarkPlace(ps, MarkPlace.PlaceType.Forest, "");
+
+                
+
+
+                isDrawFire = false;
+                points.Clear();
+                
+
+            }
+        }
+
         private void AddPoligonToList()
         {
-            
 
+            dataGridView1.Rows.Clear();
             for (int i = 0; i < map.Poligons.Count; i++)
             {
 
                 
                 dataGridView1.Rows.Add(map.Poligons[i].Type, map.Poligons[i].Description, MathHelper.GetPoligonSpace(map.Poligons[i].Points));
+                dataGridView1.Rows[i].Cells[3].Style.BackColor = map.Poligons[i].Color;
 
                 DrawBound(map.Poligons[i].Points, map.Poligons[i].Color);
             }
@@ -541,22 +606,22 @@ namespace Layout
         private void toolStripButton8_Click(object sender, EventArgs e)
         {
 
-            int bSize;
-            if (textBoxBSize.Text == "")
-            {
-                bSize = 100;
+            //int bSize;
+            //if (textBoxBSize.Text == "")
+            //{
+            //    bSize = 100;
 
 
-            }
-            else
-            {
-                bSize = Convert.ToInt32(textBoxBSize.Text);
+            //}
+            //else
+            //{
+            //    bSize = Convert.ToInt32(textBoxBSize.Text);
 
-            }
-            graf.Clear(Color.Transparent);
+            //}
+            //graf.Clear(Color.Transparent);
 
-            marker.DrawGrid(width, higth, bSize, ref graf);
-            pictureBox.Refresh();
+            //marker.DrawGrid(width, higth, bSize, ref graf);
+            //pictureBox.Refresh();
             
                 
         }
@@ -564,6 +629,7 @@ namespace Layout
         private void toolStripButton9_Click(object sender, EventArgs e)
         {
             isDrawPoligon = true;
+            isDrawFire = false;
             bmp = new Bitmap(pictureBox.BackgroundImage.Width, pictureBox.BackgroundImage.Height);
             grf = Graphics.FromImage(bmp);
 
@@ -597,6 +663,25 @@ namespace Layout
         private void groupBoxGrid_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void toolStripButton2_Click_1(object sender, EventArgs e)
+        {
+            isDrawFire = true;
+            isDrawPoligon = false;
+            bmp = new Bitmap(pictureBox.BackgroundImage.Width, pictureBox.BackgroundImage.Height);
+            grf = Graphics.FromImage(bmp);
+        }
+
+        private void toolStripButton3_Click_1(object sender, EventArgs e)
+        {
+            DrawBound(map.FirePoint.Points, Color.Red);
+        }
+
+        private void toolStripButton1_Click_1(object sender, EventArgs e)
+        {
+            map.Poligons.RemoveAt(dataGridView1.CurrentRow.Index);
+            
         }
 
 

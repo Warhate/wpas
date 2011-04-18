@@ -21,8 +21,8 @@ namespace Myprojekt
 {
     public partial class frmMainWindow : Form
     {
-        Graphics graf;
-        Bitmap drawableImage, img;
+        Graphics graf,graf1;
+        Bitmap drawableImage, img, bImg;
         Marker marker;
         int width, hight;
         Map map;
@@ -52,6 +52,9 @@ namespace Myprojekt
         private RibbonButton _buttonShowPolygons;
         private RibbonHelpButton _helpButton;
         private RibbonSpinner _blockSize;
+        private RibbonButton _buttonShowFire;
+        private RibbonButton _buttonCalcFire;
+
 
         #endregion
 
@@ -100,6 +103,8 @@ namespace Myprojekt
             _buttonStop = new RibbonButton(_ribbon, (uint)RibbonMarkupCommands.cmdButtonStop);
             _helpButton = new RibbonHelpButton(_ribbon, (uint)RibbonMarkupCommands.cmdHelpButton);
             _blockSize = new RibbonSpinner(_ribbon, (uint)RibbonMarkupCommands.cmdBlockSize);
+            _buttonShowFire = new RibbonButton(_ribbon, (uint)RibbonMarkupCommands.cmdButtonShowFire);
+            _buttonCalcFire = new RibbonButton(_ribbon, (uint)RibbonMarkupCommands.cmdButtonCalcFire);
 
             //Ribbon events
             _buttonCreate.ExecuteEvent += new System.EventHandler<ExecuteEventArgs>(_buttonCreate_ExecuteEvent);
@@ -117,9 +122,29 @@ namespace Myprojekt
             _buttonCalculate.ExecuteEvent += new System.EventHandler<ExecuteEventArgs>(_buttonCalculate_ExecuteEvent);
             _buttonShowPolygons.ExecuteEvent += new System.EventHandler<ExecuteEventArgs>(_buttonShowPolygons_ExecuteEvent);
             _helpButton.ExecuteEvent += new System.EventHandler<ExecuteEventArgs>(_helpButton_ExecuteEvent);
-
+             _buttonShowFire.ExecuteEvent+=new EventHandler<ExecuteEventArgs>(_buttonShowFire_ExecuteEvent);
+             _buttonCalcFire.ExecuteEvent += new EventHandler<ExecuteEventArgs>(_buttonCalcFire_ExecuteEvent);
             #endregion
             
+        }
+
+        void _buttonCalcFire_ExecuteEvent(object sender, ExecuteEventArgs e)
+        {
+            graf = Graphics.FromImage(drawableImage);
+
+            for (int i = 0; i < 100; i++)
+            {
+                marker.MakeFaire(ref graf, map.FirePoint, i, map.WindDirect);
+                pictureBox1.Image = drawableImage;
+                pictureBox1.Update();
+                Thread.Sleep(50);
+            }
+            
+        }
+
+        void _buttonShowFire_ExecuteEvent(object sender, ExecuteEventArgs e)
+        {
+            DrawBound(map.FirePoint.Points, Color.Red);
         }
 
 
@@ -134,9 +159,10 @@ namespace Myprojekt
 
         void _buttonShowPolygons_ExecuteEvent(object sender, ExecuteEventArgs e)
         {
-
+            
             if (map != null)
             {
+                /*
                 drawableImage = new Bitmap(width, hight);
                 graf = Graphics.FromImage(drawableImage);
 
@@ -148,7 +174,14 @@ namespace Myprojekt
                     Thread.Sleep(50);
                 }
 
+                */
 
+                for (int i = 0; i < map.Poligons.Count; i++)
+                {
+
+                    DrawBound(map.Poligons[i].Points, map.Poligons[i].Color);
+                
+                }
 
 
             }
@@ -227,12 +260,12 @@ namespace Myprojekt
         void _buttonMarkerMap_ExecuteEvent(object sender, ExecuteEventArgs e)
         {
             MapForm mf = new MapForm();
-            mf.ShowDialog();
+            mf.ShowThis(map);
         }
 
         void _buttonCreateMap_ExecuteEvent(object sender, ExecuteEventArgs e)
         {
-            addMap.ShowDialog();
+           
         }
 
         void _buttonStop_ExecuteEvent(object sender, ExecuteEventArgs e)
@@ -259,7 +292,13 @@ namespace Myprojekt
 
         void _buttonSave_ExecuteEvent(object sender, ExecuteEventArgs e)
         {
-           
+            if (map != null)
+            {
+                if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+                {
+                    SerializHelper.SaveMap(saveFileDialog1.FileName, map,0);
+                }
+            }
         }
 
         void _buttonOpen_ExecuteEvent(object sender, ExecuteEventArgs e)
@@ -275,12 +314,26 @@ namespace Myprojekt
 
         void _buttonCreate_ExecuteEvent(object sender, ExecuteEventArgs e)
         {
-            
+           CreateMap(addMap.ShowCreateW());
         }
 
 
 
         #endregion
+
+        public void DrawBound(Point[] p1, Color color)
+        {
+            if (p1 != null && p1.Length != 0)
+            {
+                graf1 = Graphics.FromImage(drawableImage);
+                Pen p = new Pen(color, 4.0f);
+                graf1.DrawPolygon(p, p1);
+                pictureBox1.Image = drawableImage;
+                pictureBox1.Refresh();
+            }
+
+        }
+
 
         frmFilters FormFilter = new frmFilters();
         AddMap addMap = new AddMap();
@@ -362,7 +415,7 @@ namespace Myprojekt
 
             img = map.Img;
             pictureBox1.BackgroundImage = map.Img;
-
+            bImg = new Bitmap(img.Width, img.Height);
             
 
             drawableImage = new Bitmap(img.Width, img.Height);
@@ -376,6 +429,31 @@ namespace Myprojekt
 
             setMapLocal();
 
+        }
+
+        private void CreateMap(Map cMap)
+        {
+            if (cMap != null)
+            {
+                map = cMap;
+
+                img = map.Img;
+                pictureBox1.BackgroundImage = map.Img;
+
+                drawableImage = new Bitmap(img.Width, img.Height);
+                bImg = new Bitmap(img.Width, img.Height);
+                pictureBox1.Image = drawableImage;
+
+                width = pictureBox1.BackgroundImage.Width;
+                hight = pictureBox1.BackgroundImage.Height;
+                graf = Graphics.FromImage(drawableImage);
+
+                labelMessage.Visible = false;
+
+                setMapLocal();
+            }
+        
+        
         }
 
         /// <summary>
@@ -446,6 +524,12 @@ namespace Myprojekt
         private void frmMainWindow_SizeChanged(object sender, EventArgs e)
         {
             setMapLocal();
+        }
+
+        private void trackBar1_Scroll(object sender, EventArgs e)
+        {
+            //SizeF sf = new SizeF(0.01f,0.01f);
+            //pictureBox1.BackgroundImage.SScale(sf);
         }
 
 

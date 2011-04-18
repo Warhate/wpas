@@ -30,6 +30,22 @@ namespace Layout
 
         }
 
+        /// <summary>
+        /// Сереализирует обект карты
+        /// </summary>
+        /// <param name="name">Имя</param>
+        /// <param name="map">Обект карты</param>
+        public static void SaveMap(String name, Map map,int i)
+        {
+            Stream stream = File.Open(name + ".map", FileMode.OpenOrCreate);
+            Stream sr = Stream.Null;
+            BinaryFormatter bf = new BinaryFormatter();
+
+            bf.Serialize(stream, map);
+
+            stream.Close();
+
+        }
 
 
         /// <summary>

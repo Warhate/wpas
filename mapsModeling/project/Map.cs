@@ -36,6 +36,26 @@ namespace Layout
 
         List<Line> newLines = new List<Line>();
         List<MarkPlace> poligons = new List<MarkPlace>();
+        Marker.WindDirect windDirect;
+        MarkPlace firePoints;
+
+        public MarkPlace FirePoint
+        {
+            get { return firePoints; }
+            set { firePoints = value; }   
+        
+        }
+
+
+
+
+        public Marker.WindDirect WindDirect
+        {
+            get { return windDirect; }
+            set { windDirect = value; }   
+        
+        }
+
 
         /// <summary>
         /// Полигоны

@@ -141,6 +141,27 @@
   <ItemGroup>
     <None Include="Resources\1301147449_folderopen1.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\istockphoto_2176060-rusty-wind-rose-with-clipping-path.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\97d0ea8baba8d089cf0824300f129e16-wind-rose-compass-rose-clip-art.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1303153887_draw_path.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1303153947_draw_polygon_curves.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1303153811_Stop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1303155305_Burn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1303155453_fire.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

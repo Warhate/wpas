@@ -123,6 +123,55 @@ namespace Layout.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap _1303153811_Stop {
+            get {
+                object obj = ResourceManager.GetObject("1303153811_Stop", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap _1303153887_draw_path {
+            get {
+                object obj = ResourceManager.GetObject("1303153887_draw_path", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap _1303153947_draw_polygon_curves {
+            get {
+                object obj = ResourceManager.GetObject("1303153947_draw_polygon_curves", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap _1303155305_Burn {
+            get {
+                object obj = ResourceManager.GetObject("1303155305_Burn", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap _1303155453_fire {
+            get {
+                object obj = ResourceManager.GetObject("1303155453_fire", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap _97d0ea8baba8d089cf0824300f129e16_wind_rose_compass_rose_clip_art {
+            get {
+                object obj = ResourceManager.GetObject("97d0ea8baba8d089cf0824300f129e16-wind-rose-compass-rose-clip-art", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap istockphoto_2176060_rusty_wind_rose_with_clipping_path {
+            get {
+                object obj = ResourceManager.GetObject("istockphoto_2176060-rusty-wind-rose-with-clipping-path", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap save__1_ {
             get {
                 object obj = ResourceManager.GetObject("save (1)", resourceCulture);
