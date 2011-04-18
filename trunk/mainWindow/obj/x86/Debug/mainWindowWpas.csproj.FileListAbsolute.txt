@@ -76,3 +76,5 @@ D:\WPaS\mainWindow\obj\x86\Debug\GenerateResource.read.1.tlog
 D:\WPaS\mainWindow\obj\x86\Debug\GenerateResource.write.1.tlog
 F:\share\competition\fire\WPaS\mainWindow\bin\Debug\wParams.dll
 F:\share\competition\fire\WPaS\mainWindow\bin\Debug\wParams.pdb
+D:\Project\WPASSVN\mainWindow\bin\Debug\wParams.dll
+D:\Project\WPASSVN\mainWindow\bin\Debug\wParams.pdb

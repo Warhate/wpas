@@ -19,7 +19,11 @@ namespace Layout
            N,
            W,
            E,
-           S
+           S,
+           NE,
+           NW,
+           SE,
+           SW
        
        
        }
@@ -170,16 +174,155 @@ namespace Layout
 
            */
 
-               graph.FillPolygon(Brushes.Red, polygon.Points);
 
+               ////Rectangle rec = new Rectangle(100,100,100,100);
+               ////graph.FillPolygon(Brushes.Red, polygon.Points);
+               ////Region r = new Region(polygon.Points);
+               //System.Drawing.Drawing2D.GraphicsPath gp = new System.Drawing.Drawing2D.GraphicsPath();
+               ////gp.AddPolygon(polygon.Points);
+               ////Region r = new Region(rec);
+               ////graph.FillRegion(Brushes.Beige, r);
+               //System.Drawing.Drawing2D.Matrix scaleMatrix = new System.Drawing.Drawing2D.Matrix();
+               //scaleMatrix.Scale(1.01f, 1.01f, System.Drawing.Drawing2D.MatrixOrder.Append);
+
+               ////scaleMatrix = new System.Drawing.Drawing2D.Matrix(0, 1.1f,0, 1.1f, 0, 0);
+               //scaleMatrix.Shear(-0.01f, -0.01f);
+               //scaleMatrix.TransformPoints(polygon.Points);
+               ////r.Transform(scaleMatrix);
+           
+               Brush b = Brushes.OrangeRed;
+              
+               graph.FillPolygon(b, polygon.Points);
+               
+               ////r.Transform(scaleMatrix);
+               ////graph.FillRegion(Brushes.Beige, r);
+                   
                switch (wd)
                {
+
+                   case (WindDirect.NE):
+                       {
+
+                           //NE
+                           graph.DrawBezier(Pens.OrangeRed, new Point(minX, midleY), new Point(midleX + step * 3, minY - step * 3), new Point(maxX +step * 3, midleY - step * 3), new Point(midleX, maxY));
+                           //SE
+                           graph.DrawBezier(Pens.OrangeRed, new Point(midleX, minY), new Point(maxX + step, midleY + step), new Point(midleX + step, maxY + step), new Point(minX, midleY));
+                                                   //SW
+                           graph.DrawBezier(Pens.OrangeRed, new Point(maxX, midleY), new Point(midleX - step, maxY + step), new Point(minX - step, midleY + step), new Point(minX, minY));
+                           //NW
+                           graph.DrawBezier(Pens.OrangeRed, new Point(midleX, maxY), new Point(minX - step, midleY - step), new Point(midleX - step, minY - step), new Point(maxX, midleY));
+                           //N
+                           graph.DrawBezier(Pens.OrangeRed, new Point(minX, midleY), new Point(minX - step, minY - step), new Point(maxX + step, minY - step), new Point(maxX, midleY));
+                           //S
+                           graph.DrawBezier(Pens.OrangeRed, new Point(minX, midleY), new Point(minX - step, maxY + step), new Point(maxX + step, maxY + step), new Point(maxX, midleY));
+                           //W
+                           graph.DrawBezier(Pens.OrangeRed, new Point(midleX, maxY), new Point(minX - step, maxY + step), new Point(minX - step, minY - step), new Point(midleX, minY));
+                           //E
+                           graph.DrawBezier(Pens.OrangeRed, new Point(midleX, maxY), new Point(maxX + step, maxY + step), new Point(maxX + step, minY - step), new Point(midleX, minY));
+
+                           break;
+
+
+                       }
+
+                   case (WindDirect.SE):
+                       {
+
+                           //SE
+                           graph.DrawBezier(Pens.OrangeRed, new Point(midleX, minY), new Point(maxX + step * 3, midleY + step * 3), new Point(midleX + step * 3, maxY + step * 3), new Point(minX, midleY));
+                          
+                           //NE
+                           graph.DrawBezier(Pens.OrangeRed, new Point(minX, midleY), new Point(midleX + step, minY - step ), new Point(maxX + step, midleY - step ), new Point(midleX, maxY));
+                           //SW
+                           graph.DrawBezier(Pens.OrangeRed, new Point(maxX, midleY), new Point(midleX - step , maxY + step), new Point(minX - step, midleY + step ), new Point(minX, minY));
+                           //NW
+                           graph.DrawBezier(Pens.OrangeRed, new Point(midleX, maxY), new Point(minX - step , midleY - step), new Point(midleX - step, minY - step ), new Point(maxX, midleY));
+                           //N
+                           graph.DrawBezier(Pens.OrangeRed, new Point(minX, midleY), new Point(minX - step, minY - step ), new Point(maxX + step , minY - step), new Point(maxX, midleY));
+                           //S
+                           graph.DrawBezier(Pens.OrangeRed, new Point(minX, midleY), new Point(minX - step, maxY + step ), new Point(maxX + step , maxY + step), new Point(maxX, midleY));
+                           //W
+                           graph.DrawBezier(Pens.OrangeRed, new Point(midleX, maxY), new Point(minX - step , maxY + step), new Point(minX - step, minY - step ), new Point(midleX, minY));
+                           //E
+                           graph.DrawBezier(Pens.OrangeRed, new Point(midleX, maxY), new Point(maxX + step, maxY + step), new Point(maxX + step , minY - step ), new Point(midleX, minY));
+
+
+
+
+                           break;
+
+
+                       }
+
+                   case (WindDirect.SW):
+                       {
+
+                           //SW
+                           graph.DrawBezier(Pens.OrangeRed, new Point(maxX,midleY), new Point(midleX - step * 1, maxY + step * 3), new Point(minX - step *5, midleY + step * 3), new Point(minX, minY));
+                           //SE
+                           graph.DrawBezier(Pens.OrangeRed, new Point(midleX, minY), new Point(maxX + step, midleY + step), new Point(midleX + step, maxY + step), new Point(minX, midleY));
+                           //NE
+                           graph.DrawBezier(Pens.OrangeRed, new Point(minX, midleY), new Point(midleX + step, minY - step), new Point(maxX + step, midleY - step), new Point(midleX, maxY));
+                                                  //NW
+                           graph.DrawBezier(Pens.OrangeRed, new Point(midleX, maxY), new Point(minX - step, midleY - step), new Point(midleX - step, minY - step), new Point(maxX, midleY));
+                           //N
+                           graph.DrawBezier(Pens.OrangeRed, new Point(minX, midleY), new Point(minX - step, minY - step), new Point(maxX + step, minY - step), new Point(maxX, midleY));
+                           //S
+                           graph.DrawBezier(Pens.OrangeRed, new Point(minX, midleY), new Point(minX - step, maxY + step), new Point(maxX + step, maxY + step), new Point(maxX, midleY));
+                           //W
+                           graph.DrawBezier(Pens.OrangeRed, new Point(midleX, maxY), new Point(minX - step, maxY + step), new Point(minX - step, minY - step), new Point(midleX, minY));
+                           //E
+                           graph.DrawBezier(Pens.OrangeRed, new Point(midleX, maxY), new Point(maxX + step, maxY + step), new Point(maxX + step, minY - step), new Point(midleX, minY));
+
+                           break;
+
+
+                       }
+
+                   case (WindDirect.NW):
+                       {
+
+                           //NW
+                           graph.DrawBezier(Pens.OrangeRed, new Point(midleX, maxY), new Point(minX - step * 12, midleY - step * 1), new Point(midleX + step*3 , minY - step * 3), new Point(maxX,midleY));
+                           //SE
+                           graph.DrawBezier(Pens.OrangeRed, new Point(midleX, minY), new Point(maxX + step, midleY + step), new Point(midleX + step, maxY + step), new Point(minX, midleY));
+                           //NE
+                           graph.DrawBezier(Pens.OrangeRed, new Point(minX, midleY), new Point(midleX + step, minY - step), new Point(maxX + step, midleY - step), new Point(midleX, maxY));
+                           //SW
+                           graph.DrawBezier(Pens.OrangeRed, new Point(maxX, midleY), new Point(midleX - step, maxY + step), new Point(minX - step, midleY + step), new Point(minX, minY));
+                                                //N
+                           graph.DrawBezier(Pens.OrangeRed, new Point(minX, midleY), new Point(minX - step, minY - step), new Point(maxX + step, minY - step), new Point(maxX, midleY));
+                           //S
+                           graph.DrawBezier(Pens.OrangeRed, new Point(minX, midleY), new Point(minX - step, maxY + step), new Point(maxX + step, maxY + step), new Point(maxX, midleY));
+                           //W
+                           graph.DrawBezier(Pens.OrangeRed, new Point(midleX, maxY), new Point(minX - step, maxY + step), new Point(minX - step, minY - step), new Point(midleX, minY));
+                           //E
+                           graph.DrawBezier(Pens.OrangeRed, new Point(midleX, maxY), new Point(maxX + step, maxY + step), new Point(maxX + step, minY - step), new Point(midleX, minY));
+
+                           break;
+
+
+                       }
+
                    case (WindDirect.N):
                        {
 
-
-                           graph.DrawBezier(Pens.Red, new Point(minX, midleY), new Point(minX - step * 3, minY - step * 3), new Point(maxX + step * 3, minY - step * 3), new Point(maxX , midleY));
-                           
+                           //N
+                           graph.DrawBezier(Pens.OrangeRed, new Point(minX, midleY), new Point(minX - step * 3, minY - step * 3), new Point(maxX + step * 3, minY - step * 3), new Point(maxX , midleY));
+                           //SE
+                           graph.DrawBezier(Pens.OrangeRed, new Point(midleX, minY), new Point(maxX + step, midleY + step), new Point(midleX + step, maxY + step), new Point(minX, midleY));
+                           //NE
+                           graph.DrawBezier(Pens.OrangeRed, new Point(minX, midleY), new Point(midleX + step, minY - step), new Point(maxX + step, midleY - step), new Point(midleX, maxY));
+                           //SW
+                           graph.DrawBezier(Pens.OrangeRed, new Point(maxX, midleY), new Point(midleX - step, maxY + step), new Point(minX - step, midleY + step), new Point(minX, minY));
+                           //NW
+                           graph.DrawBezier(Pens.OrangeRed, new Point(midleX, maxY), new Point(minX - step, midleY - step), new Point(midleX - step, minY - step), new Point(maxX, midleY));
+                                                    //S
+                           graph.DrawBezier(Pens.OrangeRed, new Point(minX, midleY), new Point(minX - step, maxY + step), new Point(maxX + step, maxY + step), new Point(maxX, midleY));
+                           //W
+                           graph.DrawBezier(Pens.OrangeRed, new Point(midleX, maxY), new Point(minX - step, maxY + step), new Point(minX - step, minY - step), new Point(midleX, minY));
+                           //E
+                           graph.DrawBezier(Pens.OrangeRed, new Point(midleX, maxY), new Point(maxX + step, maxY + step), new Point(maxX + step, minY - step), new Point(midleX, minY));
 
                            break;
 
@@ -189,9 +332,22 @@ namespace Layout
                    case (WindDirect.S):
                        {
 
-
-                           graph.DrawBezier(Pens.Red, new Point(minX, midleY), new Point(minX - step * 3, maxY + step * 3), new Point(maxX + step * 3, maxY + step * 3), new Point(maxX, midleY));
-
+                           //S
+                           graph.DrawBezier(Pens.OrangeRed, new Point(minX, midleY), new Point(minX - step * 3, maxY + step * 3), new Point(maxX + step * 3, maxY + step * 3), new Point(maxX, midleY));
+                           //SE
+                           graph.DrawBezier(Pens.OrangeRed, new Point(midleX, minY), new Point(maxX + step, midleY + step), new Point(midleX + step, maxY + step), new Point(minX, midleY));
+                           //NE
+                           graph.DrawBezier(Pens.OrangeRed, new Point(minX, midleY), new Point(midleX + step, minY - step), new Point(maxX + step, midleY - step), new Point(midleX, maxY));
+                           //SW
+                           graph.DrawBezier(Pens.OrangeRed, new Point(maxX, midleY), new Point(midleX - step, maxY + step), new Point(minX - step, midleY + step), new Point(minX, minY));
+                           //NW
+                           graph.DrawBezier(Pens.OrangeRed, new Point(midleX, maxY), new Point(minX - step, midleY - step), new Point(midleX - step, minY - step), new Point(maxX, midleY));
+                           //N
+                           graph.DrawBezier(Pens.OrangeRed, new Point(minX, midleY), new Point(minX - step, minY - step), new Point(maxX + step, minY - step), new Point(maxX, midleY));
+                                               //W
+                           graph.DrawBezier(Pens.OrangeRed, new Point(midleX, maxY), new Point(minX - step, maxY + step), new Point(minX - step, minY - step), new Point(midleX, minY));
+                           //E
+                           graph.DrawBezier(Pens.OrangeRed, new Point(midleX, maxY), new Point(maxX + step, maxY + step), new Point(maxX + step, minY - step), new Point(midleX, minY));
 
                            break;
 
@@ -201,9 +357,22 @@ namespace Layout
                    case (WindDirect.W):
                        {
 
-
-                           graph.DrawBezier(Pens.Red, new Point(midleX, maxY), new Point(minX - step * 3, maxY + step * 3), new Point(minX - step * 3, minY - step * 3), new Point(midleX, minY));
-
+                           //W
+                           graph.DrawBezier(Pens.OrangeRed, new Point(midleX, maxY), new Point(minX - step * 3, maxY + step * 3), new Point(minX - step * 3, minY - step * 3), new Point(midleX, minY));
+                           //SE
+                           graph.DrawBezier(Pens.OrangeRed, new Point(midleX, minY), new Point(maxX + step, midleY + step), new Point(midleX + step, maxY + step), new Point(minX, midleY));
+                           //NE
+                           graph.DrawBezier(Pens.OrangeRed, new Point(minX, midleY), new Point(midleX + step, minY - step), new Point(maxX + step, midleY - step), new Point(midleX, maxY));
+                           //SW
+                           graph.DrawBezier(Pens.OrangeRed, new Point(maxX, midleY), new Point(midleX - step, maxY + step), new Point(minX - step, midleY + step), new Point(minX, minY));
+                           //NW
+                           graph.DrawBezier(Pens.OrangeRed, new Point(midleX, maxY), new Point(minX - step, midleY - step), new Point(midleX - step, minY - step), new Point(maxX, midleY));
+                           //N
+                           graph.DrawBezier(Pens.OrangeRed, new Point(minX, midleY), new Point(minX - step, minY - step), new Point(maxX + step, minY - step), new Point(maxX, midleY));
+                           //S
+                           graph.DrawBezier(Pens.OrangeRed, new Point(minX, midleY), new Point(minX - step, maxY + step), new Point(maxX + step, maxY + step), new Point(maxX, midleY));
+                                            //E
+                           graph.DrawBezier(Pens.OrangeRed, new Point(midleX, maxY), new Point(maxX + step, maxY + step), new Point(maxX + step, minY - step), new Point(midleX, minY));
 
                            break;
 
@@ -213,8 +382,23 @@ namespace Layout
                    case (WindDirect.E):
                        {
 
-
-                           graph.DrawBezier(Pens.Red, new Point(midleX, maxY), new Point(maxX + step * 3, maxY + step * 3), new Point(maxX + step * 3, minY - step * 3), new Point(midleX, minY));
+                           //E
+                           graph.DrawBezier(Pens.OrangeRed, new Point(midleX, maxY), new Point(maxX + step * 3, maxY + step * 3), new Point(maxX + step * 3, minY - step * 3), new Point(midleX, minY));
+                           //SE
+                           graph.DrawBezier(Pens.OrangeRed, new Point(midleX, minY), new Point(maxX + step, midleY + step), new Point(midleX + step, maxY + step), new Point(minX, midleY));
+                           //NE
+                           graph.DrawBezier(Pens.OrangeRed, new Point(minX, midleY), new Point(midleX + step, minY - step), new Point(maxX + step, midleY - step), new Point(midleX, maxY));
+                           //SW
+                           graph.DrawBezier(Pens.OrangeRed, new Point(maxX, midleY), new Point(midleX - step, maxY + step), new Point(minX - step, midleY + step), new Point(minX, minY));
+                           //NW
+                           graph.DrawBezier(Pens.OrangeRed, new Point(midleX, maxY), new Point(minX - step, midleY - step), new Point(midleX - step, minY - step), new Point(maxX, midleY));
+                           //N
+                           graph.DrawBezier(Pens.OrangeRed, new Point(minX, midleY), new Point(minX - step, minY - step), new Point(maxX + step, minY - step), new Point(maxX, midleY));
+                           //S
+                           graph.DrawBezier(Pens.OrangeRed, new Point(minX, midleY), new Point(minX - step, maxY + step), new Point(maxX + step, maxY + step), new Point(maxX, midleY));
+                           //W
+                           graph.DrawBezier(Pens.OrangeRed, new Point(midleX, maxY), new Point(minX - step, maxY + step), new Point(minX - step, minY - step), new Point(midleX, minY));
+                         
 
 
                            break;
