@@ -130,21 +130,30 @@ namespace Myprojekt
 
         void _buttonCalcFire_ExecuteEvent(object sender, ExecuteEventArgs e)
         {
-            graf = Graphics.FromImage(drawableImage);
-
-            for (int i = 0; i < 100; i++)
+            try
             {
-                marker.MakeFaire(ref graf, map.FirePoint, i, map.WindDirect);
-                pictureBox1.Image = drawableImage;
-                pictureBox1.Update();
-                Thread.Sleep(50);
+                graf = Graphics.FromImage(drawableImage);
+
+                for (int i = 0; i < 100; i++)
+                {
+                    marker.MakeFaire(ref graf, map.FirePoint, i, map.WindDirect);
+                    pictureBox1.Image = drawableImage;
+                    pictureBox1.Update();
+                    Thread.Sleep(50);
+                }
             }
-            
+            catch (Exception)
+            { }
         }
 
         void _buttonShowFire_ExecuteEvent(object sender, ExecuteEventArgs e)
         {
-            DrawBound(map.FirePoint.Points, Color.Red);
+            try
+            {
+                DrawBound(map.FirePoint.Points, Color.Red);
+            }
+            catch (Exception)
+            { }
         }
 
 
