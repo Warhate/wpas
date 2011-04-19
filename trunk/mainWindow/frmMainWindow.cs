@@ -186,7 +186,7 @@ namespace Myprojekt
                 graf.Clear(Color.Transparent);
                 graf = Graphics.FromImage(drawableImage);
 
-                for (int i = 0; i < 0.2*map.Speed+(int)map.Temp; i++)
+                for (int i = 0; i < 0.3*map.Speed+0.1*(int)map.Temp; i++)
                 {
                     marker.MakeFaire(ref graf, map.FirePoint, i, map.WindDirect);
                     pictureBox1.Image = drawableImage;
@@ -566,8 +566,24 @@ namespace Myprojekt
             labelMessage.Visible = false;
 
             setMapLocal();
+            FireToCenter();
 
         }
+
+        private void FireToCenter()
+        {
+        //    pictureBox1.Location = new Point(pictureBox1.Location.X - pictureBox1.Width / 2 - map.FirePoint.Points[0].X,
+        //        pictureBox1.Location.Y - pictureBox1.Height / 2 - map.FirePoint.Points[0].Y);
+
+            panel3.VerticalScroll.Value = Math.Abs((map.FirePoint.Points[0].Y -pictureBox1.Height)/2 );
+            panel3.HorizontalScroll.Value = Math.Abs((map.FirePoint.Points[0].X - pictureBox1.Width) / 2);
+            //pictureBox1.Location = new Point(pictureBox1.Location.X - 10 ,
+            //    pictureBox1.Location.Y - 10 );
+
+        
+        
+        }
+
 
         private void CreateMap(Map cMap)
         {
@@ -589,6 +605,7 @@ namespace Myprojekt
                 labelMessage.Visible = false;
 
                 setMapLocal();
+                FireToCenter();
             }
         
         
