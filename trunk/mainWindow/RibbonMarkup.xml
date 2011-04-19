@@ -330,6 +330,41 @@ TooltipDescription="Натисніть, щоб відобразити решіт
   LabelTitle="">
     </Command>
 
+    <Command Name="cmdComboBoxWind"
+         Id="1037">
+    </Command>
+    
+    <Command Name="cmdGroupDemo"
+  Id="1038"
+  LabelTitle="">
+    </Command>
+    
+    <Command Name="cmdTemp"
+         Id="1039"
+         LabelTitle="Temperature">
+    </Command>
+
+    <Command Name="cmdSpeedWind"
+     Id="1040"
+     LabelTitle="Speed of wind">
+    </Command>
+
+    <Command Name="cmdButtonStartDemo"
+ Id="1041"
+ LabelTitle="&amp;Start demo"
+ LabelDescription="Start demo"
+ TooltipTitle="Start demo"
+ TooltipDescription="Start demo">
+      <Command.LargeImages>
+        <Image>Res/DemoStart32.bmp</Image>
+      </Command.LargeImages>
+    </Command>
+    
+    <Command Name="cmdGroupDemoB"
+  Id="1042"
+  LabelTitle="">
+    </Command>
+    
   </Application.Commands>
 
   <Application.Views>
@@ -419,6 +454,17 @@ TooltipDescription="Натисніть, щоб відобразити решіт
             <Button CommandName="cmdButtonShowFire" />
             <Button CommandName="cmdButtonCalcFire" />
           </Group>
+
+          <Group CommandName="cmdGroupDemo">
+            <ComboBox CommandName="cmdComboBoxWind" IsEditable="false" ResizeType="NoResize"  />
+            <Spinner CommandName="cmdTemp" />
+            <Spinner CommandName="cmdSpeedWind" />
+          </Group>
+
+          <Group CommandName="cmdGroupDemoB" SizeDefinition="OneButton" >
+            <Button CommandName="cmdButtonStartDemo" />
+          </Group>
+          
         </Tab>
 
 

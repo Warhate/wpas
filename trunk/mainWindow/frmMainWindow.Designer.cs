@@ -30,7 +30,11 @@ namespace Myprojekt
             cmdButtonShowPolygons=1031,
             cmdBlockSize=1032,
             cmdButtonShowFire=1034,
-            cmdButtonCalcFire=1035
+            cmdButtonCalcFire=1035,
+            cmdComboBoxWind = 1037,
+            cmdButtonStartDemo = 1041,
+            cmdSpeedWind = 1040,
+            cmdTemp = 1039
         }
 
 
