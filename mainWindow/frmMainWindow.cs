@@ -54,7 +54,12 @@ namespace Myprojekt
         private RibbonSpinner _blockSize;
         private RibbonButton _buttonShowFire;
         private RibbonButton _buttonCalcFire;
+        private RibbonComboBox _comboBoxWindDirect;
+        private RibbonSpinner _windSpeed;
+        private RibbonSpinner _temp;
+        private RibbonButton _buttonStartDemo;
 
+        private UICollectionChangedEvent _uiCollectionChangedEvent;
 
         #endregion
 
@@ -105,6 +110,21 @@ namespace Myprojekt
             _blockSize = new RibbonSpinner(_ribbon, (uint)RibbonMarkupCommands.cmdBlockSize);
             _buttonShowFire = new RibbonButton(_ribbon, (uint)RibbonMarkupCommands.cmdButtonShowFire);
             _buttonCalcFire = new RibbonButton(_ribbon, (uint)RibbonMarkupCommands.cmdButtonCalcFire);
+            _comboBoxWindDirect = new RibbonComboBox(_ribbon, (uint)RibbonMarkupCommands.cmdComboBoxWind);
+            _temp = new RibbonSpinner(_ribbon, (uint)RibbonMarkupCommands.cmdTemp);
+            _windSpeed = new RibbonSpinner(_ribbon, (uint)RibbonMarkupCommands.cmdSpeedWind);
+            _buttonStartDemo = new RibbonButton(_ribbon, (uint)RibbonMarkupCommands.cmdButtonStartDemo);
+
+            _temp.MaxValue=100;
+            _temp.MinValue = 0;
+            _windSpeed.MaxValue = 100;
+            _windSpeed.MinValue = 0;
+
+            _comboBoxWindDirect.Label = "Wind Direct";
+            _comboBoxWindDirect.RepresentativeString = "NWE";
+
+
+            _uiCollectionChangedEvent = new UICollectionChangedEvent();
 
             //Ribbon events
             _buttonCreate.ExecuteEvent += new System.EventHandler<ExecuteEventArgs>(_buttonCreate_ExecuteEvent);
@@ -124,8 +144,117 @@ namespace Myprojekt
             _helpButton.ExecuteEvent += new System.EventHandler<ExecuteEventArgs>(_helpButton_ExecuteEvent);
              _buttonShowFire.ExecuteEvent+=new EventHandler<ExecuteEventArgs>(_buttonShowFire_ExecuteEvent);
              _buttonCalcFire.ExecuteEvent += new EventHandler<ExecuteEventArgs>(_buttonCalcFire_ExecuteEvent);
+             _comboBoxWindDirect.ExecuteEvent += new EventHandler<ExecuteEventArgs>(_comboBoxWindDirect_ExecuteEvent);
+             _comboBoxWindDirect.ItemsSourceReady += new EventHandler<EventArgs>(_comboBoxWindDirect_ItemsSourceReady);
+             _buttonStartDemo.ExecuteEvent += new EventHandler<ExecuteEventArgs>(_buttonStartDemo_ExecuteEvent);
+             _temp.ExecuteEvent += new EventHandler<ExecuteEventArgs>(_temp_ExecuteEvent);
+             _windSpeed.ExecuteEvent += new EventHandler<ExecuteEventArgs>(_windSpeed_ExecuteEvent);
             #endregion
             
+        }
+
+        void _windSpeed_ExecuteEvent(object sender, ExecuteEventArgs e)
+        {
+            try
+            {
+                map.Speed = (int?)_windSpeed.DecimalValue;
+
+            }
+            catch (Exception)
+            { 
+            
+            }
+        }
+
+        void _temp_ExecuteEvent(object sender, ExecuteEventArgs e)
+        {
+            try
+            {
+                map.Temp = (int?)_temp.DecimalValue;
+
+            }
+            catch (Exception)
+            {
+
+            }
+        }
+
+        void _buttonStartDemo_ExecuteEvent(object sender, ExecuteEventArgs e)
+        {
+            try
+            {
+                graf.Clear(Color.Transparent);
+                graf = Graphics.FromImage(drawableImage);
+
+                for (int i = 0; i < 0.2*map.Speed+(int)map.Temp; i++)
+                {
+                    marker.MakeFaire(ref graf, map.FirePoint, i, map.WindDirect);
+                    pictureBox1.Image = drawableImage;
+                    pictureBox1.Update();
+                    Thread.Sleep(50);
+                }
+            }
+            catch (Exception)
+            { }
+        }
+
+        void _comboBoxWindDirect_ItemsSourceReady(object sender, EventArgs e)
+        {
+            IUICollection itemsSource3 = _comboBoxWindDirect.ItemsSource;
+            itemsSource3.Clear();
+            itemsSource3.Add(new GalleryItemPropertySet() { Label = "N", CategoryID = Constants.UI_Collection_InvalidIndex });
+            itemsSource3.Add(new GalleryItemPropertySet() { Label = "W", CategoryID = Constants.UI_Collection_InvalidIndex });
+            itemsSource3.Add(new GalleryItemPropertySet() { Label = "S", CategoryID = Constants.UI_Collection_InvalidIndex });
+            itemsSource3.Add(new GalleryItemPropertySet() { Label = "E", CategoryID = Constants.UI_Collection_InvalidIndex });
+            itemsSource3.Add(new GalleryItemPropertySet() { Label = "NE", CategoryID = Constants.UI_Collection_InvalidIndex });
+            itemsSource3.Add(new GalleryItemPropertySet() { Label = "SE", CategoryID = Constants.UI_Collection_InvalidIndex });
+            itemsSource3.Add(new GalleryItemPropertySet() { Label = "NW", CategoryID = Constants.UI_Collection_InvalidIndex });
+            itemsSource3.Add(new GalleryItemPropertySet() { Label = "SW", CategoryID = Constants.UI_Collection_InvalidIndex });
+        }
+
+        void _comboBoxWindDirect_ExecuteEvent(object sender, ExecuteEventArgs e)
+        {
+            if (_comboBoxWindDirect.StringValue=="N")
+            {
+                map.WindDirect = Marker.WindDirect.N;
+
+            }
+
+            if (_comboBoxWindDirect.StringValue == "W")
+            {
+                map.WindDirect = Marker.WindDirect.W;
+
+            }
+            if (_comboBoxWindDirect.StringValue == "S")
+            {
+                map.WindDirect = Marker.WindDirect.S;
+
+            }
+            if (_comboBoxWindDirect.StringValue == "E")
+            {
+                map.WindDirect = Marker.WindDirect.E;
+
+            }
+            if (_comboBoxWindDirect.StringValue == "NE")
+            {
+                map.WindDirect = Marker.WindDirect.NE;
+
+            }
+            if (_comboBoxWindDirect.StringValue == "SE")
+            {
+                map.WindDirect = Marker.WindDirect.SE;
+
+            }
+            if (_comboBoxWindDirect.StringValue == "SW")
+            {
+                map.WindDirect = Marker.WindDirect.SW;
+
+            }
+            if (_comboBoxWindDirect.StringValue == "NW")
+            {
+                map.WindDirect = Marker.WindDirect.NW;
+
+            }
         }
 
         void _buttonCalcFire_ExecuteEvent(object sender, ExecuteEventArgs e)
@@ -207,7 +336,7 @@ namespace Myprojekt
 
             if (map != null)
             {
-                drawableImage = new Bitmap(width, hight);
+                
                 graf = Graphics.FromImage(drawableImage);
 
 
@@ -234,7 +363,7 @@ namespace Myprojekt
         {
             if (map != null)
             {
-                drawableImage = new Bitmap(width, hight);
+               
                 graf = Graphics.FromImage(drawableImage);
 
 

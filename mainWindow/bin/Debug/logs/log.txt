@@ -328,3 +328,61 @@
 19 квітня 2011 р.-[0:29:11]: Started program
 19 квітня 2011 р.-[0:29:49]: Close program
 19 квітня 2011 р.-[0:30:33]: Map saved:NewFireMa
+19 квітня 2011 р.-[11:54:13]: Open map image:C:\Users\Warh\Pictures\maare.jpg
+19 квітня 2011 р.-[11:54:31]: Map saved:Wareeeee
+19 квітня 2011 р.-[11:54:34]: Started program
+19 квітня 2011 р.-[11:54:45]: Close program
+19 квітня 2011 р.-[11:57:19]: Open map:C:\Users\Warh\Desktop\ssssddsadas.map.map.map
+19 квітня 2011 р.-[12:48:43]: Open map image:C:\Users\Warh\Pictures\maare.jpg
+19 квітня 2011 р.-[12:48:50]: No set name from map
+19 квітня 2011 р.-[12:49:00]: Map saved:sss222
+19 квітня 2011 р.-[12:49:23]: Started program
+19 квітня 2011 р.-[12:53:21]: Close program
+19 квітня 2011 р.-[12:53:57]: Map saved:sss22
+19 квітня 2011 р.-[12:54:00]: Started program
+19 квітня 2011 р.-[12:55:03]: Close program
+19 квітня 2011 р.-[13:06:31]: Open map:C:\Users\Warh\Desktop\ssssddsadas.map.map.map
+19 квітня 2011 р.-[13:07:01]: Map saved:sss22rrr
+19 квітня 2011 р.-[13:07:40]: Map saved:sss22rrr
+19 квітня 2011 р.-[13:21:21]: Open map image:C:\Users\Warh\Pictures\maare.jpg
+19 квітня 2011 р.-[14:19:59]: Open map:C:\Users\Warh\Desktop\ssssddsadas.map.map
+19 квітня 2011 р.-[14:20:16]: Started program
+19 квітня 2011 р.-[14:20:36]: Close program
+19 квітня 2011 р.-[14:23:42]: Open map:C:\Users\Warh\Desktop\ssssddsadas.map.map.map
+19 квітня 2011 р.-[15:08:59]: Started program
+19 квітня 2011 р.-[15:09:31]: Close program
+19 квітня 2011 р.-[15:09:50]: Started program
+19 квітня 2011 р.-[15:10:01]: Close program
+19 квітня 2011 р.-[16:47:16]: Open map image:C:\Users\Warh\Pictures\maare.jpg
+19 квітня 2011 р.-[16:47:31]: Map saved:120
+19 квітня 2011 р.-[16:47:38]: Started program
+19 квітня 2011 р.-[16:47:58]: Close program
+19 квітня 2011 р.-[18:44:07]: Open map:C:\Users\Warh\Desktop\firemap.map.map
+19 квітня 2011 р.-[18:44:55]: Open map:C:\Users\Warh\Desktop\firemap.map.map
+19 квітня 2011 р.-[18:46:20]: Open map:C:\Users\Warh\Desktop\firemap.map.map
+19 квітня 2011 р.-[18:49:17]: Open map:C:\Users\Warh\Desktop\firemap.map.map
+19 квітня 2011 р.-[18:50:50]: Open map:C:\Users\Warh\Desktop\firemap.map.map
+19 квітня 2011 р.-[18:58:18]: Open map:C:\Users\Warh\Desktop\firemap.map.map
+19 квітня 2011 р.-[19:00:26]: Open map:C:\Users\Warh\Desktop\firemap.map.map
+19 квітня 2011 р.-[19:01:34]: Open map:C:\Users\Warh\Desktop\firemap.map.map
+19 квітня 2011 р.-[19:02:18]: Open map:C:\Users\Warh\Desktop\firemap.map.map
+19 квітня 2011 р.-[19:02:56]: Open map:C:\Users\Warh\Desktop\firemap.map.map
+19 квітня 2011 р.-[19:03:56]: Open map:C:\Users\Warh\Desktop\firemap.map.map
+19 квітня 2011 р.-[19:06:02]: Started program
+19 квітня 2011 р.-[19:06:14]: Close program
+19 квітня 2011 р.-[19:07:43]: Open map:C:\Users\Warh\Desktop\firemap.map.map
+19 квітня 2011 р.-[19:07:51]: Started program
+19 квітня 2011 р.-[19:08:00]: Close program
+19 квітня 2011 р.-[19:08:44]: Open map:C:\Users\Warh\Desktop\firemap.map.map
+19 квітня 2011 р.-[19:08:47]: Started program
+19 квітня 2011 р.-[19:08:53]: Close program
+19 квітня 2011 р.-[19:09:43]: Open map:C:\Users\Warh\Desktop\firemap.map.map
+19 квітня 2011 р.-[19:09:44]: Started program
+19 квітня 2011 р.-[19:09:54]: Close program
+19 квітня 2011 р.-[19:10:28]: Open map:C:\Users\Warh\Desktop\firemap.map.map
+19 квітня 2011 р.-[19:10:29]: Started program
+19 квітня 2011 р.-[19:10:37]: Close program
+19 квітня 2011 р.-[19:16:12]: Open map image:D:\Downloads\CSR-image.jpg
+19 квітня 2011 р.-[19:16:22]: Map saved:to
+19 квітня 2011 р.-[19:16:35]: Started program
+19 квітня 2011 р.-[19:17:20]: Close program
